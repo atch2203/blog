@@ -1,0 +1,25 @@
+---
+---
+
+@import "{{ site.theme }}";
+body {
+    /* color: #2b2b2b; */
+    // font-family: Roboto, Arial, sans-serif;
+    font: 90px/1.4 "IBM Plex Sans", sans-serif;
+}
+
+/* This removes the indent in the article list.
+https://stackoverflow.com/a/12426634/14106506
+https://stackoverflow.com/a/5639253/14106506 */
+.article-list {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+.centered-image {
+  display: block;
+  width: 75%; /* Or whatever portion of the page you want it to be */
+  margin: 0 auto; /* Horizontally centers image in its container */
+}

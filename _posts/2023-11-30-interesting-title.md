@@ -1,0 +1,47 @@
+<!--
+TODO:
+- insert images/videos+captions 
+- big quotes in the middle 
+- cut out some parts to make it more readable
+- fix links/sources
+- title
+--->
+
+Ever since I was young, I was always interested in computers and technology, whether it be competitive programming, block coding, computer-aided design, Raspberry Pis, or video games. As a curious child, I saw and explored many things, including Team Fortress 2 strategy guides, the best programming languages for web development, various openers and T-spin setups in competitive Tetris, and everything in between. The only constant throughout many of these, though, is the use of a keyboard and mouse. In elementary school, when I first learned to type using the Qwerty layout, there was a leaderboard for the fastest typers in the whole school, and I remember being so proud of myself for being able to type “The quick brown fox jumped over the lazy dog” at 48 words per minute.
+
+
+During middle and high school, I continued to find new technologies and use them with the help of the internet, mostly using YouTube to stay up to date with the world. It was through this that I stumbled across the mechanical keyboard and typing community, and many of them mentioned a layout called Dvorak. As someone who only knew about Qwerty, I was intrigued when they mentioned the benefits that it has over Qwerty, such as better ergonomics, touch typing, and smoother movement. Additionally, they also mentioned how Qwerty was designed inefficiently and that it was only designed to space out common pairs of letters. Eventually, after seeing enough of these videos, I was convinced and started to try to learn Dvorak.
+
+The first few days of trying to use Dvorak were some of the easiest. Not only were resources easy to find, but memorizing the layout didn’t take that long, and I was able to type around 10-20 words per minute. After a few weeks, I was able to type at around 40 words per minute, and I started to commit certain patterns to memory, such as the groupings “st,” “wh,” and “tch.” Despite seeing a plateau in progress after I reached around 60 words per minute, I was very optimistic, and I didn’t think that it would be long before I would be able to start using it for real writing. 
+
+Similar to learning Dvorak, I found that learning other things also had a very sharp initial spike in growth. I discovered stenography in a similar manner to Dvorak – through videos of people promoting it. When I started learning stenography, I also easily memorized the layout and basic words quickly, which motivated me to continue. However, after a few weeks, I realized the true difficulty of memorizing and understanding the rules of typing different words and how much time that would take, leading me to eventually quit. More recently, I’ve been getting into Beat Saber and Tetris, and I’ve also experienced a quick growth, initially rising up the leaderboards quickly. However, just as my speed with Dvorak started to plateau at around 60 words per minute, so has my abilities and rankings in Tetris and Beat Saber, which can sometimes be frustrating when compared to how fast I grew initially. 
+
+Online, I heard many people saying that the best way to switch to a new layout is to just permanently switch to it for everyday work (Note 1). This is similar to how I switched from Windows to Debian, a different operating system. Even though I was comfortable with Windows and knew that not everything would be the same, after deleting Windows I quickly acclimated to Debian’s apps and features. Because of this, I believed that switching my main method of typing to Dvorak would help improve my abilities rapidly and help make me more comfortable with it. 
+
+However, once I started to use Dvorak for writing essays and code, I was very disappointed. I found that my speed dropped significantly compared to typing practice, and I wasn’t able to think about my ideas clearly. While doing typing tests only required you to copy what’s on your screen, writing essays required me to be able to think faster, with typing speed being secondary. Compared to the effortless translation from thought to typing in Qwerty, I had to put a lot of brainpower into thinking about where each key was while typing in Dvorak. This ability to not have to think about the location of each key on a keyboard is essential for daily use, and it is something that I was unable to obtain for Dvorak even after pursuing it for months. Because of this, I found that doing work in Dvorak not only was slower and frustrating, but it also lowered the quality of my work and ideas, so I always ended up opting to use Qwerty. While permanently switching may have worked for changing operating systems, it didn’t work for keyboard layouts, where I didn’t have the time to go through assignments slowly.
+
+The conversation around using Dvorak instead of Qwerty also leads to a bigger question, which is “Why do people not want to change?” There are plenty of other examples of standards being used despite being worse, and Qwerty is no exception. For example, PHP powers most of the web, accounting for more than 70% of websites, even though it is quite old compared to modern languages such as Typescript and Python (Note 2). The reason for PHP’s survival is because switching over to a newer language requires rewriting the entire codebase and hiring different employees, which require time, money, and effort. Even modern companies, such as WordPress and Facebook, use PHP in their applications (Mellifera). Additionally, in baseball, robot umpires are able to determine the difference between a strike and ball with >99% accuracy. However, in Major League games, human umpires are still used as the final say, even if they miss a call around 5-10% of the time (“Umpires.”). There have been instances of a wrong call deciding the outcome of a game, such as when umpire Laz Diaz called a strike that would have led to overtime as a ball, letting the Houston Astros score 7 more runs to win the game (Reuter). Just like human umpires and PHP are still used due to their historical importance, the only advantage Qwerty has over the other layouts is that more people use it as the standard keyboard layout, with its keyboard shortcuts being ubiquitous and every keyboard already having Qwerty labelings.
+
+After attempting to learn Dvorak and eventually quitting, I understand why switching keyboard layouts is so hard and have learned that sometimes the benefits aren’t worth the effort or time required to learn them. Especially in school, where you don’t want to spend extra time on homework and projects, typing slower while having to think about where the keys are is extremely discouraging. Additionally, while trying to use Dvorak, I have learned some downsides of alternative keyboard layouts, some of which are not mentioned in videos promoting them. Even though typing does feel slightly more comfortable, when using other people’s, public, or new computers, you are forced to use Qwerty, which makes learning Qwerty many times more valuable and useful (Garrison). Additionally, keyboard shortcuts are another thing you have to learn, and gaming requires you to switch back to Qwerty anyway (Porter). While doing some research for this, I rediscovered the existence of ergonomic keyboards, which provide many of the same benefits of alternative keyboard layouts, except without the many hours of practice required. With the Qwerty ergonomics problem partially solved, I don’t think that the standard typing layout is going anywhere, and I don’t see Dvorak or other alternative keyboard layouts becoming widespread.
+
+Works Cited
+
+Garrison, Justin. “Dvorak: The Good, Bad, Ugly, and Recommendations.” Justin Garrison, 13 Feb. 2021, https://justingarrison.com/blog/2021-02-13-dvorak-the-good-bad-ugly-and-recommendations/. 
+
+Mellifera, Nočnica. “Do Developers Still Use PHP (and Why That’s the Wrong Question to Ask).” DEV Community, DEV Community, 5 Aug. 2021, https://dev.to/run-x/do-developers-still-use-php-and-why-that-s-the-wrong-question-to-ask-3n04.
+
+Porter, Jon. “I’ve Used Dvorak for 10 Years, and I’m Here to Tell You It’s Not All That.” The Verge, 17 Feb. 2019, www.theverge.com/2019/2/17/18223384/dvorak-qwerty-keyboard-layout-10-years-speed-ergonomics.
+
+“QWERTY vs Dvorak As Fast as Possible.” YouTube, uploaded by Techquickie, 16 July 2004, https://www.youtube.com/watch?v=tIJNusYZXMA.
+
+Reuter, Joel. “Why Robot UMPS Aren’t the Best Solution to MLB’s Umpiring Problem...Yet.” Bleacher Report, Bleacher Report, 20 Oct. 2021, https://bleacherreport.com/articles/2949584-why-robot-umps-arent-the-best-solution-to-mlbs-umpiring-problemyet.
+
+“Should you learn to type with Dvorak? Question answered by fastest Dvorak typist.” YouTube, uploaded by NoThisIsJohn, 29 September 2020, https://www.youtube.com/watch?v=uVejEMOD4cw.
+
+“Umpires.” Umpire Scorecards, https://umpscorecards.com/umpires/. Accessed 17 Nov. 2023.
+
+Notes
+
+1 - Fourth answer to the question in a Stack Exchange post https://writing.stackexchange.com/questions/1093/is-it-worth-switching-to-dvorak
+
+2 - Comment on Reddit post about PHP https://www.reddit.com/r/webdev/comments/s54nkn/is_php_still_worth_learning_in_2022/
