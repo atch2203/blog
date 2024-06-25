@@ -48,7 +48,7 @@ flag: `jellyCTF{th1s_1snt_a_r3d_0n3_r1gh7?}`
 
 ##### factory_clicker
 The files provided show that there is an `/increment` endpoint for post requests, so just send a post request with a large number.
-![[factoryoverload.png]]
+![alt text](https://github.com/atch2203/jellyctf/blob/main/web/factory_clicker/factoryoverload.png?raw=true)
 flag: `flag jellyCTF{keep_on_piping_jelly}`
 
 ##### bro_visited_his_site_2
@@ -70,11 +70,34 @@ flag: `jellyCTF{u_r_the_p3rfect_ultimate_IDOR}`
 This is a simple code injection; just put `a; ls` and then `a; cat flag.txt`
 flag: `jellyCTF{c3rt1fied_aw4t15tic}`
 
-##### 
+##### awascii_validator
+Our goal is to get our payload to `debug()`, but it is translated from awascii before it is sent to debug. Translating `;ls` results in `awawawawawawa awa awawa awa awa awa awa awawa awawa awa awa`, and sending it in shows that the flag is in `./flag`. To translate `;cat flag`, I used the python code form awafy_me (which for some reason prints backwards)
+![alt text](https://github.com/atch2203/jellyctf/blob/main/web/awascii_validator/Screenshot%202024-06-18%20215128.png?raw=true)
+flag: `jellyCTF{m4st3rs_1n_awat1sm}`
+##### pentest_on_stream
+A simple xss is easy to do, but to access the obs json file is more difficult. Using the hint led to the obs documentation, which shows that `window.obsstudio.getScenes` is what we want.
+Inputting 
+```html
+<script>
+window.obsstudio.getScenes(function (scenes) {
+    document.getElementById("name").innerHTML=scenes[1];
+});
+</script>
+```
+gives the flag: `jellyCTF{y0u_CANT_ju5t_d0_that_dud3}`
 # forensics
 <a href="#toc">back to TOC</a>
+##### alien_transmission
 <div id="forensics" />
+Popping the mp3 into a spectrum analyzer shows the flag:
+![alt text](https://github.com/atch2203/jellyctf/blob/main/forensics/alientransmission/jelly.png?raw=true)
+flag: `jellyCTF{youre_hearing_things}`
 
+##### mpreg4
+Popping the file into a hex editor shows that it should be an mp4 file, so changing the `2avc1mpreg4` to `2avc1mp4` fixes the video.
+flag: `jellyCTF{i_can_fix_her}`
+
+#####
 
 # crypto
 <a href="#toc">back to TOC</a>
