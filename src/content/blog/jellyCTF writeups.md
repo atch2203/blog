@@ -9,3 +9,4 @@ tags:
   - writeups
 description: jellyCTF writeups
 ---
+Sometime during the middle of last week I decided to actually start playing CTFs, and I remember dungwinix mentioned that 
