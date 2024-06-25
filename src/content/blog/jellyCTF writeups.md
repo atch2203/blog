@@ -13,10 +13,44 @@ Sometime during the middle of last week I decided to actually start playing CTFs
 
 > go check his writeups at https://dungwinux.github.io/-blog/security/2024/06/24/jellyctf.html, he actually was the first solo team to full clear w/o hints
 
+
+TOC:
+- <a href="#web">web</a>
+
 I used a lot of hints (almost all of them), but I was able to solve 10/10 web, 6/8 osint, 3/3 pwn, 8/10 crypto, 6/7 forensics, 5/5 misc, 3/3 rev.
-![my "awards"](@assets/images/writeups/jellyctf/awards.png)
+![my "awards"](@assets/images/writeups/jellyctf/awardssmall.png)
 <div align="center" style="color:#888888"><em>My "awards"</em></div>
 
-test image
-![test](https://github.com/atch2203/jellyctf/blob/main/crypto/cipher_check/cipher-boxes.png)
-![test2](https://github.com/atch2203/jellyctf/blob/main/web/pentest_on_stream/pathtrav.png)
+
+filler
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler 
+filler  
+<div id="web" />
