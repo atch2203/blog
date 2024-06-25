@@ -36,7 +36,7 @@ TOC:
 
 ## do_not_trust
 Opening robots.txt gives us
-```
+```html
 User-agent: *
 Disallow: /
 # jellyCTF{g0d_d4mn_cL4nk3r5}
@@ -284,13 +284,13 @@ flag: `jellyCTF{mad3_w1th_99_percent_l0v3_and_1_percent_sad_g1rl_t3ars}`
 
 ## cherry
 The goal here is to get three cherries, which corresponds to solving a linear system
-```
+```html
 19*a + 32*b + 347*c = -10992 (mod m)
 22*a + 27*b + 349*c = -30978 (mod m)
 19*a + 29*b + 353*c = -12520 (mod m)
 ```
 Solving the system with sagemath gives the amount of spins we need to do for each mode for various modulo offsets:
-``` 
+```html
 sage: solve_mod([19*a + 32*b + 347*c == -30983,22*a + 27*b + 349*c == -7390,19*a + 29*b + 353*c == -481],m)
 [(10469, 7226, 14158)]
 sage: solve_mod([19*a + 32*b + 347*c == -10992,22*a + 27*b + 349*c == -30978,19*a + 29*b + 353*c == -12520],m)
@@ -491,7 +491,7 @@ flag: `2016-09-15T15:01:46.233Z`
 I had to use a hint for this: you need to find the twitter id of the user, which can be done through their banner on [wayback machine](https://web.archive.org/web/20240325165547/https://twitter.com/j3llyfan7)
 The id for the user is `1772301250572263429`, and according to [this site](https://twirpz.wordpress.com/2015/06/16/how-to-find-twitter-users-previous-usernames/), you can go to [https://x.com/intent/user?user_id=1772301250572263429](https://x.com/intent/user?user_id=1772301250572263429) to find the new account.
 The three posts
-```
+```html
 dGhpc193YXNfbm90X215X2ludGVudGlvbn0=
 eUNURns=
 amVsbA==
