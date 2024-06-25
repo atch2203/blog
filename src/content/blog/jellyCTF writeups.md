@@ -28,7 +28,7 @@ TOC:
 - <a href="#osint">osint</a><br>
 - <a href="#pwn">pwn</a><br>
 - <a href="#rev">rev</a><br>
-- <a href="#notsolved">rev</a><br>
+- <a href="#notsolved">things i didn't solve</a><br>
 
 # web
 <a href="#toc">back to TOC</a>
