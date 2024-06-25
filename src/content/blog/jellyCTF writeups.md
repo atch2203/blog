@@ -600,3 +600,4 @@ I didn't really attempt this as I didn't solve the prequel, but the solution can
 flag: `jellyCTF{baba_is_cool_but_j3lly_i5_COOLER}`
 
 ##### forensics: oshi_mark
+I noticed that there was a pattern
