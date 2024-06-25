@@ -40,13 +40,41 @@ Disallow: /
 ### vlookup_hot_singles
 For the first stage, our goal is to impersonate the user "jelly" by modifying the JWT token. In the files provided, we are given the secret `singaQu5aeWoh1vuoJuD]ooJ9aeh2soh`, so we just copy the token into a [jwt.io](jwt.io) and modify the "user" field to "jelly". Sending a request to the /admin page with the new token gives us the flag, and access to part 2.
 ![alt text](https://github.com/atch2203/jellyctf/blob/main/web/vlookup_hot_singles/part1req.png?raw=true)
-
+flag: `jellyCTF{i_am_b3c0m3_awawa_d3str0y3r_0f_f3m4135}`
 ##### vlookup_hot_singles_2
-In the admin panel, there is a space to upload a spreadsheet and have the server send it back with columns added. I remembered a trick stolenfootball ([shoutout](https://stolenfootball.github.io/)) where you can unzip microsoft docx/xlsx files, so I made a blank spreadsheet and did that. The resulting files are xml, meaning that it's probably some xxe attack. 
+In the admin panel, there is a space to upload a spreadsheet and have the server send it back with columns added. I remembered a trick stolenfootball ([shoutout](https://stolenfootball.github.io/)) where you can unzip microsoft docx/xlsx files, so I made a blank spreadsheet and did that. The resulting files are xml, meaning that it's probably some xxe attack. Using a hint shows that the payload has to be in `docProps/core.xml`, and putting the xxe in there gives us the flag.
 
+flag: `jellyCTF{th1s_1snt_a_r3d_0n3_r1gh7?}`
+
+##### factory_clicker
+The files provided show that there is an `/increment` endpoint for post requests, so just send a post request with a large number.
+![[factoryoverload.png]]
+flag: `flag jellyCTF{keep_on_piping_jelly}`
+
+##### bro_visited_his_site_2
+You can do SSTI with the `word` parameter, and our goal is to get to `FileIO`, which can be done with this chain: `dict.__base__.__subclasses__()[114].__subclasses__()[1].__subclasses__()[0]('/app/flag.txt').read()`
+
+flag: `jellyCTF{rc3p1lled_t3mpl4te_1nj3ct10nmaxx3r}`
+
+##### bro_visited_his_site
+For some reason, this one was harder than its sequel, and using the [hint](https://ctftime.org/writeup/10895) basically gave the solution: `url_for.__globals__['current_app'].config['FLAG']`
+
+flag: `jellyCTF{f1agp1ll3d_t3mpl4te_1nj3ct10nmaxx3r}`
+
+##### aidoru
+The goal here is to get to find the secret uuid of `"jelly"`. Looking at the other uuids, they look like a hash, and putting them in a hash cracker shows that it's md5. The md5 of jelly is `328356824c8487cf314aa350d11ae145`, and going to [https://aidoru.jellyc.tf/static/secret_data/328356824c8487cf314aa350d11ae145.json](https://aidoru.jellyc.tf/static/secret_data/328356824c8487cf314aa350d11ae145.json) gives the flag.
+
+flag: `jellyCTF{u_r_the_p3rfect_ultimate_IDOR}`
+
+##### awafy_me
+This is a simple code injection; just put `a; ls` and then `a; cat flag.txt`
+flag: `jellyCTF{c3rt1fied_aw4t15tic}`
+
+##### 
 # forensics
 <a href="#toc">back to TOC</a>
 <div id="forensics" />
+
 
 # crypto
 <a href="#toc">back to TOC</a>
