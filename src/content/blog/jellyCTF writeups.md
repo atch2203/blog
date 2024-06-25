@@ -286,7 +286,7 @@ The goal here is to get three cherries, which corresponds to solving a linear sy
 19*a + 29*b + 353*c = -12520 (mod m)
 ```
 Solving the system with sagemath gives the amount of spins we need to do for each mode for various modulo offsets:
-```
+``` 
 sage: solve_mod([19*a + 32*b + 347*c == -30983,22*a + 27*b + 349*c == -7390,19*a + 29*b + 353*c == -481],m)
 [(10469, 7226, 14158)]
 sage: solve_mod([19*a + 32*b + 347*c == -10992,22*a + 27*b + 349*c == -30978,19*a + 29*b + 353*c == -12520],m)
