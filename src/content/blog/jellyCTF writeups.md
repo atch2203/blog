@@ -639,8 +639,7 @@ a = [(i+81)%192 for i in a]
 print(''.join([chr(i) for i in a]))
 ```
 
-
-After doing some stuff, I came up with my own solve
+After doing some stuff, I came up with my own solve (using dcode.fr to find the offset)
 ```python
 a = ""
 with open("hex.txt", "r") as f:
@@ -648,9 +647,8 @@ with open("hex.txt", "r") as f:
 a = a.split()
 b = a[2::7]
 a = a[3::7]
-print(b)
-a = [a[i] if b[i] == '85' else hex(int(a[i],16)-64)[2:] for i in range(len(a))]
-print(" ".join(a))
+a = [int(a[i],16)-(64+47 if b[i] == '84' else 47) for i in range(len(a))]
+print("".join([chr(x) for x in a]))
 ```
 
 flag: `jellyCTF{a_cut3_alic3_hugg4bl3_plush13}`
