@@ -600,4 +600,28 @@ I didn't really attempt this as I didn't solve the prequel, but the solution can
 flag: `jellyCTF{baba_is_cool_but_j3lly_i5_COOLER}`
 
 ##### forensics: oshi_mark
-I noticed that there was a pattern
+I noticed that there was a pattern in the hex of the text, with one character being 0 or -1, and the other being a number from 0-27:
+```python
+a = ""
+with open("hex.txt", "r") as f:
+    a = f.read()
+    a = a.split()
+
+u = "f3 a0 85 8e e2 80 8c".split()
+u = [int(x, 16) for x in u]
+s = len(u)
+letters = []
+diffs = []
+
+chunks = int(len(a)/s)
+for i in range(chunks):
+    b = a[i*s: s*i+s]
+    b = [int(x, 16) for x in b]
+    diff = [b[i]-u[i] for i in range(s)]
+    letters.append(chr(diff[3]+97))
+    diffs.append(diff[2])
+
+print(letters)
+print(diffs)
+```
+However I didn't get anywhere after that.
