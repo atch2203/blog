@@ -89,8 +89,8 @@ window.obsstudio.getScenes(function (scenes) {
 gives the flag: `jellyCTF{y0u_CANT_ju5t_d0_that_dud3}`
 # forensics
 <a href="#toc">back to TOC</a>
-##### alien_transmission
 <div id="forensics" />
+##### alien_transmission
 Popping the mp3 into a spectrum analyzer shows the flag:
 ![alt text](https://github.com/atch2203/jellyctf/blob/main/forensics/alientransmission/jelly.png?raw=true)
 flag: `jellyCTF{youre_hearing_things}`
@@ -152,10 +152,228 @@ each clue corresponds to something in the form of `ANSWER____`, and filling in t
 flag: `jellyCTF{istillloveit}`
 
 ##### exclusively_yours
-XORing the hex with `jellyCTF` results in ``
+XORing the hex with `jellyCTF` shows that the flag is XORed with itself shifted 3 bytes to the left. A script can reverse that:
+```python
+c = "06 1C 2F 38 3F 38 2C 29 09 0A 16 2D 1C 16 2B 31 17 1B 2D 0A 16 0F 18 1C 11"
+c = c.split()
+c = [int(i, 16) for i in c]
+res = ""
+key = "jel"
+for i in range(len(c)):
+    k = key[-3]
+    next = c[i]^ord(k)
+    key += chr(next)
+    res += k
+print(res)
+```
+flag: `jellyCTF{xorry_not_xorry}`
+
+##### dizzy_fisherman
+Here we are able to input the base for two people's AES encryption key. If you input 2 (or any number for that matter) you can easily brute force the exponent and get the key.
+```python
+from Crypto.Util import number
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad
+
+def brute_force(base, res, mod):
+    b = base
+    for i in range(2, 10000+1):
+        b = (b*base)%mod
+        if b == res: return i
+
+p = 63579193433447636138142180956143903452427972074605894864703396671022456098599
+g = 2
+pa = 12216650520779549051085807383600007441099464649139735571057936351615978497631
+pb = 268435456 # thats crazy
+
+cip = "7c78e0ee6710a27b97cfb37501e02cc0e4f8cf921ecb9a891793622361efaa6cc7618b790239761506f8f83fa49b974ac7618b790239761506f8f83fa49b974a"
+
+sa = brute_force(g, pa, p)
+sb = brute_force(g, pb, p)
+key = pow(pa, sb, p)
+
+encoded_key = key.to_bytes(32, byteorder='big')
+cipher = AES.new(encoded_key, AES.MODE_ECB)
+
+pt = cipher.decrypt(bytes.fromhex(cip))
+print(pt)
+```
+flag: `jellyCTF{SOS_stuck_in_warehouse}`
+##### really_special_awawawas
+Using the [hint](https://crypto.stackexchange.com/questions/74891/decrypting-multi-prime-rsa-with-e-n-and-factors-of-n-given) showed that the RSA encryption used more than 2 primes.
+I first read up a bit on how to break RSA:
+- [stackoverflow](https://stackoverflow.com/questions/58750417/how-to-decrypt-an-rsa-encryption)
+- [wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem)#Decryption)
+
+```python
+n = 40095322948381328531315369020145890848992927830000776301309425505
+e = 65537
+cip = 35622053067320123838840878683947610930876835359945867019927573838
+
+from sympy.ntheory import factorint
+factors = factorint(n)
+print(factors)
+# {5: 1, 23: 1, 460465412038271581: 1, 757179525420813109550252454787205779901919127: 1}
+
+factors = [(5,1), (23,1), (460465412038271581,1), (757179525420813109550252454787205779901919127,1)]
+d = inverse(e, carmichael_lambda(factors))
+print(d)
+# 287458461584463336135331697997301511216944981741119712297623893
+
+m = pow(cip,d,n)
+h = hex(m)
+print(h)
+print(bytes.fromhex(h[2:]).decode())
+```
+flag: `jellyCTF{awawas_4_every1}`
+##### the_brewing_secrets
+The `rand()` function is seeded with the current time in seconds, so we can easily copy and use the number to build the passcode.
+```python
+passcodeLength = 6
+bitmask = (1 << passcodeLength) - 1
+
+libc = CDLL("libc.so.6")
+
+# p = process("./a.out", stdin=PTY, stdout=PTY)
+p = remote(host='chals.jellyc.tf', port=6000)
+
+s = int(time.time())
+# print(s)
+
+libc.srand(s)
+for i in range(10):
+  r = libc.rand()
+  # print(f"r{i} {r}")
+  passcode = r & bitmask
+  print(f"passcode{i} {bin(passcode)}")
+  print(p.recvuntil(b"passcode"))
+  p.sendline(bin(passcode)[2:].encode('utf-8'))
+
+print(p.recvuntil(b"}"))
+
+p.interactive()
+```
+flag: `jellyCTF{mad3_w1th_99_percent_l0v3_and_1_percent_sad_g1rl_t3ars}`
+##### cherry
+The goal here is to get three cherries, which corresponds to solving a linear system
+```
+19*a + 32*b + 347*c = -10992 (mod m)
+22*a + 27*b + 349*c = -30978 (mod m)
+19*a + 29*b + 353*c = -12520 (mod m)
+```
+Solving the system with sagemath gives the amount of spins we need to do for each mode for various modulo offsets:
+```
+sage: solve_mod([19*a + 32*b + 347*c == -30983,22*a + 27*b + 349*c == -7390,19*a + 29*b + 353*c == -481],m)
+[(10469, 7226, 14158)]
+sage: solve_mod([19*a + 32*b + 347*c == -10992,22*a + 27*b + 349*c == -30978,19*a + 29*b + 353*c == -12520],m)
+[(4194, 29860, 25598)]
+sage: solve_mod([19*a + 32*b + 347*c == -25974,22*a + 27*b + 349*c == -26744,19*a + 29*b + 353*c == -9122],m)
+[(20582, 3380, 26344)]
+```
+At this point it look like spinning that many times will get the awascii32 lines to show the flag, and we can do that by modifying the code:
+```js
+function playCoin(n){
+  spinMode = n;
+  if (n == 0)       spinCounts = [10469, 7226, 14158];//slotSpins = [ 19,  22,  19];    you_won_c
+  else if (n == 1)    spinCounts = [4194, 29860, 25598];//slotSpins = [ 32,  27,  29];   jellyCTF{
+  else if (n == 2)    spinCounts = [20582, 3380, 26344];//slotSpins = [347, 349, 353];   herries!}
+  updatePlaintextDisplay();
+  updateModeDisplay();
+}
+```
+![flag](https://github.com/atch2203/jellyctf/blob/main/crypto/cherry_dist/WWWWW.png?raw=true)
+flag: `jellyCTF{you_won_cherries!}`
+
 # misc
-<a href="#toc">back to TOC</a>
 <div id="misc" />
+<a href="#toc">back to TOC</a>
+##### welcome
+This was the hardest challenge ever
+flag: `jellyCTF{L1k3_th15}`
+
+##### watch_streams
+Going to the description of [jelly's ctf stream](https://www.youtube.com/watch?v=QH8LKkIVHzI) gives the flag
+flag: `jellyCTF{jerrywashere123}`
+
+##### this_is_canon
+Looks like huffman encoding, but I only have a vague idea of how it exactly works.
+It took me a while to figure out what each character corresponded to in binary.
+```python
+out = "1000001010010011101111101011101011111010000010100100110000111001110111010000111011100111110100111100100110101111000001110010110110010001100011011001000011001110011101000110101100010110011111111"
+flag = ""
+
+class Node:
+    # z is 0, o is 1
+    def __init__(self, c=None):
+        self.c = c
+        self.z = None
+        self.o = None
+
+
+trees = {
+    '_':"000",
+    'e':"001",
+    'l':"010",
+    'y':'011',
+    'j':'1000',
+    'o':'1001',
+    'r':'1010',
+    'a':'10110',
+    'c':'10111',
+    'd':'11000',
+    's':'11001',
+    't':'11010',
+    'u':'11011',
+    'w':'11100',
+    'f':'111010',
+    'h':'111011',
+    'k':'111100',
+    'm':'111101',
+    '{':'111110',
+    '}':'111111'
+}
+
+root = Node()
+for ch in trees:
+    v = trees[ch]
+    h = root
+    for p in v:
+        if p == '1':
+            if h.o:
+                h = h.o
+            else:
+                h.o = Node()
+                h = h.o
+        else:
+            if h.z:
+                h = h.z
+            else:
+                h.z = Node()
+                h = h.z
+    h.c = ch
+
+it = root
+for b in out:
+    if it.c:
+        flag += it.c
+        it = root
+    if b == '1':
+        it = it.o
+    else:
+        it = it.z
+
+print(flag)
+```
+flag: `jellyctf{jelly_your_homework_was_due_yesterday}`
+
+##### is_jelly_stuck
+Solving the crossword shows that you have to go to [Baba is you](https://hempuli.itch.io/baba-is-you-level-editor-beta) with the level code `jieu-dkxx`
+I forgot to take a screenshot of the level, but you have to get the cat to sleep again with the "cat is sleep" thing facing horizontally, and from there you can push it down and be in the same block as "is".
+The flag is made by matching the letters of the crossword with your movements (like cipher_check)
+flag: `jellyCTF{krodflakarkt_k__aliases_c_led_ls}`
+
+##### just_win_lol
+
 
 # osint
 <a href="#toc">back to TOC</a>
