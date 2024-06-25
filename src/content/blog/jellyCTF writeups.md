@@ -638,3 +638,5 @@ a = [int("".join(i), 16) for i in a]
 a = [(i+81)%192 for i in a]
 print(''.join([chr(i) for i in a]))
 ```
+
+flag: `jellyCTF{a_cut3_alic3_hugg4bl3_plush13}`
