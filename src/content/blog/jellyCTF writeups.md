@@ -61,6 +61,8 @@ For some reason, this one was harder than its sequel, and using the [hint](https
 
 flag: `jellyCTF{f1agp1ll3d_t3mpl4te_1nj3ct10nmaxx3r}`
 
+check out [dungwinix](https://dungwinux.github.io/-blog/security/2024/06/24/jellyctf.html) for an unintended+easier solution
+
 ##### aidoru
 The goal here is to get to find the secret uuid of `"jelly"`. Looking at the other uuids, they look like a hash, and putting them in a hash cracker shows that it's md5. The md5 of jelly is `328356824c8487cf314aa350d11ae145`, and going to [https://aidoru.jellyc.tf/static/secret_data/328356824c8487cf314aa350d11ae145.json](https://aidoru.jellyc.tf/static/secret_data/328356824c8487cf314aa350d11ae145.json) gives the flag.
 
@@ -93,17 +95,64 @@ Popping the mp3 into a spectrum analyzer shows the flag:
 ![alt text](https://github.com/atch2203/jellyctf/blob/main/forensics/alientransmission/jelly.png?raw=true)
 flag: `jellyCTF{youre_hearing_things}`
 
-##### mpreg4
+##### mpreg
 Popping the file into a hex editor shows that it should be an mp4 file, so changing the `2avc1mpreg4` to `2avc1mp4` fixes the video.
 flag: `jellyCTF{i_can_fix_her}`
 
-#####
+##### the_REAL_truth
+The image definitely has data encoded in it, but I wasn't able to figure it out without a hint. Filtering the red channel (since there's a cyan bar at the top) gives the flag in the data + some excerpt from [jelly's wiki](https://virtualyoutuber.fandom.com/wiki/Jelly_Hoshiumi). 
+flag: `jellyCTF{th3_w0man_in_th3_r3d_ch4nn3l}`
+
+Fun fact the text in the caard.co is also taken from the Profile section of her wiki
+
+##### the_REAL_truth_2
+Fun fact: I stumbled across `image_02` somehow without looking at `sitemap.xml`
+XORing the images gives the flag
+![flag](https://github.com/atch2203/jellyctf/blob/main/forensics/the_real_truth/Screenshot_20240619_024223.png?raw=true)
+flag: `jellyCTF{tw0_h41v3s_m4k3_a_wh0L3}`
+
+##### head_empty
+I used the hint to figure out to use volatility3, and after watching a [guide](https://dfir.science/2022/02/Introduction-to-Memory-Forensics-with-Volatility-3), you just dump the password hashes and crack it with hashcat to get `jellynerd2`
+flag: `jellyCTF{jellynerd2}`
+
+##### head_empty_2
+This one probably took me the longest(out of the ones I solved), with many dead ends.
+I attempted to dump the files of the mspaint process and binwalk it, showing that there were a lot of png images. Unfortunately, they were just the microsoft app icons.
+
+I also attempted to binwalk the entire memory dump, which did give false hope
+`206700544     0xC520000       PC bitmap, Windows 3.x format,, 129 x 115 x 24`
+but the bitmap was garbage data.
+
+Using the hint showed that you needed to dump the memory of the process,  so I did
+`p vol.py -f ../memory.dmp windows.memmap --dump --pid 4700 > ../memdump.txt`
+
+Eventually, I stumbled across a post of [literally the same challenge](https://github.com/h4x0r/ctf-writeups/blob/master/Google-CTF-2016/For1/README.md) which just recommended to put the memory dump in gimp and scroll through it until you found "a contigeous block of non-random data". 
+Doing so with width=1000 and height=6000, showed that there was indeed such a block in the memory, although upside down. Tuning to width=300 (the same dimensions as the [twitter post](https://x.com/jellyhoshiumi/status/1785919609872474201)) gave the complete image.
+![alt text](https://github.com/atch2203/jellyctf/blob/main/forensics/headempty/evenbetterflip.png?raw=true)
+
+flag: `jellyCTF{pa1nt_pr1nc355}`
 
 # crypto
 <a href="#toc">back to TOC</a>
 <div id="crypto" />
+##### cult_classic_1
+This was just a series of mini-crypto puzzles:
+1) The first letter of each line reads `PRINCESS`
+2) b64->rot-3 gives `If you can decode this, you can have the next key: BIGNERD`
+3) Vig decode `KMRYCTWG{` with it's corresponding `JELLYCTF{` gives `BIGNERD` as the key. Decoding the whole thing gives `NOT BAD, HERES A FLAG FOR YOUR EFFORTS SO FAR: JELLYCTF{THIS_IS_JUST_A_WARM_UP} HOWEVER YOUR JOURNEY IS NOT OVER, TAKE THIS KEY AND PROCEED FORWARD: ALIEN`
+flag: `JELLYCTF{THIS_IS_JUST_A_WARM_UP}`
+##### cult_classic_2
+4) [brute forcing] a playfair cipher gives `ALIEN->ACOUSTIC` as one of the possibilities
+5) Using a hint shows that you need to look at [luminary's lyrics](https://www.youtube.com/watch?v=1x6oPy3Hwcw), and each `#.#` corresponds to line.col. Decoding gives "Capitalize megalencephaly for the next ..."
+6) Decoding a bacon cipher (with complete alphabet) gives `THEFINALPASSWORDISSADGIRL`
+flag: `jellyctf{jelly_was_probably_older_than_these_ciphers}`
 
+##### cipher_check
+each clue corresponds to something in the form of `ANSWER____`, and filling in the board gives `follow moist duel xqc in detail on special lineup event he won mate in 6 moves!` Following the moves of the [game](https://www.youtube.com/watch?v=e91M0XLX7Jw) and putting the corresponding letters of the squares in order gives `istillloveit`.
+flag: `jellyCTF{istillloveit}`
 
+##### exclusively_yours
+XORing the hex with `jellyCTF` results in ``
 # misc
 <a href="#toc">back to TOC</a>
 <div id="misc" />
