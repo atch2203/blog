@@ -625,3 +625,16 @@ print(letters)
 print(diffs)
 ```
 However I didn't get anywhere after that.
+
+Reading up some writeups you have to manipulate + guess how the bytes map to ascii
+```python
+a = ""
+with open("hex.txt", "r") as f:
+    a = f.read()
+a = a.split()
+a = a[4:-5]
+a = [a[i:i+7] for i in range(0, len(a), 7)]
+a = [int("".join(i), 16) for i in a]
+a = [(i+81)%192 for i in a]
+print(''.join([chr(i) for i in a]))
+```
