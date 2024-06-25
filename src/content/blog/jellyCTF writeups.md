@@ -40,7 +40,9 @@ Disallow: /
 ### vlookup_hot_singles
 For the first stage, our goal is to impersonate the user "jelly" by modifying the JWT token. In the files provided, we are given the secret `singaQu5aeWoh1vuoJuD]ooJ9aeh2soh`, so we just copy the token into a [jwt.io](jwt.io) and modify the "user" field to "jelly". Sending a request to the /admin page with the new token gives us the flag, and access to part 2.
 ![alt text](https://github.com/atch2203/jellyctf/blob/main/web/vlookup_hot_singles/part1req.png?raw=true)
+
 flag: `jellyCTF{i_am_b3c0m3_awawa_d3str0y3r_0f_f3m4135}`
+
 ##### vlookup_hot_singles_2
 In the admin panel, there is a space to upload a spreadsheet and have the server send it back with columns added. I remembered a trick stolenfootball ([shoutout](https://stolenfootball.github.io/)) where you can unzip microsoft docx/xlsx files, so I made a blank spreadsheet and did that. The resulting files are xml, meaning that it's probably some xxe attack. Using a hint shows that the payload has to be in `docProps/core.xml`, and putting the xxe in there gives us the flag.
 
@@ -49,6 +51,7 @@ flag: `jellyCTF{th1s_1snt_a_r3d_0n3_r1gh7?}`
 ##### factory_clicker
 The files provided show that there is an `/increment` endpoint for post requests, so just send a post request with a large number.
 ![alt text](https://github.com/atch2203/jellyctf/blob/main/web/factory_clicker/factoryoverload.png?raw=true)
+
 flag: `flag jellyCTF{keep_on_piping_jelly}`
 
 ##### bro_visited_his_site_2
@@ -70,6 +73,7 @@ flag: `jellyCTF{u_r_the_p3rfect_ultimate_IDOR}`
 
 ##### awafy_me
 This is a simple code injection; just put `a; ls` and then `a; cat flag.txt`
+
 flag: `jellyCTF{c3rt1fied_aw4t15tic}`
 
 ##### awascii_validator
@@ -86,21 +90,26 @@ window.obsstudio.getScenes(function (scenes) {
 });
 </script>
 ```
+
 gives the flag: `jellyCTF{y0u_CANT_ju5t_d0_that_dud3}`
+
 # forensics
 <a href="#toc">back to TOC</a>
 <div id="forensics" />
 ##### alien_transmission
 Popping the mp3 into a spectrum analyzer shows the flag:
 ![alt text](https://github.com/atch2203/jellyctf/blob/main/forensics/alientransmission/jelly.png?raw=true)
+
 flag: `jellyCTF{youre_hearing_things}`
 
 ##### mpreg
 Popping the file into a hex editor shows that it should be an mp4 file, so changing the `2avc1mpreg4` to `2avc1mp4` fixes the video.
+
 flag: `jellyCTF{i_can_fix_her}`
 
 ##### the_REAL_truth
 The image definitely has data encoded in it, but I wasn't able to figure it out without a hint. Filtering the red channel (since there's a cyan bar at the top) gives the flag in the data + some excerpt from [jelly's wiki](https://virtualyoutuber.fandom.com/wiki/Jelly_Hoshiumi). 
+
 flag: `jellyCTF{th3_w0man_in_th3_r3d_ch4nn3l}`
 
 Fun fact the text in the caard.co is also taken from the Profile section of her wiki
@@ -109,10 +118,12 @@ Fun fact the text in the caard.co is also taken from the Profile section of her 
 Fun fact: I stumbled across `image_02` somehow without looking at `sitemap.xml`
 XORing the images gives the flag
 ![flag](https://github.com/atch2203/jellyctf/blob/main/forensics/the_real_truth/Screenshot_20240619_024223.png?raw=true)
+
 flag: `jellyCTF{tw0_h41v3s_m4k3_a_wh0L3}`
 
 ##### head_empty
 I used the hint to figure out to use volatility3, and after watching a [guide](https://dfir.science/2022/02/Introduction-to-Memory-Forensics-with-Volatility-3), you just dump the password hashes and crack it with hashcat to get `jellynerd2`
+
 flag: `jellyCTF{jellynerd2}`
 
 ##### head_empty_2
@@ -140,15 +151,18 @@ This was just a series of mini-crypto puzzles:
 1) The first letter of each line reads `PRINCESS`
 2) b64->rot-3 gives `If you can decode this, you can have the next key: BIGNERD`
 3) Vig decode `KMRYCTWG{` with it's corresponding `JELLYCTF{` gives `BIGNERD` as the key. Decoding the whole thing gives `NOT BAD, HERES A FLAG FOR YOUR EFFORTS SO FAR: JELLYCTF{THIS_IS_JUST_A_WARM_UP} HOWEVER YOUR JOURNEY IS NOT OVER, TAKE THIS KEY AND PROCEED FORWARD: ALIEN`
+
 flag: `JELLYCTF{THIS_IS_JUST_A_WARM_UP}`
 ##### cult_classic_2
 4) [brute forcing] a playfair cipher gives `ALIEN->ACOUSTIC` as one of the possibilities
 5) Using a hint shows that you need to look at [luminary's lyrics](https://www.youtube.com/watch?v=1x6oPy3Hwcw), and each `#.#` corresponds to line.col. Decoding gives "Capitalize megalencephaly for the next ..."
 6) Decoding a bacon cipher (with complete alphabet) gives `THEFINALPASSWORDISSADGIRL`
+
 flag: `jellyctf{jelly_was_probably_older_than_these_ciphers}`
 
 ##### cipher_check
 each clue corresponds to something in the form of `ANSWER____`, and filling in the board gives `follow moist duel xqc in detail on special lineup event he won mate in 6 moves!` Following the moves of the [game](https://www.youtube.com/watch?v=e91M0XLX7Jw) and putting the corresponding letters of the squares in order gives `istillloveit`.
+
 flag: `jellyCTF{istillloveit}`
 
 ##### exclusively_yours
@@ -166,6 +180,7 @@ for i in range(len(c)):
     res += k
 print(res)
 ```
+
 flag: `jellyCTF{xorry_not_xorry}`
 
 ##### dizzy_fisherman
@@ -198,7 +213,9 @@ cipher = AES.new(encoded_key, AES.MODE_ECB)
 pt = cipher.decrypt(bytes.fromhex(cip))
 print(pt)
 ```
+
 flag: `jellyCTF{SOS_stuck_in_warehouse}`
+
 ##### really_special_awawawas
 Using the [hint](https://crypto.stackexchange.com/questions/74891/decrypting-multi-prime-rsa-with-e-n-and-factors-of-n-given) showed that the RSA encryption used more than 2 primes.
 I first read up a bit on how to break RSA:
@@ -225,7 +242,9 @@ h = hex(m)
 print(h)
 print(bytes.fromhex(h[2:]).decode())
 ```
+
 flag: `jellyCTF{awawas_4_every1}`
+
 ##### the_brewing_secrets
 The `rand()` function is seeded with the current time in seconds, so we can easily copy and use the number to build the passcode.
 ```python
@@ -253,7 +272,9 @@ print(p.recvuntil(b"}"))
 
 p.interactive()
 ```
+
 flag: `jellyCTF{mad3_w1th_99_percent_l0v3_and_1_percent_sad_g1rl_t3ars}`
+
 ##### cherry
 The goal here is to get three cherries, which corresponds to solving a linear system
 ```
@@ -282,6 +303,7 @@ function playCoin(n){
 }
 ```
 ![flag](https://github.com/atch2203/jellyctf/blob/main/crypto/cherry_dist/WWWWW.png?raw=true)
+
 flag: `jellyCTF{you_won_cherries!}`
 
 # misc
@@ -289,10 +311,12 @@ flag: `jellyCTF{you_won_cherries!}`
 <a href="#toc">back to TOC</a>
 ##### welcome
 This was the hardest challenge ever
+
 flag: `jellyCTF{L1k3_th15}`
 
 ##### watch_streams
 Going to the description of [jelly's ctf stream](https://www.youtube.com/watch?v=QH8LKkIVHzI) gives the flag
+
 flag: `jellyCTF{jerrywashere123}`
 
 ##### this_is_canon
@@ -364,12 +388,14 @@ for b in out:
 
 print(flag)
 ```
+
 flag: `jellyctf{jelly_your_homework_was_due_yesterday}`
 
 ##### is_jelly_stuck
 Solving the crossword shows that you have to go to [Baba is you](https://hempuli.itch.io/baba-is-you-level-editor-beta) with the level code `jieu-dkxx`
 I forgot to take a screenshot of the level, but you have to get the cat to sleep again with the "cat is sleep" thing facing horizontally, and from there you can push it down and be in the same block as "is".
 The flag is made by matching the letters of the crossword with your movements (like cipher_check)
+
 flag: `jellyCTF{krodflakarkt_k__aliases_c_led_ls}`
 
 ##### just_win_lol
@@ -420,22 +446,28 @@ ever:= 1
 ```
 After that it was just a test of reaction speed for 5 minutes.
 ![script](https://github.com/atch2203/jellyctf/blob/main/misc/just_win_lol/script.png?raw=true)
+
 flag: `jellyCTF{its_v3ry_stra1ghtf0rw4rd_s1mply_g3t_g00d_rng}`
+
 # osint
 <a href="#toc">back to TOC</a>
 <div id="osint" />
 ##### stalknights_1
 reverse image searching the post gives us [zaanse-schans](https://www.travelwithsimina.com/one-day-in-zaanse-schans/)
+
 flag: `jellyCTF{zaanse_schans,netherlands}`
+
 ##### stalknights_3
 They tweeted "last friday" on may 9, so the flight was on may 3rd.
 Plugging in the plane code `JA784A` into [flightera.net](https://www.flightera.net/en/planes/JA784A) shows that there was 1 flight on [may 3rd](https://www.flightera.net/en/flight_details/All+Nippon+Airways/NH160/RJTT/2024-05-03), arriving in JFK airport.
 
 flag: `jellyCTF{new_york,united_states_of_america}`
+
 ##### stalknights_4
 You can find the github at [https://github.com/starknight1337](https://github.com/starknight1337), with a rustlings_practice repo. Their twitter says they force pushed to hide their name, but you can find the logs of the repo in github's api. Run `curl https://api.github.com/repos/starknight1337/rustlings_practice/events` to get `Luke Ritterman` as the name.
 
 flag: `jellyCTF{luke_ritterman}`
+
 ##### secret_engineering_roleplay
 If you use [a tool to see hidden channels](https://github.com/Tyrrrz/DiscordChatExporter/releases/tag/2.43.3), you can find the flag in the hidden channel's names.
 
@@ -445,6 +477,10 @@ flag: `jellyCTF{that-is-what-the-e-stands-for-right}`
 I originally thought they were talking about a youtube channel, but after some time, I realized that [the link](https://cdn.discordapp.com/attachments/225994578258427904/1249437169056088176/Punting_Jelly.mov?ex=6678700a&is=66771e8a&hm=e5e9b77b22caf6450c5fc2dd22b273f15802f5531a9bd8a1334553c643c90827&) has `225994578258427904` and `1249437169056088176` as "timestamps", so throwing those into [a snowflake converter](https://snowsta.mp/?l=en-us&z=dz&f=c2ku4tniez-1gw) gives `2016-09-15T15:01:46.233Z`.
 
 flag: `2016-09-15T15:01:46.233Z`
+
+##### super_fan
+I had to use a hint for this: you need to find the twitter id of the user, which can be done through their banner on [wayback machine](https://web.archive.org/web/20240325165547/https://twitter.com/j3llyfan7)
+The id for the user is `1772301250572263429`, and 
 
 # pwn
 <a href="#toc">back to TOC</a>
