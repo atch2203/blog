@@ -373,11 +373,78 @@ The flag is made by matching the letters of the crossword with your movements (l
 flag: `jellyCTF{krodflakarkt_k__aliases_c_led_ls}`
 
 ##### just_win_lol
+The real challenge in this one for me was getting the docker container working. I had to modify code from [the templ docs](https://templ.guide/quick-start/installation#docker) to get it to work.
+```dockerfile
+# Fetch
+FROM golang:latest AS fetch-stage
+COPY go.mod go.sum /app/
+WORKDIR /app
+RUN go mod download
 
+# Generate
+FROM ghcr.io/a-h/templ:latest AS generate-stage
+COPY --chown=65532:65532 . /app
+WORKDIR /app
+RUN ["templ", "generate"]
 
+# Build
+FROM golang:latest AS build-stage
+COPY --from=generate-stage /app /app
+WORKDIR /app
+RUN CGO_ENABLED=0 GOOS=linux go build -o /just-win-lol
+
+FROM alpine:latest AS run
+WORKDIR /app
+RUN adduser -S jelly
+USER jelly
+COPY --chown=jelly assets /app/assets
+COPY --from=build-stage --chown=jelly /just-win-lol /app/
+EXPOSE 8080
+ENTRYPOINT ["/app/just-win-lol"]
+```
+After that I just patched main.go to print to console every time it won.
+```go
+ever:= 1
+	for ever < 2 {
+		log.Println("slept 0.5 second")
+		time.Sleep(time.Second/2)
+		// current time in unix seconds
+		var timeNow = time.Now().UTC().Unix()
+		var rand_time = rand.New(rand.NewSource(timeNow))
+		hand := randHand(*rand_time)
+		if isFiveOfAKind(hand) {
+			log.Println("win=--=-=-=-=-=-=-=-=-=-=-=-=-=")
+		}
+
+	}
+```
+After that it was just a test of reaction speed for 5 minutes.
+![script](https://github.com/atch2203/jellyctf/blob/main/misc/just_win_lol/script.png?raw=true)
+flag: `jellyCTF{its_v3ry_stra1ghtf0rw4rd_s1mply_g3t_g00d_rng}`
 # osint
 <a href="#toc">back to TOC</a>
 <div id="osint" />
+##### stalknights_1
+reverse image searching the post gives us [zaanse-schans](https://www.travelwithsimina.com/one-day-in-zaanse-schans/)
+flag: `jellyCTF{zaanse_schans,netherlands}`
+##### stalknights_3
+They tweeted "last friday" on may 9, so the flight was on may 3rd.
+Plugging in the plane code `JA784A` into [flightera.net](https://www.flightera.net/en/planes/JA784A) shows that there was 1 flight on [may 3rd](https://www.flightera.net/en/flight_details/All+Nippon+Airways/NH160/RJTT/2024-05-03), arriving in JFK airport.
+
+flag: `jellyCTF{new_york,united_states_of_america}`
+##### stalknights_4
+You can find the github at [https://github.com/starknight1337](https://github.com/starknight1337), with a rustlings_practice repo. Their twitter says they force pushed to hide their name, but you can find the logs of the repo in github's api. Run `curl https://api.github.com/repos/starknight1337/rustlings_practice/events` to get `Luke Ritterman` as the name.
+
+flag: `jellyCTF{luke_ritterman}`
+##### secret_engineering_roleplay
+If you use [a tool to see hidden channels](https://github.com/Tyrrrz/DiscordChatExporter/releases/tag/2.43.3), you can find the flag in the hidden channel's names.
+
+flag: `jellyCTF{that-is-what-the-e-stands-for-right}`
+
+##### into_the_atmosphere
+I originally thought they were talking about a youtube channel, but after some time, I realized that [the link](https://cdn.discordapp.com/attachments/225994578258427904/1249437169056088176/Punting_Jelly.mov?ex=6678700a&is=66771e8a&hm=e5e9b77b22caf6450c5fc2dd22b273f15802f5531a9bd8a1334553c643c90827&) has `225994578258427904` and `1249437169056088176` as "timestamps", so throwing those into [a snowflake converter](https://snowsta.mp/?l=en-us&z=dz&f=c2ku4tniez-1gw) gives `2016-09-15T15:01:46.233Z`.
+
+flag: `2016-09-15T15:01:46.233Z`
 
 # pwn
 <a href="#toc">back to TOC</a>
