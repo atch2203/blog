@@ -18,9 +18,9 @@ I used a lot of hints (almost all of them), but I was able to solve 10/10 web, 6
 <div align="center" style="color:#888888"><em>My "awards"</em></div>
 
 
-<div id="toc" />
 
-TOC:
+<div id="toc" />
+# TOC:
 - <a href="#web">web</a><br>
 - <a href="#forensics">forensics</a><br>
 - <a href="#crypto">crypto</a><br>
