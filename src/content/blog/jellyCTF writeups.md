@@ -20,6 +20,7 @@ I used a lot of hints (almost all of them), but I was able to solve 10/10 web, 6
 
 
 <div id="toc" />
+
 # TOC:
 - <a href="#web">web</a><br>
 - <a href="#forensics">forensics</a><br>
@@ -49,7 +50,7 @@ For the first stage, our goal is to impersonate the user "jelly" by modifying th
 flag: `jellyCTF{i_am_b3c0m3_awawa_d3str0y3r_0f_f3m4135}`
 
 ## vlookup_hot_singles_2
-In the admin panel, there is a space to upload a spreadsheet and have the server send it back with columns added. I remembered a trick [stolenfootball](https://stolenfootball.github.io/) where you can unzip microsoft docx/xlsx files, so I made a blank spreadsheet and did that. The resulting files are xml, meaning that it's probably some xxe attack. Using a hint shows that the payload has to be in `docProps/core.xml`, and putting the xxe in there gives us the flag.
+In the admin panel, there is a space to upload a spreadsheet and have the server send it back with columns added. I remembered a trick from [stolenfootball](https://stolenfootball.github.io/) where you can unzip microsoft docx/xlsx files, so I made a blank spreadsheet and did that. The resulting files are xml, meaning that it's probably some xxe attack. Using a hint shows that the payload has to be in `docProps/core.xml`, and putting the xxe in there gives us the flag.
 
 flag: `jellyCTF{th1s_1snt_a_r3d_0n3_r1gh7?}`
 
