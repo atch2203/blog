@@ -35,5 +35,4 @@ pnpm-debug.log*
 .pnp.*
 
 .obsidian/workspace.json
-.obsidian/gitignore
-.obsidian/
+.obsidian/workspace-mobile.json
