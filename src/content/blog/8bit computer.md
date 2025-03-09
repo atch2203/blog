@@ -8,4 +8,4 @@ tags:
   - other
 description: template
 ---
-Last semester, I took an honors colloquium for CS 335: Inside the Box: How Computers Work. The main section of the class which was all about the different levels of technology that goes into a computer, building up from how transistors work to logic gates to processor components and more. In that class, we 
+Last semester, I took an honors colloquium for CS 335: Inside the Box: How Computers Work. The main section of the class was all about the different levels of technology that goes into a computer, from how transistors work to logic gates to processor components and more. For the colloquium project, 
