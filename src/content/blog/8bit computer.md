@@ -8,4 +8,4 @@ tags:
   - other
 description: template
 ---
-Last semester, I took a 
+Last semester, I took an honors colloquium for CS 335: Inside the Box: How Computers Work, and 
