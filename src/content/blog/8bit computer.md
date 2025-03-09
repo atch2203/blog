@@ -8,4 +8,4 @@ tags:
   - other
 description: template
 ---
-Last semester, I took an honors colloquium for CS 335: Inside the Box: How Computers Work, and 
+Last semester, I took an honors colloquium for CS 335: Inside the Box: How Computers Work, which was all about the different levels of technology that goes into a computer, fro. In that class, we 
