@@ -56,8 +56,7 @@ In this computer, we had 2 registers and 1 ALU.
 
 ## The RAM
 Chip Weems had some RAM lying around (link), so we just used 
-![[20250218_162927.jpg]]
-
+![[rotated-20250218_162927.jpg]]
 
 ## The clock
 ![[20250218_162609.jpg]]
