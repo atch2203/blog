@@ -15,5 +15,4 @@ Last semester, I took an honors colloquium for CS 335: Inside the Box: How Compu
 For this tutorial, you will need one (1) 8 bit computer. (Unfortunately, I only remembered to take photos as I was disassembling it)
 
 
-
 <div align="center" style="color:#888888"><em>fdsafdsa</em></div>
