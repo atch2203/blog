@@ -54,7 +54,7 @@ In this computer, we had 2 registers and 1 ALU.
 
 ![[20250218_162524.jpg]]
 
-Removing the connecting 
+Removing the connecting wires between the two simplifies the 
 
 ## The RAM
 Chip Weems had some RAM lying around (link), so we just used 
