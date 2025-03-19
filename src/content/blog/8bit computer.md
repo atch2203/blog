@@ -24,5 +24,9 @@ Our whole computer consists of 8-9 main modules:
 - instruction decoder
 - the bus
 
+
+TODO illustrate this with labels
 ![[rotated-20250218_161732.jpg]]
 <div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
+
+Spanning between these modules are mostly control signal wires, data wires, and power wires ()
