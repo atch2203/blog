@@ -37,4 +37,4 @@ Spanning between these modules are control signal wires, data wires, and power w
 
 
 
-## Addendum: designing the computer
+## Addendum: designing the computer and debugging
