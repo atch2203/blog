@@ -54,7 +54,7 @@ In this computer, we had 2 registers and 1 ALU.
 ![[20250218_162524.jpg]]
 
 ## The RAM
-Ch
+Chip Weems had some RAM lying around (link), so we just used 
 
 
 ### The aftermath
