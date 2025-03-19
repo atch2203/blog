@@ -48,7 +48,7 @@ We can also remove the wires connecting everything to the bus. In this basic com
 
 Now, all we have are the individual module groups.
 
-## 
+## The RAM 
 
 
 ### The aftermath
@@ -62,3 +62,4 @@ Debugging/testing
 
 ![[20250218_162937.jpg]]
 
+![[20250218_163008.jpg]]
