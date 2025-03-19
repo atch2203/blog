@@ -29,7 +29,7 @@ TODO illustrate this with labels for modules
 ![[rotated-20250218_161732.jpg]]
 <div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
 
-Spanning between these modules are control signal wires, data wires, and power wires.  Everything else is (mostly) self contained in each of the modules.I
+Spanning between these modules are control signal wires, data wires, and power wires. Everything else is (mostly) self contained in each of the modules.
 
 ![[rotated-20250218_161732.jpg]]
 <div align="center" style="color:#888888"><em>TODO label spanning connections</em></div>
@@ -45,3 +45,6 @@ If you ever want to debug your computer after you have disconnected the instruct
 Now it's a lot easier to 
 
 ## Addendum: designing the computer, control signals, and debugging
+
+Debugging/testing
+
