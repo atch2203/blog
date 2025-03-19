@@ -63,12 +63,14 @@ Chip Weems had some RAM lying around (link), so we just used
 
 
 ## ROM + PC
-
+![[rotated-20250218_163003 1.jpg]]
 
 ## Instruction decoder
-
+![[rotated-20250218_163005.jpg]]
 
 ## LCD display
+![[rotated-20250218_163003.jpg]]
+
 
 ### The aftermath
 Once you are done, you should have the following parts:
