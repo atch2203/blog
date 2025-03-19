@@ -10,8 +10,7 @@ description: template
 ---
 Last semester, I took an honors colloquium for CS 335: Inside the Box: How Computers Work. The main section of the class was all about the different levels of technology that goes into a computer, from how transistors work to logic gates to processor components and more. For the colloquium project, I teamed up with [Sagnik Pal](http://www-edlab.cs.umass.edu/~sagnikpal/) to build an 8 bit computer out of some (not so) basic chips.
 
-
-### Separating the modules
+# Separating the modules
 For this tutorial, you will need one (1) 8 bit computer. (Unfortunately, I only remembered to take photos as I was disassembling it). If you want to build an 8 bit computer, you can follow these steps in reverse order.
 
 Our whole computer consists of 8-9 main modules:
@@ -34,9 +33,8 @@ Spanning between these modules are control signal wires, data wires, and power w
 ![[rotated-20250218_161732.jpg]]
 <div align="center" style="color:#888888"><em>TODO label spanning connections</em></div>
 
-##### Removing control signal wires and the bus
+## Removing control signal wires and the bus
 The first step in disassembling the 8 bit computer is to remove all the control signal wires. These connect every module to the instruction decoder/control unit, so you want to get rid of them first so they don't get in the way of the rest of the disassembly.
-
 
 Now it's a lot easier to see each of the modules and their connections.
 ![[rotated-20250218_162312.jpg]]
