@@ -15,11 +15,13 @@ Last semester, I took an honors colloquium for CS 335: Inside the Box: How Compu
 For this tutorial, you will need one (1) 8 bit computer. (Unfortunately, I only remembered to take photos as I was disassembling it)
 
 ![[rotated-20250218_161732.jpg]]
-<div align="center" style="color:#888888"><em>fdsafdsa</em></div>
-Our whole computer consists of 6-7 main modules:
+<div align="center" style="color:#888888"><em>Our co</em></div>
+Our whole computer consists of 8-9 main modules:
 - clock
 - RAM
 - registers
 - ALU
 - LCD display
-- 
+- program ROM + program counter
+- instruction decoder
+- the bus
