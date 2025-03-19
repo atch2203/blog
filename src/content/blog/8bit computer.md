@@ -37,7 +37,7 @@ Spanning between these modules are control signal wires, data wires, and power w
 ##### Removing control signal wires
 The first step in disassembling the 8 bit computer is to remove all the control signal wires. These connect every module to the instruction decoder/control unit, so you want to get rid of them first so they don't get in the way of the rest of the disassembly.
 
-If you ever want to debug your computer after you have disconnected the instruction decoder, you can manually 
+If you ever want to debug your computer after you have disconnected the instruction decoder, you can connect the signals to positive/negative and single step the clock manually. This helps a lot when trying to debu
 
 ![[rotated-20250218_162312.jpg]]
 <div align="center" style="color:#888888"><em>TODO label spanning connections</em></div>
