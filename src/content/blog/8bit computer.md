@@ -53,6 +53,10 @@ In this computer, we had 2 registers and 1 ALU.
 
 ![[20250218_162524.jpg]]
 
+## The RAM
+Ch
+
+
 ### The aftermath
 Once you are done, you should have the following parts:
 
