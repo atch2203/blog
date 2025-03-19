@@ -48,6 +48,7 @@ We can also remove the wires connecting everything to the bus. In this basic com
 
 Now, all we have are the individual module groups.
 
+
 ## The registers and ALU
 In this computer, we had 2 registers and 1 ALU.
 
@@ -57,7 +58,10 @@ In this computer, we had 2 registers and 1 ALU.
 Chip Weems had some RAM lying around (link), so we just used 
 ![[20250218_162927.jpg]]
 
-## The 
+
+
+## The clock
+
 
 ### The aftermath
 Once you are done, you should have the following parts:
