@@ -54,6 +54,8 @@ In this computer, we had 2 registers and 1 ALU.
 
 ![[20250218_162524.jpg]]
 
+Removing the connecting 
+
 ## The RAM
 Chip Weems had some RAM lying around (link), so we just used 
 ![[rotated-20250218_162927.jpg]]
