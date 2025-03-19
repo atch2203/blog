@@ -25,8 +25,11 @@ Our whole computer consists of 8-9 main modules:
 - the bus
 
 
-TODO illustrate this with labels
+TODO illustrate this with labels for modules
 ![[rotated-20250218_161732.jpg]]
 <div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
 
-Spanning between these modules are mostly control signal wires, data wires, and power wires ()
+Spanning between these modules are control signal wires, data wires, and power wires. Everything else is self contained
+TODO
+![[rotated-20250218_161732.jpg]]
+<div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
