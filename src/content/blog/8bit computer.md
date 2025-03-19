@@ -46,7 +46,12 @@ Now it's a lot easier to see each of the modules and their connections.
 
 At this point, we can also remove the wires connecting everything to the bus. In this basic computer, there is a single bus that all data is passed through, including ALU outputs, RAM addresses, program constants/immediates, and more.
 ![[20250218_162750.jpg]]
-<div align="center" style="color:#888888"><em>The computer without control signals</em></div>
+<div align="center" style="color:#888888"><em>Having organized bus wires helps a lot with disassembly</em></div>
+
+
+
+### The aftermath
+Once you are done, you should have the following parts:
 
 
 ## Addendum: designing the computer, control signals, and debugging
