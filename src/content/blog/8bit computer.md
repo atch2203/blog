@@ -63,6 +63,12 @@ Chip Weems had some RAM lying around (link), so we just used
 ![[20250218_162609.jpg]]
 
 
+## ROM + PC
+
+## Instruction decoder
+
+
+
 ### The aftermath
 Once you are done, you should have the following parts:
 
