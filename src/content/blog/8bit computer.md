@@ -46,6 +46,9 @@ We can also remove the wires connecting everything to the bus. In this basic com
 ![[20250218_162750.jpg]]
 <div align="center" style="color:#888888"><em>Having organized bus wires helps a lot with disassembly</em></div>
 
+Now, all we have are the individual module groups.
+
+## 
 
 
 ### The aftermath
@@ -58,3 +61,4 @@ Debugging/testing
 ![[20241117_145416.jpg]]
 
 ![[20250218_162937.jpg]]
+
