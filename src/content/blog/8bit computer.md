@@ -44,7 +44,8 @@ If you ever want to debug your computer after you have disconnected the instruct
 
 Now it's a lot easier to see each of the modules and their connections.
 
-At this point, we can also remove the wires connecting everything to the bus.
+At this point, we can also remove the wires connecting everything to the bus. In this basic computer, there is a single bus that e
+![[20250218_162750.jpg]]
 
 ## Addendum: designing the computer, control signals, and debugging
 
