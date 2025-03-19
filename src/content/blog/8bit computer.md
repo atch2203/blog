@@ -29,7 +29,7 @@ TODO illustrate this with labels for modules
 ![[rotated-20250218_161732.jpg]]
 <div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
 
-Spanning between these modules are control signal wires, data wires, and power wires. (mostly) Everything else is self contained in each of the modules.
+Spanning between these modules are control signal wires, data wires, and power wires.  Everything else is (mostly) self contained in each of the modules.I
 
 ![[rotated-20250218_161732.jpg]]
 <div align="center" style="color:#888888"><em>TODO label spanning connections</em></div>
@@ -40,7 +40,7 @@ The first step in disassembling the 8 bit computer is to remove all the control 
 If you ever want to debug your computer after you have disconnected the instruction decoder, you can connect the signals to positive/negative and single step the clock manually. This helps a lot when trying to debug whether each instruction has the right control signals.
 
 ![[rotated-20250218_162312.jpg]]
-<div align="center" style="color:#888888"><em>TODO label spanning connections</em></div>
+<div align="center" style="color:#888888"><em>The computer without control signals</em></div>
 
 Now it's a lot easier to 
 
