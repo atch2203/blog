@@ -34,7 +34,7 @@ Spanning between these modules are control signal wires, data wires, and power w
 ![[rotated-20250218_161732.jpg]]
 <div align="center" style="color:#888888"><em>TODO label spanning connections</em></div>
 
-
-
+##### Removing control signal wires
+The first step in disassembling th
 
 ## Addendum: designing the computer and debugging
