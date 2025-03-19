@@ -65,9 +65,11 @@ Chip Weems had some RAM lying around (link), so we just used
 
 ## ROM + PC
 
+
 ## Instruction decoder
 
 
+## LCD display
 
 ### The aftermath
 Once you are done, you should have the following parts:
