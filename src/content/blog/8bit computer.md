@@ -55,7 +55,9 @@ In this computer, we had 2 registers and 1 ALU.
 
 ## The RAM
 Chip Weems had some RAM lying around (link), so we just used 
+![[20250218_162927.jpg]]
 
+## The 
 
 ### The aftermath
 Once you are done, you should have the following parts:
