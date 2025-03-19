@@ -48,8 +48,10 @@ We can also remove the wires connecting everything to the bus. In this basic com
 
 Now, all we have are the individual module groups.
 
-## The RAM 
+## The registers and ALU
+In this computer, we had 2 registers and 1 ALU.
 
+![[20250218_162524.jpg]]
 
 ### The aftermath
 Once you are done, you should have the following parts:
