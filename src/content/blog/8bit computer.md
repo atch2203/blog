@@ -29,7 +29,6 @@ TODO illustrate this with labels for modules
 Spanning between these modules are control signal wires, data wires, and power wires. Everything else is (mostly) self contained in each of the modules.
 
 ![[rotated-20250218_161732.jpg]]
-<div align="center" style="color:#888888"><em>TODO label spanning connections</em></div>
 
 ## Removing control signal wires and the bus
 The first step in disassembling the 8 bit computer is to remove all the control signal wires. These connect every module to the instruction decoder/control unit and the clock, so you want to get rid of them first so they don't get in the way of the rest of the disassembly.
@@ -103,7 +102,7 @@ The i/o is as follows:
 ![[rotated-20250218_163005.jpg]]
 
 ## LCD display
-We also found this 16x2 LCD display (A-1748) in Chip Weems' miscellaneous project parts boxes, and since it used an 8 bit data input, we figured that we could fit it into our computer. The i/o is as follows:
+We also found this 16x2 LCD display (A-1748/1602d1, I couldn't find any links) in Chip Weems' miscellaneous project parts boxes, and since it used an 8 bit data input, we figured that we could fit it into our computer. The i/o is as follows:
 - control signals: write LCD data, write LCD control data
 - input: 8 bit data
 ![[rotated-20250218_163003.jpg]]
