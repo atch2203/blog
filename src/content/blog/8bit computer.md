@@ -27,8 +27,8 @@ TODO illustrate this with labels for modules
 <div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
 
 Spanning between these modules are control signal wires, data wires, and power wires. Everything else is (mostly) self contained in each of the modules.
-
-![[rotated-20250218_161732.jpg]]
+> yellow: bus ou
+![[20250218_161732.jpg]]
 
 ## Removing control signal wires and the bus
 The first step in disassembling the 8 bit computer is to remove all the control signal wires. These connect every module to the instruction decoder/control unit and the clock, so you want to get rid of them first so they don't get in the way of the rest of the disassembly.
