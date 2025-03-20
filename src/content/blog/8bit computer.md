@@ -110,8 +110,7 @@ At this point, you can take away the rest of the wires, and you'll be left with 
 ![[rotated-20250218_165020.jpg]]
 
 Once you are done, you should have the following parts:
-
-
+![[rotated-20250218_170258.jpg]]
 
 ## Addendum: designing the computer, instructions/control signals, and debugging
 
