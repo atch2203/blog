@@ -70,10 +70,12 @@ The ALUs we used were [2 4 bit fdsafds](TODO). Unfortunately, they did not have 
 
 ## The RAM
 Chip Weems had some NVRAM lying around (link), so we just used one of them. They had a 13 bit address space, so we just wired 5 of the bits to ground and used the other 8 for our addresses. To hold the address, we just used another 377 register chip. The data in/out was the same on the RAM chip, but it didn't matter that much since we made our control signals such that we can't read and write at the same time. The i/o is as follows:
-- control signals: clock, 
+- control signals: clock, write RAM address, write RAM, read RAM, enable RAM
+- input/output: 8 bit data line
 ![[rotated-20250218_162927.jpg]]
 
 ## The clock
+The clock was simultaneously the simplest yet hardest module
 ![[20250218_162609.jpg]]
 
 
