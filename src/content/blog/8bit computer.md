@@ -56,8 +56,10 @@ In this computer, we had 2 registers and 1 ALU.
 The two yellow wire groups in the image above connect the outputs of the two register chips to the inputs of the ALU.
 Removing the connecting wires between the two boards shows the inputs/outputs for each board more clearly.
 
-####
+Our register module contains 2 377 chips, and have the following i/o:
+- input: clock, 
 ![[rotated-20250218_163127.jpg]]
+
 ![[rotated-20250218_163036.jpg]]
 
 
