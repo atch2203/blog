@@ -3,7 +3,7 @@ author: atch2203
 pubDatetime: 2025-03-19
 title: How to take apart an 8 bit computer
 featured: false
-draft: true
+draft: false
 tags: 
 description: A CS 335H project
 ---
