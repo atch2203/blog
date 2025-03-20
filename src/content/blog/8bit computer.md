@@ -5,7 +5,7 @@ title: How to take apart an 8 bit computer
 featured: false
 draft: true
 tags: 
-description:
+description: A CS 335H project
 ---
 Last semester, I took an honors colloquium for CS 335: Inside the Box: How Computers Work. The main section of the class was all about the different levels of technology that goes into a computer, from how transistors work to logic gates to processor components and more. For the colloquium project, I teamed up with [Sagnik Pal](http://www-edlab.cs.umass.edu/~sagnikpal/) to build an 8 bit computer out of some (not so) basic chips.
 
@@ -111,13 +111,11 @@ We also found this 16x2 LCD display in Chip Weems' miscellaneous project parts b
 ![[rotated-20250218_163003.jpg]]
 <div align="center" style="color:#888888"><em>The bottom half of the board contains just the LCD display</em></div>
 
-### The rest of the wires
+## The rest of the wires
 At this point, you can take away the rest of the wires, and you'll be left with a pretty clean looking (nonfunctional) computer.
 
 ![[rotated-20250218_165020.jpg]]
 ![[rotated-20250218_170258.jpg]]
-
-
 
 # Designing the computer and debugging
 There is a lot more to talk about, but I'll just talk about the process of designing, testing, and programming the computer.
