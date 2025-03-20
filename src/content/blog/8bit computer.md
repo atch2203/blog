@@ -82,7 +82,7 @@ The clock was simultaneously the simplest yet hardest module to get correct. Man
 
 
 ## ROM + PC
-To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediate fields/data. They had 11 bit address spaces, but we only used 8 bits, restricting our program sizes to 256 bytes. 
+To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediate fields/data. They had 11 bit address spaces, but we only used 8 bits, restricting our program sizes to 256 bytes. For the program counter, we used 2 432432 chips, allowing for easy incrementing. As you can see, the program counter output is tied to the EEPROM 
 ![[rotated-20250218_163003 1.jpg]]
 
 ## Instruction decoder
@@ -98,7 +98,7 @@ To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediate
 Once you are done, you should have the following parts:
 
 
-## Addendum: designing the computer, instrucitcontrol signals, and debugging
+## Addendum: designing the computer, instructions/control signals, and debugging
 
 Debugging/testing
 ![[20241117_145416.jpg]]
