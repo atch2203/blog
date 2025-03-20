@@ -133,4 +133,4 @@ When we got everything on the bus, the writes and reads naturally moved onto the
 ![[20250218_163008.jpg]]
 
 # Software and programming
-Programming the whole computer was about the same amount of work, if not more, compared to designing and building it. Since we used EEPROMs,
+Programming the whole computer was about the same amount of work, if not more, compared to designing and building it. Since we used EEPROMs, all of the instruction decoding logic was pushed into software/our massive control signal spreadsheet.
