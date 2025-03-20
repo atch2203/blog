@@ -119,7 +119,7 @@ At this point, you can take away the rest of the wires, and you'll be left with 
 ![[rotated-20250218_165020.jpg]]
 ![[rotated-20250218_170258.jpg]]
 
-# Addendum: designing the computer, debugging, and software/programming 
+# Designing the computer and debugging
 There is a lot more to talk about, but I'll just talk about the process of designing, testing, and programming the computer.
 
 Before even assembling anything, we spent quite a while building it up in logisim. Only once our design was mostly finalized did we order the parts.
@@ -132,4 +132,5 @@ When we got everything on the bus, the writes and reads naturally moved onto the
 ![[20250218_162937.jpg]]
 ![[20250218_163008.jpg]]
 
-Programming the whole computer was
+# Software and programming
+Programming the whole computer was about the same amount of work, if not more, compared to designing and building it. Since we used EEPROMs,
