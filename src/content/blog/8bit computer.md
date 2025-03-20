@@ -85,6 +85,7 @@ The clock was simultaneously the simplest yet hardest module to get correct. Man
 
 ![](@assets/images/cs335/20250319213729.png)
 <div align="center" style="color:#888888"><em>Least confusing datasheet</em></div>
+
 ![](@assets/images/cs335/20250218_162609.jpg)
 <div align="center" style="color:#888888"><em>Incredibly unreadable wiring</em></div>
 
