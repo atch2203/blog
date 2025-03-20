@@ -58,7 +58,7 @@ Our register module contains 2 [74377](https://www.ti.com/product/SN74LS377) chi
 - output: 8 bit register A, 8 bit register B
 ![[rotated-20250218_163127.jpg]]
 
-For the ALU we chained 2 [4 bit sn54s181 ALUs](https://www.ti.com/product/SN54S181) together. Unfortunately, they did not have much of the functionality we wanted, so we had to add a 4324 buffer to enable/disable output and some logic gates to get comparisons and carry flags. Additionally, the comparison/subtract functionality required a different carry in, so we needed to add a control signal for that. Notably, there is no clock input, since the ALU does not need to store any data. 
+For the ALU we chained 2 [4 bit sn54s181 ALUs](https://www.ti.com/product/SN54S181) together. Unfortunately, they did not have much of the functionality we wanted, so we had to add a [74541 buffer](https://www.ti.com/product/SN74HCT541) to enable/disable output and some logic gates to get comparisons and carry flags. Additionally, the comparison/subtract functionality required a different carry in, so we needed to add a control signal for that. Notably, there is no clock input, since the ALU does not need to store any data. 
 
 The i/o is as follows:
 - control signals: 5 bit ALU function, 1 bit carry in, output enable/disable
@@ -67,7 +67,7 @@ The i/o is as follows:
 ![[rotated-20250218_163036.jpg]]
 
 ## The RAM
-Chip Weems had some NVRAM lying around (link), so we just used one of them. They had a 13 bit address space, so we just wired 5 of the bits to ground and used the other 8 for our addresses. To hold the address, we just used another 377 register chip. The data in/out was the same on the RAM chip, but it didn't matter that much since we made our control signals such that we can't read and write at the same time. 
+Chip Weems had some [NVRAM]() lying around, so we just used one of them. They had a 13 bit address space, so we just wired 5 of the bits to ground and used the other 8 for our addresses. To hold the address, we just used another 377 register chip. The data in/out was the same on the RAM chip, but it didn't matter that much since we made our control signals such that we can't read and write at the same time. 
 
 The i/o is as follows:
 - control signals: clock, write RAM address, write RAM, read RAM, enable RAM
