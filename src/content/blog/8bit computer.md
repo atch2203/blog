@@ -27,7 +27,11 @@ TODO illustrate this with labels for modules
 <div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
 
 Spanning between these modules are control signal wires, data wires, and power wires. Everything else is (mostly) self contained in each of the modules.
-> yellow: bus ou
+> yellow: bus output (module input)
+> cyan: bus input (module output)
+> green: i/o (between modules or on bus)
+> red: intra-module data lines
+> magenta: status/display wires
 ![[20250218_161732.jpg]]
 
 ## Removing control signal wires and the bus
