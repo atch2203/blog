@@ -119,12 +119,11 @@ At this point, you can take away the rest of the wires, and you'll be left with 
 ![[rotated-20250218_165020.jpg]]
 ![[rotated-20250218_170258.jpg]]
 
-# Addendum: designing the computer, instructions/control signals, and debugging
+# Addendum: designing the computer, debugging, and software/programming 
 There is a lot more to talk about, but I'll just talk about the process of designing, testing, and programming the computer.
 
 Before even assembling anything, we spent quite a while building it up in logisim. Only once our design was mostly finalized did we order the parts.
-
-
+![[Pasted image 20250319212125.png]]
 
 For debugging, it really helped to have a testing rig, both with 8 bit write/read, and 1 bit probes (which really helped later).
 ![[20241117_145416.jpg]]
@@ -132,3 +131,5 @@ For debugging, it really helped to have a testing rig, both with 8 bit write/rea
 When we got everything on the bus, the writes and reads naturally moved onto the bus as well.
 ![[20250218_162937.jpg]]
 ![[20250218_163008.jpg]]
+
+Programming the whole computer was
