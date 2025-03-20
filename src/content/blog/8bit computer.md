@@ -84,7 +84,9 @@ The clock was simultaneously the simplest yet hardest module to get correct. Man
 
 
 ## ROM + PC
-To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediate fields/data. They had 13 bit address spaces, but we only used 8 bits, restricting our program sizes to 256 bytes. For the program counter (PC), we used 2 432432 chips, allowing for easy incrementing. As you can see, the program counter output is tied to the EEPROM address. Since the EEPROMs had an enable pin, we could wire the data ROM output to the bus and the instruction ROM output to the instruction decoder. The i/o is as follows:
+To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediate fields/data. They had 13 bit address spaces, but we only used 8 bits, restricting our program sizes to 256 bytes. For the program counter (PC), we used 2 432432 chips, allowing for easy incrementing. As you can see, the program counter output is tied to the EEPROM address. Since the EEPROMs had an enable pin, we could wire the data ROM output to the bus and the instruction ROM output to the instruction decoder. 
+
+The i/o is as follows:
 - control signals: clock, PC increment, PC write (jmp), PC reset button, data out enable
 - input: 8 bit jmp address
 - output: 8 bit instruction (to instruction decoder), 8 bit immediate/data
@@ -92,7 +94,9 @@ To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediate
 <div align="center" style="color:#888888"><em>The top half of the above board contains (from left to right) the PC, the instruction ROM, and the data ROM</em></div>
 
 ## Instruction decoder
-The instruction decoder, like the program data, used more EEPROMs. Here, we used them to map each instruction (8 bit) to control signals (~20 bits). We also used a 3 bit subclock so each instruction could have multiple parts (fetch, add, store, etc), as well as two flags (carry/ge and zero) for conditionals. These totaled to 13 bits of address space, which the EEPROMs fit perfectly. The subclock used a 432432 chip, just like the program counter, and was tied to reset when the PC increment signal was on. The flags used a 377 chip (even though we only used 2/8 bits) and was tied to the ALU. The i/o is as follows:
+The instruction decoder, like the program data, used more EEPROMs. Here, we used them to map each instruction (8 bit) to control signals (~20 bits). We also used a 3 bit subclock so each instruction could have multiple parts (fetch, add, store, etc), as well as two flags (carry/ge and zero) for conditionals. These totaled to 13 bits of address space, which the EEPROMs fit perfectly. The subclock used a 432432 chip, just like the program counter, and was tied to reset when the PC increment signal was on. The flags used a 377 chip (even though we only used 2/8 bits) and was tied to the ALU. 
+
+The i/o is as follows:
 - control signals: clock, subclock reset, instruction write, flag write
 - input: 8 bit instruction, 2 bit flags
 - output: all control signals for other modules
@@ -107,9 +111,8 @@ We also found this 16x2 LCD display in Chip Weems' miscellaneous project parts b
 
 ### The rest of the wires
 At this point, you can take away the rest of the wires, and you'll be left with a pretty clean looking (nonfunctional) computer.
-![[rotated-20250218_165020.jpg]]
 
-Once you are done, you should have the following parts:
+![[rotated-20250218_165020.jpg]]
 ![[rotated-20250218_170258.jpg]]
 
 ## Addendum: designing the computer, instructions/control signals, and debugging
