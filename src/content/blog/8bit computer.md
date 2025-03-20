@@ -46,7 +46,6 @@ We can also remove the wires connecting everything to the bus. In this basic com
 
 Now, we are left with the individual module groups.
 
-
 ## The registers and ALU
 In this computer, we had 2 registers and 1 ALU.
 ![[20250218_162524.jpg]]
