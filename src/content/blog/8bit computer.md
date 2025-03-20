@@ -74,7 +74,10 @@ Chip Weems had some NVRAM lying around (link), so we just used one of them. They
 ![[rotated-20250218_162927.jpg]]
 
 ## The clock
-The clock was simultaneously the simplest yet hardest module to get correct. Many tutorials online used different schematics, and
+The clock was simultaneously the simplest yet hardest module to get correct. Many tutorials online used different confusing schematics, and the datasheet's pinout descriptions were not helpful. Additionally, we had to tinker around with the potentiometer, resistor, and capacitor values
+
+> fdjsakfldsajlk
+- datasheet
 ![[20250218_162609.jpg]]
 
 
