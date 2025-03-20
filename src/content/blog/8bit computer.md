@@ -22,7 +22,7 @@ Our whole computer consists of 8-9 main modules:
 - instruction decoder
 - the bus
 
-%s/!\[\[/!\[]
+%s/!\[\[/![](@assets\/images\/cs335\//g
 ![](@assets/images/migrating-to-astro/image.png)
 ![[20250319_214836.jpg]]
 <div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
