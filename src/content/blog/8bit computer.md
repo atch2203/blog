@@ -83,7 +83,7 @@ The i/o is as follows:
 ## The clock
 The clock was simultaneously the simplest yet hardest module to get correct. Many tutorials online for 555 timers used different confusing schematics, and the datasheet's pinout descriptions were not helpful. Additionally, we had to tinker around with the potentiometer, resistor, and capacitor values until we got a steady blinking on the LED. There is both a clock and an inverted clock, but we only ended up using the clock.
 
-![](@assets/images/cs335/Pasted image 20250319213729.png)
+![](@assets/images/cs335/20250319213729.png)
 <div align="center" style="color:#888888"><em>Least confusing datasheet</em></div>
 ![](@assets/images/cs335/20250218_162609.jpg)
 <div align="center" style="color:#888888"><em>Incredibly unreadable wiring</em></div>
@@ -95,7 +95,7 @@ The i/o is as follows:
 - control signals: clock, PC increment, PC write (jmp), PC reset button, data out enable
 - input: 8 bit jmp address
 - output: 8 bit instruction (to instruction decoder), 8 bit immediate/data
-![](@assets/images/cs335/rotated-20250218_163003 1.jpg)
+![](@assets/images/cs335/rotated-20250218_163003_1.jpg)
 <div align="center" style="color:#888888"><em>The top half of the above board contains (from left to right) the PC, the instruction ROM, and the data ROM</em></div>
 
 ## Instruction decoder
@@ -124,7 +124,7 @@ At this point, you can take away the rest of the wires, and you'll be left with 
 There is a lot more to talk about, but I'll just talk about the process of designing, testing, and programming the computer.
 
 Before even assembling anything, we spent quite a while building it up in logisim. Only once our design was mostly finalized did we order the parts.
-![](@assets/images/cs335/Pasted image 20250319212125.png)
+![](@assets/images/cs335/20250319212125.png)
 
 For debugging, it really helped to have a testing rig, both with 8 bit write/read, and 1 bit probes (which really helped later).
 ![](@assets/images/cs335/20241117_145416.jpg)
@@ -135,6 +135,6 @@ When we got everything on the bus, the writes and reads naturally moved onto the
 
 # Software and programming
 Programming the whole computer was about the same amount of work, if not more, compared to designing and building it. Since we used EEPROMs, all of the instruction decoding logic was pushed into software/our massive control signal spreadsheet.
-![](@assets/images/cs335/Pasted image 20250319212415.png)
+![](@assets/images/cs335/20250319212415.png)
 
 Additionally, Sagnik was in charge of flashing the EEPROMs with the control signal mappings and program data, as well as writing a compiler that could convert assembly into our instruction set.
