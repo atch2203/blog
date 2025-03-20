@@ -46,14 +46,14 @@ We can also remove the wires connecting everything to the bus. In this basic com
 ![[20250218_162750.jpg]]
 <div align="center" style="color:#888888"><em>Having organized bus wires helps a lot with disassembly</em></div>
 
-Now, we are left with are the individual module groups.
+Now, we are left with the individual module groups.
 
 
 ## The registers and ALU
 In this computer, we had 2 registers and 1 ALU.
 
 ![[20250218_162524.jpg]]
-
+The two yellow wire groups in the image above connect the outputs of the two register chips to the ALU.
 Removing the connecting wires between the two simplifies the 
 
 ## The RAM
