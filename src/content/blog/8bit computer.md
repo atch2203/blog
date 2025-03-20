@@ -82,7 +82,7 @@ The clock was simultaneously the simplest yet hardest module to get correct. Man
 
 
 ## ROM + PC
-
+To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediates
 ![[rotated-20250218_163003 1.jpg]]
 
 ## Instruction decoder
@@ -91,6 +91,8 @@ The clock was simultaneously the simplest yet hardest module to get correct. Man
 ## LCD display
 ![[rotated-20250218_163003.jpg]]
 
+
+### The rest of the wires
 
 ### The aftermath
 Once you are done, you should have the following parts:
