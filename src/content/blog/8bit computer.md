@@ -52,7 +52,7 @@ In this computer, we had 2 registers and 1 ALU.
 The two yellow wire groups in the image above connect the outputs of the two register chips to the inputs of the ALU.
 Removing the connecting wires between the two boards shows the inputs/outputs for each board more clearly.
 
-Our register module contains 2 [74377]() chips, and have the following i/o:
+Our register module contains 2 [74377](https://www.ti.com/product/SN74LS377) chips, and have the following i/o:
 - control signals: clock, write register A, write register B
 - input: 8 bit data in
 - output: 8 bit register A, 8 bit register B
