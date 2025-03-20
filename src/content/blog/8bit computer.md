@@ -57,7 +57,8 @@ The two yellow wire groups in the image above connect the outputs of the two reg
 Removing the connecting wires between the two boards shows the inputs/outputs for each board more clearly.
 
 Our register module contains 2 377 chips, and have the following i/o:
-- input: clock, 
+- input: clock, write register A, write register B, 8 bit data in
+- output: register A, register B
 ![[rotated-20250218_163127.jpg]]
 
 ![[rotated-20250218_163036.jpg]]
