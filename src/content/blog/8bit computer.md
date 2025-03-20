@@ -72,6 +72,7 @@ Chip Weems had some NVRAM lying around (link), so we just used one of them. They
 - control signals: clock, write RAM address, write RAM, read RAM, enable RAM
 - input/output: 8 bit data line
 ![[rotated-20250218_162927.jpg]]
+<div align="center" style="color:#888888"><em>Having organized bus wires helps a lot with disassembly</em></div>
 
 ## The clock
 The clock was simultaneously the simplest yet hardest module to get correct. Many tutorials online used different confusing schematics, and the datasheet's pinout descriptions were not helpful. Additionally, we had to tinker around with the potentiometer, resistor, and capacitor values until we got a steady blinking on the LED. There is both a clock and an inverted clock, but we only ended up using the clock.
@@ -79,14 +80,16 @@ The clock was simultaneously the simplest yet hardest module to get correct. Man
 > fdjsakfldsajlk
 - datasheet
 ![[20250218_162609.jpg]]
+<div align="center" style="color:#888888"><em>Having organized bus wires helps a lot with disassembly</em></div>
 
 
 ## ROM + PC
 To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediate fields/data. They had 11 bit address spaces, but we only used 8 bits, restricting our program sizes to 256 bytes. For the program counter (PC), we used 2 432432 chips, allowing for easy incrementing. As you can see, the program counter output is tied to the EEPROM address. Since the EEPROMs had an enable pin, we could wire the data ROM output to the bus and the instruction ROM output to the instruction decoder. The i/o is as follows:
 - control signals: clock, PC increment, PC write (jmp), PC reset button, data out enable
 - input: 8 bit jmp address
-- output: 8 bit instruction (to instruction decoder), 
+- output: 8 bit instruction (to instruction decoder), 8 bit immediate/data
 ![[rotated-20250218_163003 1.jpg]]
+<div align="center" style="color:#888888"><em>The top half of</em></div>
 
 ## Instruction decoder
 ![[rotated-20250218_163005.jpg]]
