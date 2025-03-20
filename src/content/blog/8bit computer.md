@@ -99,9 +99,10 @@ The instruction decoder, like the program data, used more EEPROMs. Here, we used
 ![[rotated-20250218_163005.jpg]]
 
 ## LCD display
-We also found this 16x2 LCD display in Chip Weems' miscellaneous project parts boxes, and since it used an 8 bit data input, we figured that we could fit it into our computer. 
+We also found this 16x2 LCD display in Chip Weems' miscellaneous project parts boxes, and since it used an 8 bit data input, we figured that we could fit it into our computer. The i/o is as follows:
+- control signals: 
 ![[rotated-20250218_163003.jpg]]
-
+<div align="center" style="color:#888888"><em>The bottom half contains just the LCD display</em></div>
 
 ### The rest of the wires
 
