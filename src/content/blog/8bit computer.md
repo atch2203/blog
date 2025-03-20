@@ -22,9 +22,7 @@ Our whole computer consists of 8-9 main modules:
 - instruction decoder
 - the bus
 
-%s/!\[\[/![](@assets\/images\/cs335\//g
-![](@assets/images/migrating-to-astro/image.png)
-![[20250319_214836.jpg]]
+![](@assets/images/cs335/20250319_214836.jpg)
 <div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
 
 Spanning between these modules are control signal wires, data wires, and power wires. Everything else is (mostly) self contained in each of the modules.
@@ -35,26 +33,26 @@ Spanning between these modules are control signal wires, data wires, and power w
 > magenta: status/display wires
 > control signal wires are omitted for clarity
 
-![[20250218_161732.jpg]]
+![](@assets/images/cs335/20250218_161732.jpg)
 
 ## Removing control signal wires and the bus
 The first step in disassembling the 8 bit computer is to remove all the control signal wires. These connect every module to the instruction decoder/control unit and the clock, so you want to get rid of them first so they don't get in the way of the rest of the disassembly.
 
 Now it's a lot easier to see each of the modules and their connections.
-![[rotated-20250218_162312.jpg]]
+![](@assets/images/cs335/rotated-20250218_162312.jpg)
 <div align="center" style="color:#888888"><em>The computer without control signals</em></div>
 
 At this point, if you ever want to debug your computer, you can wire the signals to positive/negative power manually and single step the clock. This helps a lot when trying to debug whether each instruction has the right control signals.
 
 We can also remove the wires connecting everything to the bus. In this basic computer, there is a single bus that all data is passed through, including ALU outputs, RAM addresses, program constants/immediates, and more.
-![[20250218_162750.jpg]]
+![](@assets/images/cs335/20250218_162750.jpg)
 <div align="center" style="color:#888888"><em>Having organized bus wires helps a lot with disassembly</em></div>
 
 Now, we are left with the individual module groups.
 
 ## The registers and ALU
 In this computer, we had 2 registers and 1 ALU.
-![[20250218_162524.jpg]]
+![](@assets/images/cs335/20250218_162524.jpg)
 The two yellow wire groups in the image above connect the outputs of the two register chips to the inputs of the ALU.
 Removing the connecting wires between the two boards shows the inputs/outputs for each board more clearly.
 
@@ -62,7 +60,7 @@ Our register module contains 2 [74377](https://www.ti.com/product/SN74LS377) chi
 - control signals: clock, write register A, write register B
 - input: 8 bit data in
 - output: 8 bit register A, 8 bit register B
-![[rotated-20250218_163127.jpg]]
+![](@assets/images/cs335/rotated-20250218_163127.jpg)
 
 For the ALU we chained 2 [4 bit sn54s181 ALUs](https://www.ti.com/product/SN54S181) together. Unfortunately, they did not have much of the functionality we wanted, so we had to add a [74541 buffer](https://www.ti.com/product/SN74HCT541) to enable/disable output and some logic gates to get comparisons and carry flags. Additionally, the comparison/subtract functionality required a different carry in, so we needed to add a control signal for that. Notably, there is no clock input, since the ALU does not need to store any data. 
 
@@ -70,7 +68,7 @@ The i/o is as follows:
 - control signals: 5 bit ALU function, 1 bit carry in, output enable/disable
 - input: 8 bit register A, 8 bit register B
 - output: 8 bit result, carry/ge flag, zero flag
-![[rotated-20250218_163036.jpg]]
+![](@assets/images/cs335/rotated-20250218_163036.jpg)
 
 ## The RAM
 Chip Weems had some [NVRAM](https://www.analog.com/en/products/ds1230y.html) lying around, so we just used one of them. They had a 13 bit address space, so we just wired 5 of the bits to ground and used the other 8 for our addresses. To hold the address, we just used another 74377 register chip. The data in/out was the same on the RAM chip, but it didn't matter that much since we made our control signals such that we can't read and write at the same time. 
@@ -78,15 +76,15 @@ Chip Weems had some [NVRAM](https://www.analog.com/en/products/ds1230y.html) lyi
 The i/o is as follows:
 - control signals: clock, write RAM address, write RAM, read RAM, enable RAM
 - input/output: 8 bit data line
-![[rotated-20250218_162927.jpg]]
+![](@assets/images/cs335/rotated-20250218_162927.jpg)
 <div align="center" style="color:#888888"><em>Incredible wiring</em></div>
 
 ## The clock
 The clock was simultaneously the simplest yet hardest module to get correct. Many tutorials online for 555 timers used different confusing schematics, and the datasheet's pinout descriptions were not helpful. Additionally, we had to tinker around with the potentiometer, resistor, and capacitor values until we got a steady blinking on the LED. There is both a clock and an inverted clock, but we only ended up using the clock.
 
-![[Pasted image 20250319213729.png]]
+![](@assets/images/cs335/Pasted image 20250319213729.png)
 <div align="center" style="color:#888888"><em>Least confusing datasheet</em></div>
-![[20250218_162609.jpg]]
+![](@assets/images/cs335/20250218_162609.jpg)
 <div align="center" style="color:#888888"><em>Incredibly unreadable wiring</em></div>
 
 ## ROM + PC
@@ -96,7 +94,7 @@ The i/o is as follows:
 - control signals: clock, PC increment, PC write (jmp), PC reset button, data out enable
 - input: 8 bit jmp address
 - output: 8 bit instruction (to instruction decoder), 8 bit immediate/data
-![[rotated-20250218_163003 1.jpg]]
+![](@assets/images/cs335/rotated-20250218_163003 1.jpg)
 <div align="center" style="color:#888888"><em>The top half of the above board contains (from left to right) the PC, the instruction ROM, and the data ROM</em></div>
 
 ## Instruction decoder
@@ -106,36 +104,36 @@ The i/o is as follows:
 - control signals: clock, subclock reset, instruction write, flag write
 - input: 8 bit instruction, 2 bit flags
 - output: all control signals for other modules
-![[rotated-20250218_163005.jpg]]
+![](@assets/images/cs335/rotated-20250218_163005.jpg)
 
 ## LCD display
 We also found this 16x2 LCD display (A-1748/1602d1, I couldn't find any links) in Chip Weems' miscellaneous project parts boxes, and since it used an 8 bit data input, we figured that we could fit it into our computer. The i/o is as follows:
 - control signals: write LCD data, write LCD control data
 - input: 8 bit data
-![[rotated-20250218_163003.jpg]]
+![](@assets/images/cs335/rotated-20250218_163003.jpg)
 <div align="center" style="color:#888888"><em>The bottom half of the board contains just the LCD display</em></div>
 
 ## The rest of the wires
 At this point, you can take away the rest of the wires, and you'll be left with a pretty clean looking (nonfunctional) computer.
 
-![[rotated-20250218_165020.jpg]]
-![[rotated-20250218_170258.jpg]]
+![](@assets/images/cs335/rotated-20250218_165020.jpg)
+![](@assets/images/cs335/rotated-20250218_170258.jpg)
 
 # Designing the computer and debugging
 There is a lot more to talk about, but I'll just talk about the process of designing, testing, and programming the computer.
 
 Before even assembling anything, we spent quite a while building it up in logisim. Only once our design was mostly finalized did we order the parts.
-![[Pasted image 20250319212125.png]]
+![](@assets/images/cs335/Pasted image 20250319212125.png)
 
 For debugging, it really helped to have a testing rig, both with 8 bit write/read, and 1 bit probes (which really helped later).
-![[20241117_145416.jpg]]
+![](@assets/images/cs335/20241117_145416.jpg)
 
 When we got everything on the bus, the writes and reads naturally moved onto the bus as well.
-![[20250218_162937.jpg]]
-![[20250218_163008.jpg]]
+![](@assets/images/cs335/20250218_162937.jpg)
+![](@assets/images/cs335/20250218_163008.jpg)
 
 # Software and programming
 Programming the whole computer was about the same amount of work, if not more, compared to designing and building it. Since we used EEPROMs, all of the instruction decoding logic was pushed into software/our massive control signal spreadsheet.
-![[Pasted image 20250319212415.png]]
+![](@assets/images/cs335/Pasted image 20250319212415.png)
 
 Additionally, Sagnik was in charge of flashing the EEPROMs with the control signal mappings and program data, as well as writing a compiler that could convert assembly into our instruction set.
