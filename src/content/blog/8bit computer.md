@@ -103,7 +103,7 @@ The i/o is as follows:
 ![[rotated-20250218_163005.jpg]]
 
 ## LCD display
-We also found this 16x2 LCD display in Chip Weems' miscellaneous project parts boxes, and since it used an 8 bit data input, we figured that we could fit it into our computer. The i/o is as follows:
+We also found this 16x2 LCD display (A-1748) in Chip Weems' miscellaneous project parts boxes, and since it used an 8 bit data input, we figured that we could fit it into our computer. The i/o is as follows:
 - control signals: write LCD data, write LCD control data
 - input: 8 bit data
 ![[rotated-20250218_163003.jpg]]
