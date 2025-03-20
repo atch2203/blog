@@ -92,7 +92,7 @@ To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediate
 <div align="center" style="color:#888888"><em>The top half of the above board contains (from left to right) the PC, the instruction ROM, and the data ROM</em></div>
 
 ## Instruction decoder
-The instruction decoder, like the program data, used more EEPROMs. Here, we used them to map each instruction (8 bit) to control signals (~20 bits). We also used a 3 bit subclock so each instruction could have multiple parts (fetch, add, store, etc), as well as two flags (carry/ge and zero) for conditionals. These totaled to 13 bits of address space, which the EEPROMs fit perfectly. 
+The instruction decoder, like the program data, used more EEPROMs. Here, we used them to map each instruction (8 bit) to control signals (~20 bits). We also used a 3 bit subclock so each instruction could have multiple parts (fetch, add, store, etc), as well as two flags (carry/ge and zero) for conditionals. These totaled to 13 bits of address space, which the EEPROMs fit perfectly. The subclock used a 432432 chip, just like the program counter, and was tied to reset when the PC increment signal was on. The flags used a 377 chip 
 ![[rotated-20250218_163005.jpg]]
 
 ## LCD display
