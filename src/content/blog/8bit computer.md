@@ -122,7 +122,7 @@ At this point, you can take away the rest of the wires, and you'll be left with 
 # Addendum: designing the computer, instructions/control signals, and debugging
 There is a lot more to talk about, but I'll just talk about the process of designing, testing, and programming the computer.
 
-Before even
+Before even assembling anything, we spent quite a while building it up in logisim
 
 For debugging, it really helped to have a testing rig, both with 8 bit write/read, and 1 bit probes (which really helped later).
 ![[20241117_145416.jpg]]
