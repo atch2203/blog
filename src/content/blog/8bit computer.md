@@ -57,6 +57,7 @@ The two yellow wire groups in the image above connect the outputs of the two reg
 Removing the connecting wires between the two boards shows the inputs/outputs for each board more clearly.
 
 
+
 ## The RAM
 Chip Weems had some RAM lying around (link), so we just used 
 ![[rotated-20250218_162927.jpg]]
