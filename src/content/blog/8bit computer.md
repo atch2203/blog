@@ -134,3 +134,6 @@ When we got everything on the bus, the writes and reads naturally moved onto the
 
 # Software and programming
 Programming the whole computer was about the same amount of work, if not more, compared to designing and building it. Since we used EEPROMs, all of the instruction decoding logic was pushed into software/our massive control signal spreadsheet.
+![[Pasted image 20250319212415.png]]
+
+Additionally, Sagnik was in charge of flashing the EEPROMs with the 
