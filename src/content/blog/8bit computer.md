@@ -27,12 +27,12 @@ Our whole computer consists of 8-9 main modules:
 <div align="center" style="color:#888888"><em>Our computer running a Fibonacci program</em></div>
 
 Spanning between these modules are control signal wires, data wires, and power wires. Everything else is (mostly) self contained in each of the modules.
-> yellow: bus output (module input)
-> cyan: bus input (module output)
-> green: i/o (between modules or on bus)
-> red: intra-module data lines
-> magenta: status/display wires
-> control signal wires are omitted for clarity
+> yellow: bus output (module input)  
+> cyan: bus input (module output)  
+> green: i/o (between modules or on bus)  
+> red: intra-module data lines  
+> magenta: status/display wires  
+> control signal wires are omitted for clarity  
 
 ![](@assets/images/cs335/20250218_161732.jpg)
 
