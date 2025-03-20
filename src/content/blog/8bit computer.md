@@ -57,11 +57,13 @@ The two yellow wire groups in the image above connect the outputs of the two reg
 Removing the connecting wires between the two boards shows the inputs/outputs for each board more clearly.
 
 Our register module contains 2 377 chips, and have the following i/o:
-- input: clock, write register A, write register B, 8 bit data in
+- control signals: clock, write register A, write register B, 
+- input: 8 bit data in
 - output: register A, register B
 ![[rotated-20250218_163127.jpg]]
 
-The ALUs we used were [2 4 bit fdsafds](TODO). Unfortunately, they did not have much of the functionality we wanted, so we had to add a 4324 buffer to enable/disable output and some logic gates to get comparisons and carry flags. 
+The ALUs we used were [2 4 bit fdsafds](TODO). Unfortunately, they did not have much of the functionality we wanted, so we had to add a 4324 buffer to enable/disable output and some logic gates to get comparisons and carry flags. The i/o is as follows:
+- control signals: 5 bit ALU function, 1 bit carry in, output enable/disable
 ![[rotated-20250218_163036.jpg]]
 
 
