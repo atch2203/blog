@@ -119,13 +119,14 @@ At this point, you can take away the rest of the wires, and you'll be left with 
 ![[rotated-20250218_165020.jpg]]
 ![[rotated-20250218_170258.jpg]]
 
-## Addendum: designing the computer, instructions/control signals, and debugging
+# Addendum: designing the computer, instructions/control signals, and debugging
 There is a lot more to talk about, but I'll just talk about the process of designing, testing, and programming the computer.
 
-For debugging, it really helped to have a testing rig, both with 8 bit write and re
+Before even
+
+For debugging, it really helped to have a testing rig, both with 8 bit write/read, and 1 bit probes (which really helped later).
 ![[20241117_145416.jpg]]
 
-When we got everything on the bus, 
+When we got everything on the bus, the writes and reads naturally moved onto the bus as well.
 ![[20250218_162937.jpg]]
-
 ![[20250218_163008.jpg]]
