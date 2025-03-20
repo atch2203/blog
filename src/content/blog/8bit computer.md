@@ -92,6 +92,7 @@ To hold program data, we used 2 EEPROMs, 1 for instructions, and 1 for immediate
 <div align="center" style="color:#888888"><em>The top half of the above board contains (from left to right) the PC, the instruction ROM, and the data ROM</em></div>
 
 ## Instruction decoder
+The instruction decoder was 
 ![[rotated-20250218_163005.jpg]]
 
 ## LCD display
