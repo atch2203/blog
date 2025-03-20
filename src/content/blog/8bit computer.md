@@ -52,13 +52,13 @@ In this computer, we had 2 registers and 1 ALU.
 The two yellow wire groups in the image above connect the outputs of the two register chips to the inputs of the ALU.
 Removing the connecting wires between the two boards shows the inputs/outputs for each board more clearly.
 
-Our register module contains 2 74377 chips, and have the following i/o:
+Our register module contains 2 [74377]() chips, and have the following i/o:
 - control signals: clock, write register A, write register B
 - input: 8 bit data in
 - output: 8 bit register A, 8 bit register B
 ![[rotated-20250218_163127.jpg]]
 
-The ALUs we used were [2 4 bit fdsafds](TODO). Unfortunately, they did not have much of the functionality we wanted, so we had to add a 4324 buffer to enable/disable output and some logic gates to get comparisons and carry flags. Additionally, the comparison/subtract functionality required a different carry in, so we needed to add a control signal for that. Notably, there is no clock input, since the ALU does not need to store any data. 
+For the ALU we chained 2 [4 bit sn54s181 ALUs](https://www.ti.com/product/SN54S181) together. Unfortunately, they did not have much of the functionality we wanted, so we had to add a 4324 buffer to enable/disable output and some logic gates to get comparisons and carry flags. Additionally, the comparison/subtract functionality required a different carry in, so we needed to add a control signal for that. Notably, there is no clock input, since the ALU does not need to store any data. 
 
 The i/o is as follows:
 - control signals: 5 bit ALU function, 1 bit carry in, output enable/disable
