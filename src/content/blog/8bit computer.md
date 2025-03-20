@@ -106,9 +106,11 @@ We also found this 16x2 LCD display in Chip Weems' miscellaneous project parts b
 <div align="center" style="color:#888888"><em>The bottom half of the board contains just the LCD display</em></div>
 
 ### The rest of the wires
+At this point, you can take away the rest of the wires, and you'll be left with a pretty clean looking (nonfunctional) computer.
+![[rotated-20250218_165020.jpg]]
 
-### The aftermath
 Once you are done, you should have the following parts:
+
 
 
 ## Addendum: designing the computer, instructions/control signals, and debugging
