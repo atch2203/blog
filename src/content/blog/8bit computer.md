@@ -67,7 +67,7 @@ The i/o is as follows:
 ![[rotated-20250218_163036.jpg]]
 
 ## The RAM
-Chip Weems had some [NVRAM]() lying around, so we just used one of them. They had a 13 bit address space, so we just wired 5 of the bits to ground and used the other 8 for our addresses. To hold the address, we just used another 377 register chip. The data in/out was the same on the RAM chip, but it didn't matter that much since we made our control signals such that we can't read and write at the same time. 
+Chip Weems had some [NVRAM](https://www.analog.com/en/products/ds1230y.html) lying around, so we just used one of them. They had a 13 bit address space, so we just wired 5 of the bits to ground and used the other 8 for our addresses. To hold the address, we just used another 74377 register chip. The data in/out was the same on the RAM chip, but it didn't matter that much since we made our control signals such that we can't read and write at the same time. 
 
 The i/o is as follows:
 - control signals: clock, write RAM address, write RAM, read RAM, enable RAM
@@ -76,7 +76,7 @@ The i/o is as follows:
 <div align="center" style="color:#888888"><em>Incredible wiring</em></div>
 
 ## The clock
-The clock was simultaneously the simplest yet hardest module to get correct. Many tutorials online used different confusing schematics, and the datasheet's pinout descriptions were not helpful. Additionally, we had to tinker around with the potentiometer, resistor, and capacitor values until we got a steady blinking on the LED. There is both a clock and an inverted clock, but we only ended up using the clock.
+The clock was simultaneously the simplest yet hardest module to get correct. Many tutorials online for 555 timers used different confusing schematics, and the datasheet's pinout descriptions were not helpful. Additionally, we had to tinker around with the potentiometer, resistor, and capacitor values until we got a steady blinking on the LED. There is both a clock and an inverted clock, but we only ended up using the clock.
 
 > fdjsakfldsajlk
 - datasheet
