@@ -74,7 +74,7 @@ Chip Weems had some NVRAM lying around (link), so we just used one of them. They
 ![[rotated-20250218_162927.jpg]]
 
 ## The clock
-The clock was simultaneously the simplest yet hardest module to get correct. Many tutorials online used different confusing schematics, and the datasheet's pinout descriptions were not helpful. Additionally, we had to tinker around with the potentiometer, resistor, and capacitor values
+The clock was simultaneously the simplest yet hardest module to get correct. Many tutorials online used different confusing schematics, and the datasheet's pinout descriptions were not helpful. Additionally, we had to tinker around with the potentiometer, resistor, and capacitor values until we got a steady blinking on the LED. There is both a clock and an inverted clock, but we only ended up using the clock.
 
 > fdjsakfldsajlk
 - datasheet
@@ -82,6 +82,7 @@ The clock was simultaneously the simplest yet hardest module to get correct. Man
 
 
 ## ROM + PC
+
 ![[rotated-20250218_163003 1.jpg]]
 
 ## Instruction decoder
