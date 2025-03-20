@@ -4,9 +4,8 @@ pubDatetime: 2025-03-19
 title: How to take apart an 8 bit computer
 featured: false
 draft: true
-tags:
-  - other
-description: template
+tags: 
+description:
 ---
 Last semester, I took an honors colloquium for CS 335: Inside the Box: How Computers Work. The main section of the class was all about the different levels of technology that goes into a computer, from how transistors work to logic gates to processor components and more. For the colloquium project, I teamed up with [Sagnik Pal](http://www-edlab.cs.umass.edu/~sagnikpal/) to build an 8 bit computer out of some (not so) basic chips.
 
@@ -22,7 +21,6 @@ Our whole computer consists of 8-9 main modules:
 - program ROM + program counter
 - instruction decoder
 - the bus
-
 
 TODO illustrate this with labels for modules
 ![[rotated-20250218_161732.jpg]]
@@ -119,6 +117,8 @@ At this point, you can take away the rest of the wires, and you'll be left with 
 ![[rotated-20250218_165020.jpg]]
 ![[rotated-20250218_170258.jpg]]
 
+
+
 # Designing the computer and debugging
 There is a lot more to talk about, but I'll just talk about the process of designing, testing, and programming the computer.
 
@@ -135,4 +135,5 @@ When we got everything on the bus, the writes and reads naturally moved onto the
 # Software and programming
 Programming the whole computer was about the same amount of work, if not more, compared to designing and building it. Since we used EEPROMs, all of the instruction decoding logic was pushed into software/our massive control signal spreadsheet.
 ![[Pasted image 20250319212415.png]]
+
 Additionally, Sagnik was in charge of flashing the EEPROMs with the control signal mappings and program data, as well as writing a compiler that could convert assembly into our instruction set.
