@@ -61,6 +61,7 @@ Our register module contains 2 377 chips, and have the following i/o:
 - output: register A, register B
 ![[rotated-20250218_163127.jpg]]
 
+The ALUs we used were 
 ![[rotated-20250218_163036.jpg]]
 
 
