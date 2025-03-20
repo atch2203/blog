@@ -10,7 +10,10 @@ description: template
 ---
 
 <script>
-window.onload(('body > div > div.Content.EmbedFrame > div > div > div.fXIG0').click()
+window.onload = function(){
+
+('body > div > div.Content.EmbedFrame > div > div > div.fXIG0').click()
+}
 </script>
 
 <iframe src="https://www.instagram.com/reel/DC0ARHMR6e3/?utm_source=ig_embed&amp;utm_campaign=loading"> </iframe>
