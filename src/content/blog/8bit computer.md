@@ -120,7 +120,7 @@ At this point, you can take away the rest of the wires, and you'll be left with 
 
 ![](@assets/images/cs335/rotated-20250218_165020.jpg)
 ![](@assets/images/cs335/rotated-20250218_170258.jpg)
-![](@assets/images/cs335/20250218_170559.jpg)
+![](@assets/images/cs335/rotated-20250218_170559.jpg)
 
 # Designing the computer and debugging
 There is a lot more to talk about, but I'll just talk about the process of designing, testing, and programming the computer.
