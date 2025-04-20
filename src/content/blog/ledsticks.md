@@ -36,7 +36,7 @@ In an effort to reduce my own work as much as possible, I attempted to copy and 
 ![alt text](@assets/images/writeups/ledsticks/ledapart.jpg)
 <div align="center" style="color:#888888"><em>asdf</em></div>
 
-By the end of all of my test prints, I had a working prototype of something that could 1) emit light and 2) be attached to the end of an LED stick. All that remained was to convert it to clear TPU and iron out the inner dimensions of the attachment.
+By the end of all of my test prints, I had a prototype of something that could 1) emit light and 2) be attached to the end of an LED stick. All that remained was to convert it to clear TPU and iron out the inner dimensions of the attachment.
 ![alt text](@assets/images/writeups/ledsticks/ledprototype.jpg)
 ![alt text](@assets/images/writeups/ledsticks/firstledattachment.jpg)
 <div align="center" style="color:#888888"><em>First prototype working!</em></div>
@@ -46,6 +46,8 @@ By the end of all of my test prints, I had a working prototype of something that
 ## finished with the attachments
 ![alt text](@assets/images/writeups/ledsticks/comparison.jpg)
 ![alt text](@assets/images/writeups/ledsticks/comparisondark.jpg)
+<div align="center" style="color:#888888"><em>Not too bad!</em></div>
+
 
 issue: it flies off and is too dim, we want brighter!
 
