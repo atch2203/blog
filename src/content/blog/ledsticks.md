@@ -92,11 +92,13 @@ All that was left was to clean up the wiring a little and make a second stick. I
 ![alt text](@assets/images/writeups/ledsticks/secondwiringback.jpg)
 ![alt text](@assets/images/writeups/ledsticks/firstledpair.jpg)
 
-However, these sticks were still too heavy (43 grams) and had an unreasonable amount of drag/air resistance, so I had to optimize. Since there was plenty of empty space in the neopixel section, I decided to add a thinner pipe in that section (which also made the sticks look more like)
+However, these sticks were still too heavy (43 grams) and had an unreasonable amount of drag/air resistance, so I had to optimize. Since there was plenty of empty space in the neopixel section, I decided to add a thinner pipe in that section (which also made the sticks look more like Sundia's normal sticks).
+
+![alt text](@assets/images/writeups/ledsticks/finalweight.jpg)
+![alt text](@assets/images/writeups/ledsticks/finalpair.jpg)
+
+And that brings us to where I am today. I still have plans to make them better, since the drag/air resistance 
 
 
-
-While I was a
-- polycarb sections - initial, weight/resistance too high, then final
 
 ## Side quest: rings
