@@ -88,6 +88,7 @@ To help maintain rigidity of the stick, I first tried PLA, but that broke quickl
 
 
 ![alt text](@assets/images/ledsticks/metalrods.jpg)
+
 These sticks *technically* functioned, but they were horrible to use for integrals since they were 55 grams each (leading to everything being painfully slow).
 Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the LED attachment exploding (no photo evidence, but the batteries flew over 40 feet away from where we were yoyoing).
 
@@ -114,7 +115,11 @@ All that was left was to clean up the wiring a little and make a second stick. I
 
 **todo insert wiring schematic**
 ![alt text](@assets/images/ledsticks/incrediblefirstwiring.jpg)![alt text](@assets/images/ledsticks/secondwiring.jpg)
+<div align="center" style="color:#888888"><em>The difference in neatness is (almost) apparent</em></div>
+
 ![alt text](@assets/images/ledsticks/secondwiringback.jpg)
+<div align="center" style="color:#888888"><em></em></div>
+
 ![alt text](@assets/images/ledsticks/firstledpair.jpg)
 
 However, these sticks were still too heavy (43 grams) and had an unreasonable amount of drag/air resistance, so I had to optimize. Since there was plenty of empty space in the neopixel section, I decided to add a thinner pipe in that section (which also made the sticks look more like Sundia's normal sticks).
