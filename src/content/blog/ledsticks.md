@@ -49,11 +49,10 @@ By the end of all of my test prints, I had a prototype of something that could 1
 <div align="center" style="color:#888888"><em>Not too bad!</em></div>
 While my own LED attachment was better in some ways, it was worse than Sundia's in others:
 - While it never broke, it also flew off the LED stick if you hit it too hard (or swung it too fast)
-- The wire contact with the end cap wasn't very reliable, especially if you hit the attachment too hard
+- The wire contact with the end cap wasn't very reliable, especially if you hit the attachment frequently
 
-Both of these issues posed too much of an issue to be usable for vertax and integrals (where making a mistake leads to a dangerous projectile). Additionally, while it is similar in brightness to Sundia's, 
+Both of these issues posed too much of an issue to be usable for vertax and integrals (where making a mistake leads to a dangerous projectile). Additionally, while it is similar in brightness to Sundia's LED sticks, it was a lot dimmer than their LED yoyo attachments.
 
-issue: it flies off and is too dim, we want brighter!
 
 
 ## Something about custom LED sticks
