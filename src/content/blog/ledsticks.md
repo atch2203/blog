@@ -61,7 +61,13 @@ Not satisfied with the TPU attachments, I thought to myself:
 And so I got back to work, designing a whole stick from scratch, attempting to design a better mounting mechanism:
 ![[Pasted image 20250420170949.png]]
 ![alt text](@assets/images/writeups/ledsticks/diywhole.jpg)
+
+To help maintain rigidity of the stick
 ![alt text](@assets/images/writeups/ledsticks/metalrods.jpg)
+
+
+
+
 
 ![alt text](@assets/images/writeups/ledsticks/interestingfailure.jpg)
 
