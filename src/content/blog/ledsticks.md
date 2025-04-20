@@ -10,7 +10,7 @@ description: A journey of trials, errors, and RGB LEDs (with a side of magforce 
 ---
 
 <style>
-img {
+img:not(.astro-3ef6ksr2) {
 max-height:40vh;
 width:auto;
 }
