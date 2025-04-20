@@ -29,7 +29,11 @@ Soldering/wiring image can be seen below
 
 ## finished with the attachments
 
+
 # Something about custom LED sticks
+- first iteration didn't work (insert images, weight, etc)
+
+- polycarb sections - initial, weight/rse
 
 
 ## Side quest: rings
