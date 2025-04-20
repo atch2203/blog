@@ -44,10 +44,13 @@ And thus began the quest for the unbreakable LED sticks...
 In an effort to reduce my own work as much as possible, I attempted to copy and reuse as many parts of Sundia's LED attachment as much as possible. Unfortunately, the board with the LEDs on it was firmly epoxied in place, so I could only reuse the end cap.
 ![alt text](@assets/images/ledsticks/ledapart.jpg)
 <div align="center" style="color:#888888"><em>asdf</em></div>
+
 By the end of all of my test prints, I had a prototype of something that could 1) emit light and 2) be attached to the end of an LED stick. All that remained was to convert it to clear TPU and iron out the inner dimensions of the attachment.
+
 ![alt text](@assets/images/ledsticks/ledprototype.jpg)
 ![alt text](@assets/images/ledsticks/firstledattachment.jpg)
 <div align="center" style="color:#888888"><em>First prototype working!</em></div>
+
 ![alt text](@assets/images/ledsticks/noinfill.jpg)
 <div align="center" style="color:#888888"><em>What happens when you do a mini-gen with no infill</em></div>
 
@@ -74,9 +77,12 @@ And so I got back to work, designing a whole stick from scratch, attempting to d
 To help maintain rigidity of the stick, I first tried PLA, but that broke quickly (after 1 hit against the ground), so I switched to TPU with metal rods inside.
 ![alt text](@assets/images/ledsticks/plastick.jpg)
 <div align="center" style="color:#888888"><em>PLA after lightly touching the ground</em></div>
-![alt text](@assets/images/ledsticks/floppystick.jpg)
+
+![alt text](@assets/images/ledsticks/floppystick.png)
 ![alt text](@assets/images/ledsticks/plastick.jpg)
 <div align="center" style="color:#888888"><em>Left: TPU stick with no metal rods<br />Right: TPU stick with metal rods inside</em></div>
+
+
 ![alt text](@assets/images/ledsticks/metalrods.jpg)
 These sticks *technically* functioned, but they were horrible to use for integrals since they were 55 grams each (leading to everything being painfully slow).
 Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the LED attachment exploding (no photo evidence, but the batteries flew over 40 feet away from where we were yoyoing).
