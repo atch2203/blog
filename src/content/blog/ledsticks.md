@@ -72,7 +72,7 @@ These sticks *technically* functioned, but they were horrible to use for . Also,
 In lieu of becoming another public safety hazard, I had to scrap these sticks and come up with a more novel approach.
 
 ![alt text](@assets/images/writeups/ledsticks/interestingfailure.jpg)
-<div align="center" style="color:#888888"><em></em></div>
+<div align="center" style="color:#888888"><em>An interesting print failure for your visual amusement</em></div>
 
 - first iteration didn't work (insert images, weight, etc)
 ## The redemption of fully custom sticks
