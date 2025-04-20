@@ -23,6 +23,7 @@ I think that most people can agree that everything looks better if you add LEDs 
   <source src="/blog/assets/bigdawg.mp4" type="video/mp4">
 </video>
 <div align="center" style="color:#888888"><em>Shoutout to Bryant "big dawg" Lam</em></div>
+
 However, I have an issue: Sundia's LED stick attachments are way to easy to break (especially if you hit the ground with them)
 ![alt text](@assets/images/writeups/ledsticks/brokenattachment.jpg)
 <div align="center" style="color:#888888"><em>You vs the guy she tells you not to worry about</em></div>
