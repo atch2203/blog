@@ -102,6 +102,4 @@ And that brings us to where I am today. I still have plans to make them better, 
 **insert video of scrats**
 
 ## Side quest: rings
-While at practice, I noticed that some TASC members used plastic rings for their magforces. However, the rings only came with certain magforces from our Sundia USA dealer, so I decided to figure out how to 3d print our own.
-
-
+While at practice, I noticed that some TASC members used plastic rings for their magforces. However, the rings only came with certain magforces from our Sundia USA dealer, so I decided to figure out how to 3d print our own. One thing led to another, and I ended up designing rings for magforces, evos, and falcons. To be honest, designing the patterns on the 
