@@ -8,9 +8,7 @@ tags:
   - other
 description: A journey of trials, errors, and RGB LEDs (with a side of magforce rings)
 ---
-
-
-# Links for people 
+# Links for people jjjjjjjjjjjjjjjjjjjjj
 [rings](https://cad.onshape.com/documents/ef44f07510415427593272c5/w/335d813986e4bbf1b998e1ed/e/3d402b5cbd4970cf173c050d?renderMode=0&uiState=67dc828452500464e79a29ff)
 
 [LED stick attachment](https://cad.onshape.com/documents/2f172437386052dd5692cff2/w/3c3cbeae348244a1abd02d45/e/f236c0c66763af97218da1e9?renderMode=0&uiState=67dc802656e2f57f79daf283)
@@ -28,12 +26,13 @@ Soldering/wiring image can be seen below
 
 
 ## finished with the attachments
-
+clear TPU
+issue: it flies off and is too dim, we want brighter!
 
 # Something about custom LED sticks
 - first iteration didn't work (insert images, weight, etc)
 
-- polycarb sections - initial, weight/rse
+- polycarb sections - initial, weight/resistance too high, then final
 
 
 ## Side quest: rings
