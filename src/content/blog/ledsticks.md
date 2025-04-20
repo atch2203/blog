@@ -55,7 +55,11 @@ Both of these issues posed too much of an issue to be usable for vertax and inte
 
 With no easy path forward, the first chapter on the LED stick saga concluded, and I moved on to greater endeavors.
 ## Fully custom LED sticks
-If the attachment point between the LED attachment and the stick was
+Not satisfied with the TPU attachments, I thought to myself:
+> If the attachment point between the LED attachment and the stick was the point of failure, what if we just made the whole stick ourselves and put LEDs along the whole thing?
+
+And so I got back to
+
 - first iteration didn't work (insert images, weight, etc)
 
 - polycarb sections - initial, weight/resistance too high, then final
