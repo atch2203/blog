@@ -11,7 +11,7 @@ description: A journey of trials, errors, and RGB LEDs (with a side of magforce 
 
 <style>
 img {
-max-height:20vh;
+max-height:40vh;
 width:auto;
 }
 </style>
