@@ -30,8 +30,8 @@ Since I wanted to do integrals with them (since I'm not good at vertax), I took 
 And thus began the quest for the unbreakable LED sticks...
 
 ## Threads and LEDs
-In an effort to reduce my own work as much as possible, I attempted to copy and reuse as many parts of sundia's LED attachment as much as possible. 
-
+In an effort to reduce my own work as much as possible, I attempted to copy and reuse as many parts of sundia's LED attachment as much as possible. Unfor
+![alt text](@assets/images/writeups/ledsticks/ledapart.jpg)
 ## finished with the attachments
 clear TPU
 
