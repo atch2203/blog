@@ -102,4 +102,4 @@ And that brings us to where I am today. I still have plans to make them better, 
 **insert video of scrats**
 
 ## Side quest: rings
-While at practice, I noticed that some 
+While at practice, I noticed that some TASC members used plastic rings for their magforces. However, the rings only came with certain magforces from Graham Lo, so 
