@@ -45,7 +45,7 @@ And thus began the quest for the unbreakable LED sticks...
 ## Threads and LEDs
 In an effort to reduce my own work as much as possible, I attempted to copy and reuse as many parts of Sundia's LED attachment as much as possible. Unfortunately, the board with the LEDs on it was firmly epoxied in place, so I could only reuse the end cap.
 ![alt text](@assets/images/ledsticks/ledapart.jpg)
-<div align="center" style="color:#888888"><em>asdf</em></div>
+<div align="center" style="color:#888888"><em>TODO caption</em></div>
 
 By the end of all of my test prints, I had a prototype of something that could 1) emit light and 2) be attached to the end of an LED stick. All that remained was to convert it to clear TPU and iron out the inner dimensions of the attachment.
 
@@ -60,6 +60,7 @@ By the end of all of my test prints, I had a prototype of something that could 1
 ![alt text](@assets/images/ledsticks/comparison.jpg)
 ![alt text](@assets/images/ledsticks/comparisondark.jpg)
 <div align="center" style="color:#888888"><em>Not too bad!</em></div>
+
 While my own LED attachment was better in some ways, it was worse than Sundia's in others:
 - While it never broke, it also flew off the LED stick if you hit it too hard (or swung it too fast)
 - The wire contact with the end cap wasn't very reliable, especially if you hit the attachment frequently
@@ -75,6 +76,7 @@ Not satisfied with the TPU attachments, I thought to myself:
 And so I got back to work, designing a whole stick from scratch, attempting to design a better mounting mechanism:
 ![alt text](@assets/images/ledsticks/attachmentpoint.png)
 ![alt text](@assets/images/ledsticks/diywhole.jpg)
+<div align="center" style="color:#888888"><em></em></div>
 
 To help maintain rigidity of the stick, I first tried PLA, but that broke quickly (after 1 hit against the ground), so I switched to TPU with metal rods inside.
 ![alt text](@assets/images/ledsticks/plastick.jpg)
