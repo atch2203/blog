@@ -67,14 +67,12 @@ To help maintain rigidity of the stick, I first tried PLA, but that broke quickl
 <div align="center" style="color:#888888"><em>Left: TPU stick with no metal rods<br />Right: TPU stick with metal rods inside</em></div>
 ![alt text](@assets/images/writeups/ledsticks/metalrods.jpg)
 
-These sticks *technically* functioned, but they were horrible to use for . Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the LED attachment exploding (no photo evidence, but the batteries flew over 40 feet away from where we were yoyoing).
+These sticks *technically* functioned, but they were horrible to use for . Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the LED attachment exploding (no photo evidence, but the batteries flew over 40 feet away from where we were yoyoing). Additionally, 
 
 In lieu of becoming another public safety hazard, I had to scrap these sticks and come up with a more novel approach.
 
 ![alt text](@assets/images/writeups/ledsticks/interestingfailure.jpg)
 <div align="center" style="color:#888888"><em>An interesting print failure for your visual amusement</em></div>
-
-- first iteration didn't work (insert images, weight, etc)
 ## The redemption of fully custom sticks
 
 
