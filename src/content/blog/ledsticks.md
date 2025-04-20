@@ -69,9 +69,9 @@ To help maintain rigidity of the stick, I first tried PLA, but that broke quickl
 <div align="center" style="color:#888888"><em>Left: TPU stick with no metal rods<br />Right: TPU stick with metal rods inside</em></div>
 ![alt text](@assets/images/writeups/ledsticks/metalrods.jpg)
 
-These sticks *technically* functioned, but they were horrible to use for . Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the attachment (no photo evidence, but the batteries flew)
+These sticks *technically* functioned, but they were horrible to use for . Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the LED attachment exploding (no photo evidence, but the batteries flew over 40 feet away from where we were yoyoing).
 
-
+In lieu of becoming another pub
 
 ![alt text](@assets/images/writeups/ledsticks/interestingfailure.jpg)
 
