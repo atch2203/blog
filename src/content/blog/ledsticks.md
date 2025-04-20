@@ -29,7 +29,7 @@ Since I wanted to do integrals with them (since I'm not good at vertax), I took 
 
 And thus began the quest for the unbreakable LED sticks...
 
-## 
+## Threads and LEDs
 
 
 ## finished with the attachments
