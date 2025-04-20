@@ -124,8 +124,9 @@ All that was left was to clean up the wiring a little and make a second stick. I
 However, these sticks were still too heavy (43 grams) and had an unreasonable amount of drag/air resistance, so I had to optimize. Since there was plenty of empty space in the neopixel section, I decided to add a thinner pipe in that section (which also made the sticks look more like Sundia's normal sticks).
 
 ![altText](@assets/images/ledsticks/finalweight.jpg)
-![altText](@assets/images/ledsticks/finalpair.jpg)
 <div align="center" style="color:#888888"><em>36 grams!</em></div>
+
+![altText](@assets/images/ledsticks/finalpair.jpg)
 
 And that brings us to where I am today. I still have plans to make them better, since the drag/air resistance still feels off compared to normal sundia sticks.
 
