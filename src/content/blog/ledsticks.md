@@ -76,9 +76,13 @@ In lieu of becoming another public safety hazard and wanting to avoid having to 
 ## The redemption of fully custom sticks
 It was apparent that 3d printing is not the way, at least for making the whole stick. However, [Chris Pho](https://www.linkedin.com/in/christopher-pho/) showed me a diabolo group that made LED sticks by using clear tubing (insert group name here), which immediately gave me the idea to put a microcontroller and battery in a polycarbonate tube. However, finding small and light parts was a challenge, but I eventually settled on Adafruit's Trinket M0 (15.3mm wide), 14250 batteries (14mm wide), and 16mm IDx18mm OD polycarbonate tubing. 
 
-Throughout , I came up with a simple design.
-![[Pasted image 20250420180717.png]]
+Throughout a few days, I came up with a simple design.
+![[Pasted image 20250420180858.png]]
 
+
+
+
+While I was a
 - polycarb sections - initial, weight/resistance too high, then final
 
 ## Side quest: rings
