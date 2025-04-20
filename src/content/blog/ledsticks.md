@@ -97,8 +97,9 @@ However, these sticks were still too heavy (43 grams) and had an unreasonable am
 ![alt text](@assets/images/writeups/ledsticks/finalweight.jpg)
 ![alt text](@assets/images/writeups/ledsticks/finalpair.jpg)
 
-And that brings us to where I am today. I still have plans to make them better, since the drag/air resistance 
+And that brings us to where I am today. I still have plans to make them better, since the drag/air resistance still feels off compared to normal sundia sticks.
 
-
+**insert video of scrats**
 
 ## Side quest: rings
+While at practice, I noticed that some 
