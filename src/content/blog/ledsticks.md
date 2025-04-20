@@ -3,7 +3,7 @@ author: atch2203
 pubDatetime: 2025-03-20
 title: The quest for unbreakable diabolo LED sticks
 featured: false
-draft: true
+draft: false
 tags:
   - other
 description: A journey of trials, errors, and RGB LEDs (with a side of magforce rings)
