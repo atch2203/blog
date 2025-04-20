@@ -23,6 +23,7 @@ I think that most people can agree that everything looks better if you add LEDs 
   <source src="/blog/assets/bigdawg.mp4" type="video/mp4">
 </video>
 <div align="center" style="color:#888888"><em>Shoutout to Bryant "big dawg" Lam</em></div>
+However, I have an issue: Sundia's LED stick
 
 ## finished with the attachments
 clear TPU
