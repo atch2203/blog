@@ -35,8 +35,11 @@ In an effort to reduce my own work as much as possible, I attempted to copy and 
 By the end of all of my test prints, I had a working prototype of something that could 1) emit light and 2) be attached to the end of an LED stick. All that remained was to convert it to clear filament and iron out the inner dimensions of the attachment.
 ![alt text](@assets/images/writeups/ledsticks/ledprototype.jpg)
 ![alt text](@assets/images/writeups/ledsticks/firstledattachment.jpg)
-Along the way, 
+
 ![alt text](@assets/images/writeups/ledsticks/noinfill.jpg)
+
+![alt text](@assets/images/writeups/ledsticks/comparison.jpg)
+![alt text](@assets/images/writeups/ledsticks/comparisondark.jpg)
 ## finished with the attachments
 clear TPU
 
