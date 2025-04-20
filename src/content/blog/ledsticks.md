@@ -24,8 +24,13 @@ I think that most people can agree that everything looks better if you add LEDs 
 </video>
 <div align="center" style="color:#888888"><em>Shoutout to Bryant "big dawg" Lam</em></div>
 However, I have an issue: Sundia's LED stick attachments are way to easy to break (especially if you hit the ground with them)
-
 ![alt text](@assets/images/writeups/ledsticks/brokenattachment.jpg)
+Since I wanted to do integrals with them (since I'm not good at vertax), I took it upon myself to make my own.
+
+And thus began the quest for the unbreakable LED sticks...
+
+
+
 ## finished with the attachments
 clear TPU
 
