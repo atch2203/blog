@@ -80,6 +80,9 @@ Finding small and light parts was a challenge, but I eventually settled on Adafr
 Throughout a few days, I came up with a simple design.
 ![[Pasted image 20250420180858.png]]
 While the parts were shipping, I also soldered a prototype for the neopixel/electronics assembly.
+![alt text](@assets/images/writeups/ledsticks/firstneopixel.jpg)
+
+Then I put it in the pipe when it arrived, and it worked immediately!
 
 
 
