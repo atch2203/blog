@@ -83,6 +83,8 @@ While the parts were shipping, I also soldered a prototype for the neopixel/elec
 ![alt text](@assets/images/writeups/ledsticks/firstneopixel.jpg)
 
 Then I put it in the pipe when it arrived, and it worked immediately!
+![alt text](@assets/images/writeups/ledsticks/firstneopixelinpipe.jpg)
+![alt text](@assets/images/writeups/ledsticks/firstneopixelinpipe.jpg)
 
 
 
