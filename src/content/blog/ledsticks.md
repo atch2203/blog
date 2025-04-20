@@ -32,7 +32,11 @@ And thus began the quest for the unbreakable LED sticks...
 ## Threads and LEDs
 In an effort to reduce my own work as much as possible, I attempted to copy and reuse as many parts of Sundia's LED attachment as much as possible. Unfortunately, the board with the LEDs on it was firmly epoxied in place, so I could only reuse the end cap.
 ![alt text](@assets/images/writeups/ledsticks/ledapart.jpg)
-By the end of all of my test prints, I had a working prototype of something that could 1) emit light and 2) be attached to the end of an LED stick. All that remained was to convert it to clear filament and iron out any 
+By the end of all of my test prints, I had a working prototype of something that could 1) emit light and 2) be attached to the end of an LED stick. All that remained was to convert it to clear filament and iron out the inner dimensions of the attachment.
+![alt text](@assets/images/writeups/ledsticks/ledprototype.jpg)
+![alt text](@assets/images/writeups/ledsticks/firstledattachment.jpg)
+Along the way, 
+![alt text](@assets/images/writeups/ledsticks/noinfill.jpg)
 ## finished with the attachments
 clear TPU
 
