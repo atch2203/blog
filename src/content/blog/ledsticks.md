@@ -39,6 +39,7 @@ Since I wanted to do integrals with them (since I'm not good at vertax), I took 
 
 And thus began the quest for the unbreakable LED sticks...
 
+
 ## Threads and LEDs
 In an effort to reduce my own work as much as possible, I attempted to copy and reuse as many parts of Sundia's LED attachment as much as possible. Unfortunately, the board with the LEDs on it was firmly epoxied in place, so I could only reuse the end cap.
 ![alt text](@assets/images/ledsticks/ledapart.jpg)
@@ -49,6 +50,7 @@ By the end of all of my test prints, I had a prototype of something that could 1
 <div align="center" style="color:#888888"><em>First prototype working!</em></div>
 ![alt text](@assets/images/ledsticks/noinfill.jpg)
 <div align="center" style="color:#888888"><em>What happens when you do a mini-gen with no infill</em></div>
+
 ## finished with the attachments
 ![alt text](@assets/images/ledsticks/comparison.jpg)
 ![alt text](@assets/images/ledsticks/comparisondark.jpg)
@@ -60,6 +62,7 @@ While my own LED attachment was better in some ways, it was worse than Sundia's 
 Both of these issues posed too much of an issue to be usable for vertax and integrals (where making a mistake leads to a dangerous projectile). Additionally, while it is similar in brightness to Sundia's LED sticks, it was a lot dimmer than their LED yoyo attachments.
 
 With no easy path forward, the first chapter on the LED stick saga concluded, and I moved on to greater endeavors.
+
 ## Fully custom LED sticks
 Not satisfied with the TPU attachments, I thought to myself:
 > If the attachment point between the LED attachment and the stick was the point of failure, what if we just made the whole stick ourselves and put LEDs along the whole thing?
@@ -81,7 +84,9 @@ In lieu of becoming another public safety hazard and wanting to avoid having to 
 
 ![alt text](@assets/images/ledsticks/interestingfailure.jpg)
 <div align="center" style="color:#888888"><em>An interesting print failure for your visual amusement</em></div>
+
 ## The redemption of fully custom sticks
+
 It was apparent that 3d printing is not the way, at least for making the whole stick. However, [Chris Pho](https://www.linkedin.com/in/christopher-pho/) showed me a diabolo group that made LED sticks by using clear tubing (**insert group name here**), which immediately gave me the idea to put a microcontroller and battery in a polycarbonate tube. 
 Finding small and light parts was a challenge, but I eventually settled on Adafruit's Trinket M0 (15.3mm wide), 14250 batteries (14mm wide), and 16mm IDx18mm OD polycarbonate tubing. 
 
