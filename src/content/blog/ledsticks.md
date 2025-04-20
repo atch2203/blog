@@ -8,8 +8,8 @@ tags:
   - other
 description: A journey of trials, errors, and RGB LEDs (with a side of magforce rings)
 ---
-# Links for people
-[rings](https://cad.onshape.com/documents/ef44f07510415427593272c5/w/335d813986e4bbf1b998e1ed/e/3d402b5cbd4970cf173c050d?renderMode=0&uiState=67dc828452500464e79a29ff)
+# Links
+[Diabolo rings](https://cad.onshape.com/documents/ef44f07510415427593272c5/w/335d813986e4bbf1b998e1ed/e/3d402b5cbd4970cf173c050d?renderMode=0&uiState=67dc828452500464e79a29ff)
 
 [LED stick attachment](https://cad.onshape.com/documents/2f172437386052dd5692cff2/w/3c3cbeae348244a1abd02d45/e/f236c0c66763af97218da1e9?renderMode=0&uiState=67dc802656e2f57f79daf283)
 
@@ -58,7 +58,6 @@ Not satisfied with the TPU attachments, I thought to myself:
 
 And so I got back to work, designing a whole stick from scratch, attempting to design a better mounting mechanism:
 ![alt text](@assets/images/writeups/ledsticks/attachmentpoint.png)
-![[attachmentpoint.png]]
 ![alt text](@assets/images/writeups/ledsticks/diywhole.jpg)
 
 To help maintain rigidity of the stick, I first tried PLA, but that broke quickly (after 1 hit against the ground), so I switched to TPU with metal rods inside.
@@ -75,7 +74,7 @@ In lieu of becoming another public safety hazard and wanting to avoid having to 
 ![alt text](@assets/images/writeups/ledsticks/interestingfailure.jpg)
 <div align="center" style="color:#888888"><em>An interesting print failure for your visual amusement</em></div>
 ## The redemption of fully custom sticks
-It was apparent that 3d printing is not the way, at least for making the whole stick. However, [Chris Pho](https://www.linkedin.com/in/christopher-pho/) showed me a diabolo group that made LED sticks by using clear tubing (insert group name here), which immediately gave me the idea to put a microcontroller and battery in a polycarbonate tube. 
+It was apparent that 3d printing is not the way, at least for making the whole stick. However, [Chris Pho](https://www.linkedin.com/in/christopher-pho/) showed me a diabolo group that made LED sticks by using clear tubing (**insert group name here**), which immediately gave me the idea to put a microcontroller and battery in a polycarbonate tube. 
 Finding small and light parts was a challenge, but I eventually settled on Adafruit's Trinket M0 (15.3mm wide), 14250 batteries (14mm wide), and 16mm IDx18mm OD polycarbonate tubing. 
 
 Throughout a few days, I came up with a simple design.
