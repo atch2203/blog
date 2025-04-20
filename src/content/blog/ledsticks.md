@@ -25,9 +25,12 @@ I think that most people can agree that everything looks better if you add LEDs 
 <div align="center" style="color:#888888"><em>Shoutout to Bryant "big dawg" Lam</em></div>
 However, I have an issue: Sundia's LED stick attachments are way to easy to break (especially if you hit the ground with them)
 
+![alt text](@assets/images/writeups/ledsticks/brokenattachment.jpg)
 ## finished with the attachments
 clear TPU
+
 issue: it flies off and is too dim, we want brighter!
+
 
 ## Something about custom LED sticks
 - first iteration didn't work (insert images, weight, etc)
