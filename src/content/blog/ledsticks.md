@@ -13,11 +13,9 @@ description: A journey of trials, errors, and glorious RGB LEDs
 
 [rings](https://cad.onshape.com/documents/ef44f07510415427593272c5/w/335d813986e4bbf1b998e1ed/e/3d402b5cbd4970cf173c050d?renderMode=0&uiState=67dc828452500464e79a29ff)
 
-
-
-
-
 <video style="margin: auto;" width="50%" autoplay muted controls>
   <source src="/blog/assets/bigdawg.mp4" type="video/mp4">
 </video>
 <div align="center" style="color:#888888"><em>Shoutout to Bryant "big dawg" Lam</em></div>
+
+# Something about custom LED sticks
