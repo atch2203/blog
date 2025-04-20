@@ -74,7 +74,8 @@ And so I got back to work, designing a whole stick from scratch, attempting to d
 To help maintain rigidity of the stick, I first tried PLA, but that broke quickly (after 1 hit against the ground), so I switched to TPU with metal rods inside.
 ![alt text](@assets/images/ledsticks/plastick.jpg)
 <div align="center" style="color:#888888"><em>PLA after lightly touching the ground</em></div>
-![[Pasted image 20250420171225.png]]
+![alt text](@assets/images/ledsticks/floppystick.jpg)
+![alt text](@assets/images/ledsticks/plastick.jpg)
 <div align="center" style="color:#888888"><em>Left: TPU stick with no metal rods<br />Right: TPU stick with metal rods inside</em></div>
 ![alt text](@assets/images/ledsticks/metalrods.jpg)
 These sticks *technically* functioned, but they were horrible to use for integrals since they were 55 grams each (leading to everything being painfully slow).
