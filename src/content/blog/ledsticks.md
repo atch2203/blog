@@ -11,9 +11,9 @@ description: A journey of trials, errors, and RGB LEDs (with a side of magforce 
 # Links
 [Diabolo rings](https://cad.onshape.com/documents/ef44f07510415427593272c5/w/335d813986e4bbf1b998e1ed/e/3d402b5cbd4970cf173c050d?renderMode=0&uiState=67dc828452500464e79a29ff)
 
-[LED stick attachment](https://cad.onshape.com/documents/2f172437386052dd5692cff2/w/3c3cbeae348244a1abd02d45/e/f236c0c66763af97218da1e9?renderMode=0&uiState=67dc802656e2f57f79daf283)
+[LED stick attachment CAD](https://cad.onshape.com/documents/2f172437386052dd5692cff2/w/3c3cbeae348244a1abd02d45/e/f236c0c66763af97218da1e9?renderMode=0&uiState=67dc802656e2f57f79daf283)
 
-[BOM for custom sticks](https://docs.google.com/spreadsheets/d/1AGBjD4QgN3zay3sqjv-TY1QxXT6H7o_dQcXg4EoeE98/edit?usp=sharing)
+[BoM for custom sticks](https://docs.google.com/spreadsheets/d/1AGBjD4QgN3zay3sqjv-TY1QxXT6H7o_dQcXg4EoeE98/edit?usp=sharing)
 [CAD for custom sticks](https://cad.onshape.com/documents/1d5338fab54cf7945d5026d9/w/bd0ecd5b70426e0669c48a16/e/12736169232025d556fdddc3?renderMode=0&uiState=680557fb16208c54fe85de3b)
 Soldering/wiring image can be seen below
 
