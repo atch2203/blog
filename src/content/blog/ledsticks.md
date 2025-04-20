@@ -57,7 +57,7 @@ Not satisfied with the TPU attachments, I thought to myself:
 > If the attachment point between the LED attachment and the stick was the point of failure, what if we just made the whole stick ourselves and put LEDs along the whole thing?
 
 And so I got back to work, designing a whole stick from scratch, attempting to design a better mounting mechanism:
-![[Pasted image 20250420170949.png]]
+![[attachmentpoint.png]]
 ![alt text](@assets/images/writeups/ledsticks/diywhole.jpg)
 
 To help maintain rigidity of the stick, I first tried PLA, but that broke quickly (after 1 hit against the ground), so I switched to TPU with metal rods inside.
@@ -78,7 +78,7 @@ It was apparent that 3d printing is not the way, at least for making the whole s
 Finding small and light parts was a challenge, but I eventually settled on Adafruit's Trinket M0 (15.3mm wide), 14250 batteries (14mm wide), and 16mm IDx18mm OD polycarbonate tubing. 
 
 Throughout a few days, I came up with a simple design.
-![[Pasted image 20250420180858.png]]
+![[stickcad.png]]
 While the parts were shipping, I also soldered a prototype for the neopixel/electronics assembly.
 ![alt text](@assets/images/writeups/ledsticks/firstneopixel.jpg)
 
