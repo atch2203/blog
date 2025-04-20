@@ -8,6 +8,13 @@ tags:
   - other
 description: A journey of trials, errors, and RGB LEDs (with a side of magforce rings)
 ---
+
+<style>
+img {
+max-height:20vh;
+width:auto;
+}
+</style>
 # Links
 [Diabolo rings](https://cad.onshape.com/documents/ef44f07510415427593272c5/w/335d813986e4bbf1b998e1ed/e/3d402b5cbd4970cf173c050d?renderMode=0&uiState=67dc828452500464e79a29ff)
 
