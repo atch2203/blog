@@ -62,9 +62,9 @@ And so I got back to work, designing a whole stick from scratch, attempting to d
 ![[Pasted image 20250420170949.png]]
 ![alt text](@assets/images/writeups/ledsticks/diywhole.jpg)
 
-To help maintain rigidity of the stick
+To help maintain rigidity of the stick, I first tried PLA, but that broke quickly (after 1 hit against the g)
 ![[Pasted image 20250420171225.png]]
-<div align="center" style="color:#888888"><em>Left: TPU stick with no a</em></div>
+<div align="center" style="color:#888888"><em>Left: TPU stick with no metal rods<br />Right: TPU stick with metal rods inside</em></div>
 ![alt text](@assets/images/writeups/ledsticks/plastick.jpg)
 
 
