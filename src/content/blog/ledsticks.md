@@ -48,8 +48,10 @@ By the end of all of my test prints, I had a prototype of something that could 1
 ![alt text](@assets/images/writeups/ledsticks/comparisondark.jpg)
 <div align="center" style="color:#888888"><em>Not too bad!</em></div>
 While my own LED attachment was better in some ways, it was worse than Sundia's in others:
-- While it never broke, it also flew off the LED stick if you hit it too hard
+- While it never broke, it also flew off the LED stick if you hit it too hard (or swung it too fast)
 - The wire contact with the end cap wasn't very reliable, especially if you hit the attachment too hard
+
+Both of these issues didn't 
 
 issue: it flies off and is too dim, we want brighter!
 
