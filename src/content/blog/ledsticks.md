@@ -59,6 +59,7 @@ Not satisfied with the TPU attachments, I thought to myself:
 > If the attachment point between the LED attachment and the stick was the point of failure, what if we just made the whole stick ourselves and put LEDs along the whole thing?
 
 And so I got back to work, designing a whole stick from scratch, attempting to design a better mounting mechanism:
+![[Pasted image 20250420170949.png]]
 ![alt text](@assets/images/writeups/ledsticks/diywhole.jpg)
 ![alt text](@assets/images/writeups/ledsticks/metalrods.jpg)
 
