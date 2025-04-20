@@ -64,11 +64,9 @@ And so I got back to work, designing a whole stick from scratch, attempting to d
 
 To help maintain rigidity of the stick
 ![[Pasted image 20250420171225.png]]
+<div align="center" style="color:#888888"><em>Left: TPU stick with no a</em></div>
+![alt text](@assets/images/writeups/ledsticks/plastick.jpg)
 
-<div align="center" style="color:#888888"><em>Not too bad!</em></div>
-While my own LED attachment was better in some ways, it was worse than Sundia's in others:
-- While it never broke, it also flew off the LED stick if you hit it too hard (or swung it too fast)
-- The wire contact with the end cap wasn't very reliable, especially if you hit the attachment frequently
 
 ![alt text](@assets/images/writeups/ledsticks/metalrods.jpg)
 
