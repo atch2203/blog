@@ -82,6 +82,8 @@ Throughout a few days, I came up with a simple design.
 
 
 
+
+
 While I was a
 - polycarb sections - initial, weight/resistance too high, then final
 
