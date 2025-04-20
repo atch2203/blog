@@ -18,7 +18,7 @@ description: A journey of trials, errors, and RGB LEDs (with a side of magforce 
 Soldering/wiring image can be seen below
 
 ### Now onto how I got there
-
+I think that most people can agree that everything looks better if you add LEDs to it, and diabolo is no exception.
 <video style="margin: auto;" width="50%" autoplay muted controls>
   <source src="/blog/assets/bigdawg.mp4" type="video/mp4">
 </video>
