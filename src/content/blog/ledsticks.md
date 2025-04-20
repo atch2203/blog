@@ -13,7 +13,7 @@ description: A journey of trials, errors, and RGB LEDs (with a side of magforce 
 
 [LED stick attachment](https://cad.onshape.com/documents/2f172437386052dd5692cff2/w/3c3cbeae348244a1abd02d45/e/f236c0c66763af97218da1e9?renderMode=0&uiState=67dc802656e2f57f79daf283)
 
-[BOM for custom sticks]
+[BOM for custom sticks](https://docs.google.com/spreadsheets/d/1AGBjD4QgN3zay3sqjv-TY1QxXT6H7o_dQcXg4EoeE98/edit?usp=sharing)
 [CAD for custom sticks]
 Soldering/wiring image can be seen below
 
