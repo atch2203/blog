@@ -21,8 +21,10 @@ width:auto;
 [LED stick attachment CAD](https://cad.onshape.com/documents/2f172437386052dd5692cff2/w/3c3cbeae348244a1abd02d45/e/f236c0c66763af97218da1e9?renderMode=0&uiState=67dc802656e2f57f79daf283)
 
 [BoM for custom sticks](https://docs.google.com/spreadsheets/d/1AGBjD4QgN3zay3sqjv-TY1QxXT6H7o_dQcXg4EoeE98/edit?usp=sharing)
+
 [CAD for custom sticks](https://cad.onshape.com/documents/1d5338fab54cf7945d5026d9/w/bd0ecd5b70426e0669c48a16/e/12736169232025d556fdddc3?renderMode=0&uiState=680557fb16208c54fe85de3b)
-Soldering/wiring image can be seen below
+
+Soldering/wiring image can be seen <a href="#wiring">here</a>
 
 ### Now onto how I got there
 I think that most people can agree that everything looks better if you add LEDs to it, and diabolo is no exception.
@@ -106,7 +108,7 @@ Then I put it in the pipe when it arrived, and it worked immediately!
 ![alt text](@assets/images/ledsticks/firstneopixelinpipenolight.jpg)
 ![alt text](@assets/images/ledsticks/firstneopixelinpipe.jpg)
 
-All that was left was to clean up the wiring a little and make a second stick. I also added a button, since reflashing code to debug was an absolute pain.
+All that was left was to clean up the wiring a little and make a second stick. I also added a button, since reflashing code to debug was an absolute pain. <div id="wiring"></div>
 ![alt text](@assets/images/ledsticks/incrediblefirstwiring.jpg)![alt text](@assets/images/ledsticks/secondwiring.jpg)
 ![alt text](@assets/images/ledsticks/secondwiringback.jpg)
 ![alt text](@assets/images/ledsticks/firstledpair.jpg)
