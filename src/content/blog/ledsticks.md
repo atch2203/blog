@@ -1,6 +1,6 @@
 ---
 author: atch2203
-pubDatetime: 2025-03-20
+pubDatetime: 2025-04-21
 title: The quest for unbreakable diabolo LED sticks
 featured: false
 draft: false
@@ -8,13 +8,13 @@ tags:
   - other
 description: A journey of trials, errors, and RGB LEDs (with a side of magforce rings)
 ---
-
 <style>
 img:not(.astro-3ef6ksr2) {
 max-height:40vh;
 width:auto;
 }
 </style>
+
 # Links
 [Diabolo rings](https://cad.onshape.com/documents/ef44f07510415427593272c5/w/335d813986e4bbf1b998e1ed/e/3d402b5cbd4970cf173c050d?renderMode=0&uiState=67dc828452500464e79a29ff)
 
@@ -109,6 +109,8 @@ Then I put it in the pipe when it arrived, and it worked immediately!
 ![alt text](@assets/images/ledsticks/firstneopixelinpipe.jpg)
 
 All that was left was to clean up the wiring a little and make a second stick. I also added a button, since reflashing code to debug was an absolute pain. <div id="wiring"></div>
+
+**todo insert wiring schematic**
 ![alt text](@assets/images/ledsticks/incrediblefirstwiring.jpg)![alt text](@assets/images/ledsticks/secondwiring.jpg)
 ![alt text](@assets/images/ledsticks/secondwiringback.jpg)
 ![alt text](@assets/images/ledsticks/firstledpair.jpg)
