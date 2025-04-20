@@ -86,12 +86,13 @@ Then I put it in the pipe when it arrived, and it worked immediately!
 ![alt text](@assets/images/writeups/ledsticks/firstneopixelinpipenolight.jpg)
 ![alt text](@assets/images/writeups/ledsticks/firstneopixelinpipe.jpg)
 
-All that was left was to clean up the wiring a little and make a second stick. I also added a button, since reflashing code to 
-
+All that was left was to clean up the wiring a little and make a second stick. I also added a button, since reflashing code to debug was an absolute pain.
 ![alt text](@assets/images/writeups/ledsticks/incrediblefirstwiring.jpg)
 ![alt text](@assets/images/writeups/ledsticks/secondwiring.jpg)
+![alt text](@assets/images/writeups/ledsticks/secondwiringback.jpg)
+![alt text](@assets/images/writeups/ledsticks/firstledpair.jpg)
 
-
+However, these sticks were still too heavy (43 grams) and had an unreasonable amount, so I had to 
 
 
 
