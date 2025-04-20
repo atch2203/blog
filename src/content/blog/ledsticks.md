@@ -130,7 +130,9 @@ However, these sticks were still too heavy (43 grams) and had an unreasonable am
 
 And that brings us to where I am today. I still have plans to make them better, since the drag/air resistance still feels off compared to normal sundia sticks.
 
-**insert video of scrats**
+<video style="margin: auto;" width="50%" autoplay muted controls>
+  <source src="/blog/assets/poi.mp4" type="video/mp4">
+</video>
 
 ## Side quest: rings
 While at practice, I noticed that some TASC members used plastic rings for their magforces. However, the rings only came with certain magforces from our Sundia USA dealer, so I decided to figure out how to 3d print our own. One thing led to another, and I ended up designing rings for magforces, evos, and falcons. To be honest, designing the patterns in the rings took longer than tuning them due to my bad graphic/artistic design skills.
