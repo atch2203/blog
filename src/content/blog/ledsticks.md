@@ -33,7 +33,7 @@ I think that most people can agree that everything looks better if you add LEDs 
 </video>
 <div align="center" style="color:#888888"><em>Shoutout to Bryant "big dawg" Lam</em></div>
 
-However, I have an issue: Sundia's LED stick attachments are way to easy to break (especially if you hit the ground with them)
+However, I have an issue: Sundia's LED stick attachments are way to easy to break (especially if you hit the ground with them).
 ![altText](@assets/images/ledsticks/brokenattachment.jpg)
 <div align="center" style="color:#888888"><em>You vs the guy she tells you not to worry about</em></div>
 
@@ -45,7 +45,7 @@ And thus began the quest for the unbreakable LED sticks...
 ## Threads and LEDs
 In an effort to reduce my own work as much as possible, I attempted to copy and reuse as many parts of Sundia's LED attachment as much as possible. Unfortunately, the board with the LEDs on it was firmly epoxied in place, so I could only reuse the end cap.
 ![altText](@assets/images/ledsticks/ledapart.jpg)
-<div align="center" style="color:#888888"><em>TODO caption</em></div>
+<div align="center" style="color:#888888"><em></em></div>
 
 By the end of all of my test prints, I had a prototype of something that could 1) emit light and 2) be attached to the end of an LED stick. All that remained was to convert it to clear TPU and iron out the inner dimensions of the attachment.
 
