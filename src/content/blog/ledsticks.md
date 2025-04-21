@@ -145,7 +145,7 @@ And that brings us to where I am today.
 ## So what next?
 I still have plans to make them better, since the drag/air resistance still feels off compared to normal sundia sticks. Here is a list of improvements that I'm planning to make sometime in the future:
 - Fix the positive battery contacts
-	- Right now, the "contact" is just a 
+	- Right now, the "contact" is just pressing the wire and metal plate together, which sometimes disconnects internally if you hit the stick too hard
 - Use thin neopixels (5mm wide) and 6mm IDx8mm OD tubing for the thin part of the stick
 	- This may cause flex issues, since I'm already feeling some flex with the 11mm IDx13mm OD tubing
 - Make a version with no microcontroller and static lights (to decrease weight/thickness)
