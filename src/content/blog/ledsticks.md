@@ -70,7 +70,7 @@ While my own LED attachment was better in some ways, it was worse than Sundia's 
 
 Both of these issues posed too much of an issue to be usable for vertax and integrals (where making a mistake leads to a dangerous projectile). Additionally, while it is similar in brightness to Sundia's LED sticks, it was a lot dimmer than their LED yoyo attachments.
 
-![altText](@assets/images/ledsticks/dimbutterfly.jpg)
+![altText](@assets/images/ledsticks/dimbutterfly.png)
 <div align="center" style="color:#888888"><em>The brightness (and image quality) is pitiful</em></div>
 
 With no easy path forward, the first chapter on the LED stick saga concluded, and I moved on to greater endeavors.
