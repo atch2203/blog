@@ -83,13 +83,13 @@ To help maintain rigidity of the stick, I first tried PLA, but that broke quickl
 <div align="center" style="color:#888888"><em>PLA after lightly touching the ground</em></div>
 
 ![altText](@assets/images/ledsticks/floppystick.png)
-<div align="center" style="color:#888888"><em>Floppy stick</em></div>
-
-![altText](@assets/images/ledsticks/plastick.jpg)
-<div align="center" style="color:#888888"><em>Left: TPU stick with no metal rods<br />Right: TPU stick with metal rods inside</em></div>
-
+<div align="center" style="color:#888888"><em>Floppy stick (no metal rods)</em></div>
 
 ![altText](@assets/images/ledsticks/metalrods.jpg)
+<div align="center" style="color:#888888"><em>TPU stick with no metal rods<br />Right: TPU stick with metal rods inside</em></div>
+
+
+![altText](@assets/images/ledsticks/plastick.jpg)
 
 These sticks *technically* functioned, but they were horrible to use for integrals since they were 55 grams each (leading to everything being painfully slow).
 Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the LED attachment exploding (no photo evidence, but the batteries flew over 40 feet away from where we were yoyoing).
