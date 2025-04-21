@@ -26,7 +26,7 @@ width:auto;
 
 Soldering/wiring image can be seen <a href="#wiring">here</a>
 
-### Now onto how I got there
+## Now onto how I got here...
 I think that most people can agree that everything looks better if you add LEDs to it, and diabolo is no exception.
 <video style="margin: auto;" width="50%" autoplay muted controls>
   <source src="/blog/assets/bigdawg.mp4" type="video/mp4">
