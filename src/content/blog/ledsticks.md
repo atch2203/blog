@@ -16,17 +16,14 @@ width:auto;
 </style>
 
 # Links
-[Diabolo rings](https://cad.onshape.com/documents/ef44f07510415427593272c5/w/335d813986e4bbf1b998e1ed/e/3d402b5cbd4970cf173c050d?renderMode=0&uiState=67dc828452500464e79a29ff)
+- [Diabolo rings](https://cad.onshape.com/documents/ef44f07510415427593272c5/w/335d813986e4bbf1b998e1ed/e/3d402b5cbd4970cf173c050d?renderMode=0&uiState=67dc828452500464e79a29ff)
+- [LED stick attachment CAD](https://cad.onshape.com/documents/2f172437386052dd5692cff2/w/3c3cbeae348244a1abd02d45/e/f236c0c66763af97218da1e9?renderMode=0&uiState=67dc802656e2f57f79daf283)
+- [BoM for custom sticks](https://docs.google.com/spreadsheets/d/1AGBjD4QgN3zay3sqjv-TY1QxXT6H7o_dQcXg4EoeE98/edit?usp=sharing)
+- [CAD for custom sticks](https://cad.onshape.com/documents/1d5338fab54cf7945d5026d9/w/bd0ecd5b70426e0669c48a16/e/12736169232025d556fdddc3?renderMode=0&uiState=680557fb16208c54fe85de3b)
+- [Code for custom sticks](https://github.com/atch2203/LEDstick)
+- Soldering/wiring image can be seen <a href="#wiring">here</a>
 
-[LED stick attachment CAD](https://cad.onshape.com/documents/2f172437386052dd5692cff2/w/3c3cbeae348244a1abd02d45/e/f236c0c66763af97218da1e9?renderMode=0&uiState=67dc802656e2f57f79daf283)
 
-[BoM for custom sticks](https://docs.google.com/spreadsheets/d/1AGBjD4QgN3zay3sqjv-TY1QxXT6H7o_dQcXg4EoeE98/edit?usp=sharing)
-
-[CAD for custom sticks](https://cad.onshape.com/documents/1d5338fab54cf7945d5026d9/w/bd0ecd5b70426e0669c48a16/e/12736169232025d556fdddc3?renderMode=0&uiState=680557fb16208c54fe85de3b)
-
-[Code for custom sticks](https://github.com/atch2203/LEDstick)
-
-Soldering/wiring image can be seen <a href="#wiring">here</a>
 
 ## Now onto how I got here...
 I think that most people can agree that everything looks better if you add LEDs to it, and diabolo is no exception.
@@ -147,12 +144,13 @@ And that brings us to where I am today.
 
 ## So what next?
 I still have plans to make them better, since the drag/air resistance still feels off compared to normal sundia sticks. Here is a list of improvements that I'm planning to make sometime in the future:
+- Fix the positive battery contacts
+	- Right now, the "contact" is just a 
 - Use thin neopixels (5mm wide) and 6mm IDx8mm OD tubing for the thin part of the stick
 	- This may cause flex issues, since I'm already feeling some flex with the 11mm IDx13mm OD tubing
 - Make a version with no microcontroller and static lights (to decrease weight/thickness)
 - Add a rubber button "cover" (like you see on gamepad buttons)
 	- Right now, I have to use a screwdriver/something pointy to press the button, since it is fully contained within the stick
-- 
 
 ## Side quest: magforce rings
 While at practice, I noticed that some TASC members used plastic rings for their magforces. However, the rings only came with certain magforces from our Sundia USA dealer, so I decided to figure out how to 3d print our own. One thing led to another, and I ended up designing rings for magforces, evos, and falcons. To be honest, designing the patterns in the rings took longer than tuning them due to my bad graphic/artistic design skills.
