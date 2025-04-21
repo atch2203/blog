@@ -45,7 +45,7 @@ And thus began the quest for the unbreakable LED sticks...
 ## Threads and LEDs
 In an effort to reduce my own work as much as possible, I attempted to copy and reuse as many parts of Sundia's LED attachment as much as possible. Unfortunately, the board with the LEDs on it was firmly epoxied in place, so I could only reuse the end cap.
 ![altText](@assets/images/ledsticks/ledapart.jpg)
-<div align="center" style="color:#888888"><em></em></div>
+<div align="center" style="color:#888888"><em>The end goal (for now)</em></div>
 
 By the end of all of my test prints, I had a prototype of something that could 1) emit light and 2) be attached to the end of an LED stick. All that remained was to convert it to clear TPU and iron out the inner dimensions of the attachment.
 
@@ -130,11 +130,14 @@ However, these sticks were still too heavy (43 grams) and had an unreasonable am
 
 ![altText](@assets/images/ledsticks/finalpair.jpg)
 
-And that brings us to where I am today. I still have plans to make them better, since the drag/air resistance still feels off compared to normal sundia sticks.
+And that brings us to where I am today. 
 
 <video style="margin: auto;" width="50%" autoplay muted controls>
   <source src="/blog/assets/poi.mp4" type="video/mp4">
 </video>
+
+## So what next?
+I still have plans to make them better, since the drag/air resistance still feels off compared to normal sundia sticks. 
 
 ## Side quest: rings
 While at practice, I noticed that some TASC members used plastic rings for their magforces. However, the rings only came with certain magforces from our Sundia USA dealer, so I decided to figure out how to 3d print our own. One thing led to another, and I ended up designing rings for magforces, evos, and falcons. To be honest, designing the patterns in the rings took longer than tuning them due to my bad graphic/artistic design skills.
