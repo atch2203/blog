@@ -80,14 +80,14 @@ Not satisfied with the TPU attachments, I thought to myself:
 And so I got back to work, designing a whole stick from scratch, attempting to design a better mounting mechanism:
 ![altText](@assets/images/ledsticks/attachmentpoint.png)
 ![altText](@assets/images/ledsticks/diywhole.jpg)
-<div align="center" style="color:#888888"><em>A "twist and turn" type locking mechanism</em></div>
+<div align="center" style="color:#888888"><em>A twist type locking mechanism</em></div>
 
 To help maintain rigidity of the stick, I first tried PLA, but that broke quickly (after 1 hit against the ground), so I switched to TPU with metal rods inside.
 ![altText](@assets/images/ledsticks/plastick.jpg)
 <div align="center" style="color:#888888"><em>PLA after "lightly" touching the ground</em></div>
 
 ![altText](@assets/images/ledsticks/floppystick.png)
-<div align="center" style="color:#888888"><em>Left hand: floppy stick (no metal rods)<br />Right hand: stick with metal rods</em></div>
+<div align="center" style="color:#888888"><em>Left hand: floppy stick (no metal rods)<br />Right hand: TPU stick with metal rods</em></div>
 
 ![altText](@assets/images/ledsticks/metalrods.jpg)
 <div align="center" style="color:#888888"><em>TPU stick with metal rods inside</em></div>
