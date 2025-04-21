@@ -57,6 +57,7 @@ By the end of all of my test prints, I had a prototype of something that could 1
 <div align="center" style="color:#888888"><em>What happens when you do a mini-gen with no infill</em></div>
 
 ## The end...?
+I was able to print the attachments out of clear TPU using the all campus makerspace's printers, and they worked like a charm.
 ![altText](@assets/images/ledsticks/comparison.jpg)
 ![altText](@assets/images/ledsticks/comparisondark.jpg)
 <div align="center" style="color:#888888"><em>Not too bad!</em></div>
@@ -80,7 +81,7 @@ And so I got back to work, designing a whole stick from scratch, attempting to d
 
 To help maintain rigidity of the stick, I first tried PLA, but that broke quickly (after 1 hit against the ground), so I switched to TPU with metal rods inside.
 ![altText](@assets/images/ledsticks/plastick.jpg)
-<div align="center" style="color:#888888"><em>PLA after lightly touching the ground</em></div>
+<div align="center" style="color:#888888"><em>PLA after "lightly" touching the ground</em></div>
 
 ![altText](@assets/images/ledsticks/floppystick.png)
 <div align="center" style="color:#888888"><em>Left hand: floppy stick (no metal rods)<br />Right hand: stick with metal rods</em></div>
