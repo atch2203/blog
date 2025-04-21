@@ -86,7 +86,7 @@ To help maintain rigidity of the stick, I first tried PLA, but that broke quickl
 <div align="center" style="color:#888888"><em>Floppy stick (no metal rods)</em></div>
 
 ![altText](@assets/images/ledsticks/metalrods.jpg)
-<div align="center" style="color:#888888"><em>TPU stick with no metal rods<br />Right: TPU stick with metal rods inside</em></div>
+<div align="center" style="color:#888888"><em>TPU stick with metal rods inside</em></div>
 
 
 ![altText](@assets/images/ledsticks/plastick.jpg)
