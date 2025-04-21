@@ -66,7 +66,7 @@ I was able to print the attachments out of clear TPU using the all campus makers
 
 While my own LED attachment was better in some ways, it was worse than Sundia's in others:
 - While it never broke, it also flew off the LED stick if you hit it too hard (or swung it too fast)
-	- This could be solved with a heat insert (with a )
+	- This could be solved with a heat insert (with a hole for the string to go through), but then I'd have the problem of the end cap flying off (see fully custom sticks)
 - The wire contact with the end cap wasn't very reliable, especially if you hit the attachment frequently
 
 Both of these issues posed too much of an issue to be usable for vertax and integrals (where making a mistake leads to a dangerous projectile). Additionally, while it is similar in brightness to Sundia's LED sticks, it was a lot dimmer than their LED yoyo attachments.
@@ -152,6 +152,7 @@ I still have plans to make them better, since the drag/air resistance still feel
 - Make a version with no microcontroller and static lights (to decrease weight/thickness)
 - Add a rubber button "cover" (like you see on gamepad buttons)
 	- Right now, I have to use a screwdriver/something pointy to press the button, since it is fully contained within the stick
+- 
 
 ## Side quest: magforce rings
 While at practice, I noticed that some TASC members used plastic rings for their magforces. However, the rings only came with certain magforces from our Sundia USA dealer, so I decided to figure out how to 3d print our own. One thing led to another, and I ended up designing rings for magforces, evos, and falcons. To be honest, designing the patterns in the rings took longer than tuning them due to my bad graphic/artistic design skills.
