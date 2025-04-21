@@ -9,7 +9,7 @@ tags:
   - writeups
 description: Author writeup for UMassCTF 2025 web challenge
 ---
-Last weekend (April 18-20), the UMass Cybersecurity Club hosted [UMassCTF 2025](https://ctftime.org/event/2653). Aside from organizing the challenges for each category, I also wrote my own web challenge, Bonk4Cash. 
+Last weekend (April 18-20), the [UMass Cybersecurity Club](https://umasscybersec.org/) hosted [UMassCTF 2025](https://ctftime.org/event/2653). Aside from organizing the challenges for each category, I also wrote my own web challenge, Bonk4Cash. 
 
 My challenge was heavily inspired by [this talk](https://www.youtube.com/watch?v=70yyOMFylUA) by Martin Doyhenard on web cache exploitation, and you can see that reflected in the network diagram.
 
@@ -20,6 +20,7 @@ Notably, almost everything goes through the cache, including the admin's request
 Playing around with the application, it seems that there are a few main functionalities:
 - registering as a new user with only alphanumeric characters in the username
 - sending chat messages via websockets/getting the chat logs from `/transcript`
+- playing a scuffed version of 1v1 bonk.io
 - viewing the stats of a user at `/stats/username`
 - reporting a user at `/report/username`
 
