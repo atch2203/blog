@@ -95,8 +95,8 @@ To help maintain rigidity of the stick, I first tried PLA, but that broke quickl
 
 ![altText](@assets/images/ledsticks/plastick.jpg)
 
-These sticks *technically* functioned, but they were horrible to use for integrals since they were 55 grams each (leading to everything being painfully slow). For reference, plastic sticks are 
-Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the LED attachment exploding (no photo evidence, but the batteries flew over 40 feet away from where we were yoyoing).
+These sticks *technically* functioned, but they were horrible to use for integrals since they were 55 grams each (leading to everything being painfully slow). For reference, plastic sticks are typically 37 grams each, and carbon sticks are around 30-33 grams each.
+Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the LED attachment exploding (no photo evidence, but the batteries flew over 30 feet away from where we were yoyoing).
 
 In lieu of becoming another public safety hazard and wanting to avoid having to figure out how to cut over 20 grams off of a 3d print, I had to scrap these sticks and come up with a more novel approach.
 
