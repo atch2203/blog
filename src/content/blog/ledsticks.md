@@ -24,7 +24,7 @@ width:auto;
 
 [CAD for custom sticks](https://cad.onshape.com/documents/1d5338fab54cf7945d5026d9/w/bd0ecd5b70426e0669c48a16/e/12736169232025d556fdddc3?renderMode=0&uiState=680557fb16208c54fe85de3b)
 
-[Code for]
+[Code for custom sticks]()
 
 Soldering/wiring image can be seen <a href="#wiring">here</a>
 
