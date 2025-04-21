@@ -66,6 +66,7 @@ I was able to print the attachments out of clear TPU using the all campus makers
 
 While my own LED attachment was better in some ways, it was worse than Sundia's in others:
 - While it never broke, it also flew off the LED stick if you hit it too hard (or swung it too fast)
+	- This could be solved with a heat insert (with a )
 - The wire contact with the end cap wasn't very reliable, especially if you hit the attachment frequently
 
 Both of these issues posed too much of an issue to be usable for vertax and integrals (where making a mistake leads to a dangerous projectile). Additionally, while it is similar in brightness to Sundia's LED sticks, it was a lot dimmer than their LED yoyo attachments.
