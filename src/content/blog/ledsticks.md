@@ -68,8 +68,8 @@ While my own LED attachment was better in some ways, it was worse than Sundia's 
 
 Both of these issues posed too much of an issue to be usable for vertax and integrals (where making a mistake leads to a dangerous projectile). Additionally, while it is similar in brightness to Sundia's LED sticks, it was a lot dimmer than their LED yoyo attachments.
 
-
-<div align="center" style="color:#888888"><em>The brightness is pitiful</em></div>
+![altText](@assets/images/ledsticks/dimbutterfly.jpg)
+<div align="center" style="color:#888888"><em>The brightness (and image quality) is pitiful</em></div>
 
 With no easy path forward, the first chapter on the LED stick saga concluded, and I moved on to greater endeavors.
 
@@ -95,7 +95,7 @@ To help maintain rigidity of the stick, I first tried PLA, but that broke quickl
 
 ![altText](@assets/images/ledsticks/plastick.jpg)
 
-These sticks *technically* functioned, but they were horrible to use for integrals since they were 55 grams each (leading to everything being painfully slow).
+These sticks *technically* functioned, but they were horrible to use for integrals since they were 55 grams each (leading to everything being painfully slow). For reference, plastic sticks are 
 Also, now that the point of failure between the attachment and stick was fixed, we discovered a new point of failure: the end cap and the LED attachment exploding (no photo evidence, but the batteries flew over 40 feet away from where we were yoyoing).
 
 In lieu of becoming another public safety hazard and wanting to avoid having to figure out how to cut over 20 grams off of a 3d print, I had to scrap these sticks and come up with a more novel approach.
