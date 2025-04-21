@@ -111,10 +111,10 @@ Then I put it in the pipe when it arrived, and it worked immediately!
 ![altText](@assets/images/ledsticks/firstneopixelinpipenolight.jpg)
 ![altText](@assets/images/ledsticks/firstneopixelinpipe.jpg)
 
-All that was left was to clean up the wiring a little and make a second stick. I also added a button, since reflashing code to debug was an absolute pain. <div id="wiring"></div>
+All that was left was to clean up the wiring a little and make a second stick. I also added a button, since reflashing code to debug was an absolute pain. <div id="wiring">
 
 ![altText](@assets/images/ledsticks/firstledpair.jpg)
-<div align="center" style="color:#888888"><em>Schematic; it's a lot more compact </em></div>
+<div align="center" style="color:#888888"><em>Schematic; it's a lot more compact IRL (see below)</em></div>
 
 ![altText](@assets/images/ledsticks/incrediblefirstwiring.jpg)![altText](@assets/images/ledsticks/secondwiring.jpg)
 <div align="center" style="color:#888888"><em>The difference in neatness is (almost) apparent</em></div>
