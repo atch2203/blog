@@ -42,7 +42,7 @@ Since I wanted to do integrals with them (since I'm not good at vertax), I took 
 And thus began the quest for the unbreakable LED sticks...
 
 
-## Threads and LEDs
+## A humble beginning
 In an effort to reduce my own work as much as possible, I attempted to copy and reuse as many parts of Sundia's LED attachment as much as possible. Unfortunately, the board with the LEDs on it was firmly epoxied in place, so I could only reuse the end cap.
 ![altText](@assets/images/ledsticks/ledapart.jpg)
 <div align="center" style="color:#888888"><em>The end goal (for now)</em></div>
@@ -56,7 +56,7 @@ By the end of all of my test prints, I had a prototype of something that could 1
 ![altText](@assets/images/ledsticks/noinfill.jpg)
 <div align="center" style="color:#888888"><em>What happens when you do a mini-gen with no infill</em></div>
 
-## finished with the attachments
+## The end...?
 ![altText](@assets/images/ledsticks/comparison.jpg)
 ![altText](@assets/images/ledsticks/comparisondark.jpg)
 <div align="center" style="color:#888888"><em>Not too bad!</em></div>
@@ -69,7 +69,7 @@ Both of these issues posed too much of an issue to be usable for vertax and inte
 
 With no easy path forward, the first chapter on the LED stick saga concluded, and I moved on to greater endeavors.
 
-## Fully custom LED sticks
+## Onwards to fully custom LED sticks
 Not satisfied with the TPU attachments, I thought to myself:
 > If the attachment point between the LED attachment and the stick was the point of failure, what if we just made the whole stick ourselves and put LEDs along the whole thing?
 
@@ -142,7 +142,7 @@ I still have plans to make them better, since the drag/air resistance still feel
 	- This may cause flex issues, since I'm already feeling some flex with the 11mm IDx13mm OD tubing
 - Make a version with no microcontroller and static lights (to decrease weight/thickness)
 - Add a rubber button "cover" (like you see on gamepad buttons)
-	- 
+	- Right now, I have to use a screwdriver/something pointy to press the button, since it is fully contained within the stick
 
 ## Side quest: magforce rings
 While at practice, I noticed that some TASC members used plastic rings for their magforces. However, the rings only came with certain magforces from our Sundia USA dealer, so I decided to figure out how to 3d print our own. One thing led to another, and I ended up designing rings for magforces, evos, and falcons. To be honest, designing the patterns in the rings took longer than tuning them due to my bad graphic/artistic design skills.
