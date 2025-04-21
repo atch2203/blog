@@ -83,7 +83,7 @@ To help maintain rigidity of the stick, I first tried PLA, but that broke quickl
 <div align="center" style="color:#888888"><em>PLA after lightly touching the ground</em></div>
 
 ![altText](@assets/images/ledsticks/floppystick.png)
-<div align="center" style="color:#888888"><em>Floppy stick (no metal rods)</em></div>
+<div align="center" style="color:#888888"><em>Left hand: floppy stick (no metal rods)<br />Right hand: stick with metal rods</em></div>
 
 ![altText](@assets/images/ledsticks/metalrods.jpg)
 <div align="center" style="color:#888888"><em>TPU stick with metal rods inside</em></div>
