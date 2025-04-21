@@ -68,6 +68,9 @@ While my own LED attachment was better in some ways, it was worse than Sundia's 
 
 Both of these issues posed too much of an issue to be usable for vertax and integrals (where making a mistake leads to a dangerous projectile). Additionally, while it is similar in brightness to Sundia's LED sticks, it was a lot dimmer than their LED yoyo attachments.
 
+
+<div align="center" style="color:#888888"><em>Not too bad!</em></div>
+
 With no easy path forward, the first chapter on the LED stick saga concluded, and I moved on to greater endeavors.
 
 ## Onwards to fully custom LED sticks
@@ -119,6 +122,7 @@ All that was left was to clean up the wiring a little and make a second stick. I
 ![altText](@assets/images/ledsticks/schematic.jpg)
 <div align="center" style="color:#888888"><em>Schematic; it's a lot more compact IRL (see below)</em></div>
 
+Shoutout to the CICS Makerspace for letting me use their soldering irons and electronics.
 ![altText](@assets/images/ledsticks/incrediblefirstwiring.jpg)![altText](@assets/images/ledsticks/secondwiring.jpg)
 <div align="center" style="color:#888888"><em>The difference in neatness is (almost) apparent</em></div>
 
