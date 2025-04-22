@@ -58,7 +58,7 @@ app.post('/report/:username', utils.authMiddleware, async (req, res) => {
 
 It seems that we need to get the admin to report themselves, and then exfiltrate the flag from the redirect. 
 
-The issue is, reporting a user just goes to the `/stats` page, which (theoretically) shouldn't have any XSS or other vulnerability (this happens to not be true, see <a href="wrong">"What went wrong"</a>). Additionally, from the network diagram, even if we did have an XSS, we wouldn't be able to exfiltrate the data easily since the `web` container doesn't have access to the internet (once again, this happens to also not be true, see what went wrong again).
+The issue is, reporting a user just goes to the `/stats` page, which (theoretically) shouldn't have any XSS or other vulnerability (this happens to not be true, see <a href="#wrong">"What went wrong"</a>). Additionally, from the network diagram, even if we did have an XSS, we wouldn't be able to exfiltrate the data easily since the `web` container doesn't have access to the internet (once again, this happens to also not be true, see what went wrong again).
 
 ## Exploring the suspiciously conspicuous cache
 My hope was that players would see the cache and see that they would have to do something with it (since why would it be there otherwise?).
