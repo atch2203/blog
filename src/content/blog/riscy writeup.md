@@ -25,7 +25,6 @@ gdb-multiarch riscy
 ![[Pasted image 20250422170114.png]]
 
 ## Static analysis
-
 ```c
 void main(void){
   ssize_t readsize;
@@ -54,6 +53,8 @@ void main(void){
   exit(1);
 }
 ```
+Ess
+
 
 
 ## Dynamic analysis
