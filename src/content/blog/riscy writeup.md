@@ -53,7 +53,8 @@ void main(void){
   exit(1);
 }
 ```
-Ess
+It seems that this program is only doing 3-4 things:
+- it first gives us the pointer to 
 
 
 
@@ -62,3 +63,7 @@ Let's confirm what we think is happening. We are specifically looking for a few 
 - what is read/written into the first local variable (the function pointer)
 - what is read/written into the buffer
 - most importantly, what happens when our function pointer is called
+
+#### A brief aside: running riscv
+
+[link](https://issues.genenetwork.org/topics/riscv/debug-riscv-assembly-with-qemu-and-gdb)
