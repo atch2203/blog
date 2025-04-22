@@ -21,4 +21,6 @@ gdb-multiarch riscy
 "target remote :4444"
 ```
 
+`riscy`, on the other hand, is the program that we're supposed to pwn. IDA doesn't have out of the box support for riscv, so I put it in ghidra
+
 ## Static analysis
