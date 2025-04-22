@@ -31,4 +31,5 @@ gdb-multiarch riscy
 
 ## Dynamic analysis
 Let's confirm what we think is happening. We are specifically looking for a few things:
-- what is read/written into the first local variable ()
+- what is read/written into the first local variable (the function pointer)
+- what is read/written into the 
