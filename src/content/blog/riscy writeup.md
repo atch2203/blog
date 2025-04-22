@@ -26,7 +26,34 @@ gdb-multiarch riscy
 
 ## Static analysis
 
-
+```c
+void main(void){
+  ssize_t readsize;
+  ulong funcptr;
+  undefined buf [516];
+  int readsizeint;
+  
+  gp = &__global_pointer$;
+  memset(&funcptr,0,0x208);
+  printf("Hmm, riscy business happning at %p\n",&funcptr);
+  puts("What do you want?");
+  readsize = read(0,&funcptr,8);
+  readsizeint = (int)readsize;
+  if (readsizeint < 1) {
+    puts("read error!");
+    exit(1);
+  }
+  puts("You better not let this get more riscy");
+  readsize = read(0,buf,0x200);
+  readsizeint = (int)readsize;
+  if (readsizeint < 1) {
+    puts("read error!");
+    exit(1);
+  }
+  (*(code *)(funcptr & 0xfffffffffffffffe))(1);
+  exit(1);
+}
+```
 
 
 ## Dynamic analysis
