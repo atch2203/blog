@@ -29,7 +29,7 @@ gdb-multiarch riscy
 void main(void){
   ssize_t readsize;
   ulong funcptr;
-  undefined buf [516];
+  undefined buf [0x204];
   int readsizeint;
   
   gp = &__global_pointer$;
@@ -54,8 +54,9 @@ void main(void){
 }
 ```
 It seems that this program is only doing 3-4 things:
-- it first gives us the pointer to 
+- it first gives us the pointer to our function, which in this case is 
 
+**TODO DRAW STACK**
 
 
 ## Dynamic analysis
