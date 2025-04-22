@@ -9,3 +9,6 @@ tags:
   - writeups
 description: Writeup for a pwn challenge in UMassCTF 2025
 ---
+
+
+## Static analysis
