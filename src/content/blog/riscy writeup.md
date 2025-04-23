@@ -66,5 +66,4 @@ Let's confirm what we think is happening. We are specifically looking for a few 
 - most importantly, what happens when our function pointer is called
 
 #### A brief aside: running riscv
-
 [link](https://issues.genenetwork.org/topics/riscv/debug-riscv-assembly-with-qemu-and-gdb)
