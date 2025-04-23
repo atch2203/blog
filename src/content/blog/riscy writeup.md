@@ -55,7 +55,8 @@ void main(void){
 ```
 It seems that this program is only doing 3-4 things:
 - it first gives us the pointer to our function, which in this case is right above our buffer (verify this later)
-Note that this is 64 bit, since
+Note that this is 64 bit, since our function pointer is of type `ulong`.
+
 **TODO DRAW STACK**
 
 
