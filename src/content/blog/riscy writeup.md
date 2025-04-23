@@ -54,7 +54,7 @@ void main(void){
 }
 ```
 It seems that this program is only doing 3-4 things:
-- it first gives us the pointer to our function, which in this case is 
+- it first gives us the pointer to our function, which in this case is right above our buffer (verify this later)
 
 **TODO DRAW STACK**
 
