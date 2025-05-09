@@ -160,4 +160,4 @@ While at practice, I noticed that some TASC members used plastic rings for their
 ![altText](@assets/images/ledsticks/magforcering.jpg)
 ![altText](@assets/images/ledsticks/falconring.jpg)
 
-I also tried 3d printing a hex driver, but it's not 
+I also tried 3d printing a hex driver, but it's not as good as a metal one and can strip with high torques. The cad file for it can be found [here]()
