@@ -142,7 +142,9 @@ And that brings us to where I am today.
   <source src="/blog/assets/poi.mp4" type="video/mp4">
 </video>
 
-<div align="center" style="color:#888888"><em>Credit to <a href="https://www.instagram.com/art.bybo/">Bo</a></em></div>
+![altText](@assets/images/ledsticks/finalpair.jpg@assets/)
+
+<div align="center" style="color:#888888"><em>Credit to <a href="https://www.instagram.com/art.bybo/">Bo</a> for this image</em></div>
 
 
 ## So what next?
@@ -155,7 +157,7 @@ I still have plans to make them better, since the drag/air resistance still feel
 - Add a rubber button "cover" (like you see on gamepad buttons)
 	- Right now, I have to use a screwdriver/something pointy to press the button, since it is fully contained within the stick
 
-## Side quest: magforce rings
+## Side quest: magforce rings and hex driver
 While at practice, I noticed that some TASC members used plastic rings for their magforces. However, the rings only came with certain magforces from our Sundia USA dealer, so I decided to figure out how to 3d print our own. One thing led to another, and I ended up designing rings for magforces, evos, and falcons. To be honest, designing the patterns in the rings took longer than tuning them due to my bad graphic/artistic design skills.
 ![altText](@assets/images/ledsticks/magforcering.jpg)
 ![altText](@assets/images/ledsticks/falconring.jpg)
