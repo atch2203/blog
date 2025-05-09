@@ -142,6 +142,9 @@ And that brings us to where I am today.
   <source src="/blog/assets/poi.mp4" type="video/mp4">
 </video>
 
+<div align="center" style="color:#888888"><em>Credit to <a href="https://www.instagram.com/art.bybo/">Bo</a></em></div>
+
+
 ## So what next?
 I still have plans to make them better, since the drag/air resistance still feels off compared to normal sundia sticks. Here is a list of improvements that I'm planning to make sometime in the future:
 - Fix the positive battery contacts
