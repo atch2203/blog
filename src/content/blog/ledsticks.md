@@ -142,7 +142,7 @@ And that brings us to where I am today.
   <source src="/blog/assets/poi.mp4" type="video/mp4">
 </video>
 
-![altText](@assets/images/ledsticks/finalpair.jpg@assets/)
+![altText](@assets/images/ledsticks/poi.gif)
 
 <div align="center" style="color:#888888"><em>Credit to <a href="https://www.instagram.com/art.bybo/">Bo</a> for this image</em></div>
 
