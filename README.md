@@ -1,7 +1,7 @@
 # AstroPaper 📄
 
 ```
-%s/!\[\[/![](@assets\/images\/cs335\//g
+%s/!\[\[/![altText](@assets\/images\/cs335\//g
 %s/\]\]/)/g
 ```
 
