@@ -263,9 +263,6 @@ ptr2 buf arbrd buf <01000000> eq { ptr2 <00000000> arbwr } if
 Unfortunately, this exploit does not clean up after itself! After we try to exit the ghostscript interpreter, it attempts to clean up the heap. However, we overwrote the header of the TARGET array in the heap with all 0s, so it crashes! We didn't have time to figure out how to exit gracefully, but one of the team's members, Richard, looked into it later and found out how to clean up.
 ![altText](@assets/images/ghostscript/ghostscript-13.png)
 
-
-%% - TODO link to richard's fixing %%
-
 # Conclusion
 There's not much left to say about this exploit, except that our group unknowingly picked a hard exploit and target to analyze. Since our target was an interpreter, it was almost impossible to identify the path the exploit took to get to the vulnerable code (since there were 20 layers of looping interpreter functions before you got to font specific code). Additionally, Ghostscript's custom heap implementation really threw us in a loop, but we were eventually able to understand it.
 
