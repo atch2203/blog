@@ -5,8 +5,8 @@ export const SITE: Site = {
   author: "Atch2203",
   desc: "atch2203's blog",
   title: "atch2203's blog",
-  ogImage: "icon.png",
-  lightAndDarkMode: false,
+  ogImage: "/blog/assets/logo.png",
+  lightAndDarkMode: true,
   postPerPage: 10,
 };
 
