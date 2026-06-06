@@ -28,7 +28,7 @@ width:auto;
 ## Now onto how I got here...
 I think that most people can agree that everything looks better if you add LEDs to it, and diabolo is no exception.
 <video style="margin: auto;" width="50%" autoplay muted controls>
-  <source src="/blog/assets/bigdawg.mp4" type="video/mp4">
+  <source src="/assets/bigdawg.mp4" type="video/mp4">
 </video>
 <div align="center" style="color:#888888"><em>Shoutout to Bryant "big dawg" Lam</em></div>
 

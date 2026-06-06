@@ -9,7 +9,7 @@ tags:
 description: My experience with using AI to code a web app
 ---
 
-> **tl;dr** I vibe coded a web app to split bills privately and with p2p/party functionality @ https://atch2203.github.io/split-the-bill; while claude built a functional app, the code itself is a mess and I wouldn't use rely on AI-generated code for real work
+> **tl;dr** I vibe coded a web app to split bills privately and with p2p/party functionality @ https://stb.atch.dev; while claude built a functional app, the code itself is a mess and I wouldn't use rely on AI-generated code for real work
 
 ## The Problem
 Last semester, I was eating dinner at a restaurant with some of my friends after a performance for KDC (shoutout to Miss Saigon!). However, as a group of 11 people ordering 22 items total, our receipt ended up totaling over \$200. Naturally, calculating the division reliably was not so easy, made even harder by the fact that some of us shared items.
@@ -94,4 +94,4 @@ One thing that I will say AI-generated code is good for is playing around and pr
 
 Additionally, as a more security/backend developer, I will say that AI is great for pumping out generic and "modern" looking frontends when you don't want to do it yourself.
 
-Once again, you can find the project at https://atch2203.github.io/split-the-bill and the (spaghetti) code on my [github](https://github.com/atch2203/split-the-bill/tree/main), and I hope that you find this free tool useful (I'm more proud of the idea than the actual coding of it).
+Once again, you can find the project at https://stb.atch.dev and the (spaghetti) code on my [github](https://github.com/atch2203/split-the-bill/tree/main), and I hope that you find this free tool useful (I'm more proud of the idea than the actual coding of it).

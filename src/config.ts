@@ -1,11 +1,11 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://atch2203.github.io/", // replace this with your deployed domain
-  author: "Atch2203",
+  website: "https://atch.dev/", // replace this with your deployed domain
+  author: "atch2203",
   desc: "atch2203's blog",
   title: "atch2203's blog",
-  ogImage: "/blog/assets/logo.png",
+  ogImage: "/assets/logo.png",
   lightAndDarkMode: true,
   postPerPage: 10,
 };
@@ -28,13 +28,13 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=100083363022017",
+    href: "https://github.com/satnaing/astro-paper",
     linkTitle: `atch2203 on Facebook`,
     active: false,
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/atch2203/",
+    href: "https://github.com/satnaing/astro-paper",
     linkTitle: `atch2203 on Instagram`,
     active: false,
   },

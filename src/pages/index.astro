@@ -41,7 +41,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a> -->
 
       <p>
-        This where I post CTF writeups, project updates, and things I find interesing. You can find my main page at <a class="text-skin-accent decoration-dashed hover:underline underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0" href="https://atch2203.github.io">atch2203.github.io</a>.
+        This where I post CTF writeups, project updates, and things I find interesing. You can find my main page at <a class="text-skin-accent decoration-dashed hover:underline underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0" href="https://atch.dev">atch.dev</a>.
       </p>
       <!-- <p>
         Read the blog posts or check
@@ -73,7 +73,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <ul>
               {featuredPosts.map(({ data }) => (
                 <Card
-                  href={`/blog/posts/${slugify(data)}`}
+                  href={`/posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -95,7 +95,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
               ({ data }, index) =>
                 index < 4 && (
                   <Card
-                    href={`/blog/posts/${slugify(data)}`}
+                    href={`/posts/${slugify(data)}`}
                     frontmatter={data}
                     secHeading={false}
                   />
@@ -104,7 +104,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         }
       </ul>
       <div class="all-posts-btn-wrapper">
-        <LinkButton href="/blog/posts">
+        <LinkButton href="/posts">
           All Posts
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path
