@@ -132,4 +132,18 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+  /* Code blocks placed next to each other, stacked on narrow screens. */
+  .side-by-side {
+    @apply flex flex-col gap-2 sm:flex-row;
+  }
+  .side-by-side > * {
+    @apply !my-0 min-w-0 flex-1;
+  }
+  /* Caption added by the code fence's title="..." meta. */
+  .code-figure > pre {
+    @apply !mt-1;
+  }
+  .code-title {
+    @apply !mb-0 text-sm !opacity-70;
+  }
 }

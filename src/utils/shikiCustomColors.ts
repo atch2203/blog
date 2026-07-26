@@ -14,6 +14,7 @@ import type { ShikiTransformer, ThemedToken } from "shiki";
  *                       markdown strips backslash escapes before we see the meta
  * - `"Host: a\n\nGET":#61afef` `\n` and `\t` stand for the real characters, so a
  *                       match may run across several lines
+ * - `title="our request"` caption above the block; wraps it in a `<figure>`
  *
  * Rules can be repeated freely; later ones win, so a word rule can repaint part
  * of a coloured line.
@@ -25,6 +26,7 @@ type WordRule = { text: string; color: string };
 const LINE_RULE = /\{([\d,\s-]+):(bg=)?([^}\s]+)\}/g;
 const WORD_RULE = /\/([^/\n]+)\/:([^\s]+)/g;
 const QUOTED_WORD_RULE = /"([^"\n]+)":([^\s]+)/g;
+const TITLE_RULE = /(^|\s)title="([^"\n]*)"/;
 
 /** `\n` / `\t` in the meta string stand for the real characters. */
 function unescape(text: string): string {
@@ -46,9 +48,13 @@ function parseLines(spec: string): Set<number> {
   return lines;
 }
 
-function parseMeta(meta: string) {
+function parseMeta(rawMeta: string) {
   const lineRules: LineRule[] = [];
   const wordRules: WordRule[] = [];
+
+  // Pulled out first so the caption text is never read as a colour rule.
+  const title = rawMeta.match(TITLE_RULE)?.[2];
+  const meta = rawMeta.replace(TITLE_RULE, "");
 
   for (const [, spec, bg, color] of meta.matchAll(LINE_RULE)) {
     const lines = parseLines(spec);
@@ -64,7 +70,7 @@ function parseMeta(meta: string) {
     wordRules.push({ text: unescape(text), color });
   }
 
-  return { lineRules, wordRules };
+  return { lineRules, wordRules, title };
 }
 
 type Span = { start: number; end: number; color: string };
@@ -178,6 +184,29 @@ export function transformerCustomColors(): ShikiTransformer {
             );
         }
       }
+    },
+
+    root(node) {
+      const meta = this.options.meta?.__raw;
+      const title = meta ? parseMeta(meta).title : undefined;
+      if (!title) return;
+
+      node.children = [
+        {
+          type: "element",
+          tagName: "figure",
+          properties: { class: "code-figure" },
+          children: [
+            {
+              type: "element",
+              tagName: "figcaption",
+              properties: { class: "code-title" },
+              children: [{ type: "text", value: title }],
+            },
+            ...node.children.filter(child => child.type === "element"),
+          ],
+        },
+      ];
     },
   };
 }
