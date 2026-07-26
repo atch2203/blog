@@ -5,6 +5,7 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
+import { transformerCustomColors } from "./src/utils/shikiCustomColors";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,6 +31,7 @@ export default defineConfig({
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,
+      transformers: [transformerCustomColors()],
     },
   },
   vite: {
