@@ -12,7 +12,7 @@ description: My experience with using AI to code a web app
 > **tl;dr** I vibe coded a web app to split bills privately and with p2p/party functionality @ https://stb.atch.dev; while claude built a functional app, the code itself is a mess and I wouldn't use rely on AI-generated code for real work
 
 ## The Problem
-Last semester, I was eating dinner at a restaurant with some of my friends after a performance for KDC (shoutout to Miss Saigon!). However, as a group of 11 people ordering 22 items total, our receipt ended up totaling over \$200. Naturally, calculating the division reliably was not so easy, made even harder by the fact that some of us shared items.
+Last semester, I was eating dinner at a restaurant with some of my friends after a TASC performance for KDC (shoutout to Miss Saigon). However, as a group of 11 people ordering 22 items total, our receipt ended up totaling over \$200. Naturally, calculating the division reliably was not so easy, made even harder by the fact that some of us shared items.
 
 Usually when I had to split bills, I would follow a simple algorithm:
 1) find each person's subtotal (sum of their items before tax and tip)
@@ -20,10 +20,10 @@ Usually when I had to split bills, I would follow a simple algorithm:
 
 > Another alternative would be to account for tax+tip individually, but that's technically more calculations.
 
-However, having to do that for 11 people is a lot of manual work prone to errors, which is why I decided to spend a few days automating a quick task.
+However, having to do that for 11 people is a lot of manual work prone to human error, which is why I decided to spend a few days automating a quick task.
 
 ## "Coding" the app
-Since seeing how productive claude code could be during CPTC this year made me decide to see how far it could go with this idea. I first started out with making a description of the whole app and user flow to guide the model in the right direction when starting out. To give a quick summary of my prompt:
+Seeing how productive Claude Code could be during CPTC this year made me decide to see how far it could go with this idea. I first started out with making a description of the whole app and user flow to guide the model in the right direction when starting out. To give a quick summary of my prompt:
 
 ```
 I am making a web application called "split the bill" using svelte. It's main purpose is to be a client side only web app that can scan a receipt, assign people to what they bought, and then calculate what each person should pay. The user interface should be flexible, allowing users to add people, add receipt items, assign people, and more without forcing the user to follow steps.

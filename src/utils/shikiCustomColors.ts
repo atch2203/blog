@@ -10,10 +10,14 @@ import type { ShikiTransformer, ThemedToken } from "shiki";
  * - `{1:bg=#3a2f1a}`    background of line 1
  * - `"foo bar":#e5c07b` colour every occurrence of the literal text `foo bar`,
  *                       even where it straddles several syntax tokens
+ * - `"foo bar":bg=#3a2f1a` background of the literal text `foo bar` (foreground
+ *                       colour left untouched)
  * - `/product/:#61afef` same thing; only for text with no `/` in it, since
  *                       markdown strips backslash escapes before we see the meta
  * - `"Host: a\n\nGET":#61afef` `\n` and `\t` stand for the real characters, so a
  *                       match may run across several lines
+ * - `"W/\\"84e\\"":#61afef` `\\"` (a `\"` after markdown eats one backslash) lets
+ *                       a quoted rule match text that itself contains `"`
  * - `title="our request"` caption above the block; wraps it in a `<figure>`
  *
  * Rules can be repeated freely; later ones win, so a word rule can repaint part
@@ -21,16 +25,34 @@ import type { ShikiTransformer, ThemedToken } from "shiki";
  */
 
 type LineRule = { lines: Set<number>; color?: string; background?: string };
-type WordRule = { text: string; color: string };
+type WordRule = { text: string; color?: string; background?: string };
 
 const LINE_RULE = /\{([\d,\s-]+):(bg=)?([^}\s]+)\}/g;
-const WORD_RULE = /\/([^/\n]+)\/:([^\s]+)/g;
-const QUOTED_WORD_RULE = /"([^"\n]+)":([^\s]+)/g;
+const WORD_RULE = /\/([^/\n]+)\/:(bg=)?([^\s]+)/g;
+// Inner `\"` (written `\\"` in markdown) is consumed as an escape pair, so a
+// bare `"` only ever ends the rule.
+const QUOTED_WORD_RULE = /"((?:\\.|[^"\n\\])+)":(bg=)?([^\s]+)/g;
 const TITLE_RULE = /(^|\s)title="([^"\n]*)"/;
 
-/** `\n` / `\t` in the meta string stand for the real characters. */
+/** Shown at a line end whose newline sits inside a background span. */
+const NEWLINE_GLYPH = "↵";
+const NEWLINE_GLYPH_COLOR = "#ffffff80";
+
+/**
+ * `\n` / `\t` stand for newline and tab; `\"` for a double quote so a quoted
+ * rule can match text that itself contains `"`. Markdown eats a lone backslash
+ * before `"`, so in the fence you write `\\"` — that reaches us as `\"`.
+ */
 function unescape(text: string): string {
-  return text.replace(/\\n/g, "\n").replace(/\\t/g, "\t");
+  return text
+    .replace(/\\n/g, "\n")
+    .replace(/\\t/g, "\t")
+    .replace(/\\"/g, '"');
+}
+
+function makeWordRule(text: string, bg: string | undefined, color: string): WordRule {
+  const t = unescape(text);
+  return bg ? { text: t, background: color } : { text: t, color };
 }
 
 function parseLines(spec: string): Set<number> {
@@ -62,18 +84,20 @@ function parseMeta(rawMeta: string) {
     lineRules.push(bg ? { lines, background: color } : { lines, color });
   }
 
-  for (const [, text, color] of meta.matchAll(QUOTED_WORD_RULE)) {
-    wordRules.push({ text: unescape(text), color });
+  for (const [, text, bg, color] of meta.matchAll(QUOTED_WORD_RULE)) {
+    wordRules.push(makeWordRule(text, bg, color));
   }
 
-  for (const [, text, color] of meta.replace(QUOTED_WORD_RULE, "").matchAll(WORD_RULE)) {
-    wordRules.push({ text: unescape(text), color });
+  for (const [, text, bg, color] of meta
+    .replace(QUOTED_WORD_RULE, "")
+    .matchAll(WORD_RULE)) {
+    wordRules.push(makeWordRule(text, bg, color));
   }
 
   return { lineRules, wordRules, title };
 }
 
-type Span = { start: number; end: number; color: string };
+type Span = { start: number; end: number; color?: string; background?: string };
 
 /** Locate every occurrence of every word rule within the whole code block. */
 function findSpans(text: string, rules: WordRule[]): Span[] {
@@ -82,7 +106,12 @@ function findSpans(text: string, rules: WordRule[]): Span[] {
     if (!rule.text) continue;
     let i = text.indexOf(rule.text);
     while (i !== -1) {
-      spans.push({ start: i, end: i + rule.text.length, color: rule.color });
+      spans.push({
+        start: i,
+        end: i + rule.text.length,
+        color: rule.color,
+        background: rule.background,
+      });
       i = text.indexOf(rule.text, i + rule.text.length);
     }
   }
@@ -118,15 +147,18 @@ function applySpans(
     const sorted = [...cuts].sort((a, b) => a - b);
     for (let i = 0; i < sorted.length - 1; i++) {
       const [from, to] = [sorted[i], sorted[i + 1]];
-      // Later rules win, so take the last span covering this piece.
-      const span = spans.findLast(
-        s => s.start <= blockOffset + from && blockOffset + from < s.end
-      );
+      // Later rules win, so take the last colour/background covering this piece;
+      // foreground and background are resolved independently.
+      const covering = (s: Span) =>
+        s.start <= blockOffset + from && blockOffset + from < s.end;
+      const color = spans.findLast(s => covering(s) && s.color)?.color;
+      const background = spans.findLast(s => covering(s) && s.background)?.background;
       out.push({
         ...token,
         content: token.content.slice(from, to),
         offset: token.offset + from,
-        ...(span ? { color: span.color } : {}),
+        ...(color ? { color } : {}),
+        ...(background ? { bgColor: background } : {}),
       });
     }
 
@@ -164,6 +196,29 @@ export function transformerCustomColors(): ShikiTransformer {
         }
 
         out = applySpans(out, spans, lineStart);
+
+        // The newline joining this line to the next has no width, so a
+        // background that runs through it would visually stop at the line end.
+        // Mark it with a glyph carrying the same background.
+        const newlinePos = lineStart + lineTexts[index].length;
+        const isLastLine = index === lines.length - 1;
+        const newlineSpan = isLastLine
+          ? undefined
+          : spans.findLast(
+              s => s.background && s.start <= newlinePos && newlinePos < s.end
+            );
+        if (newlineSpan) {
+          out = [
+            ...out,
+            {
+              content: NEWLINE_GLYPH,
+              offset: newlinePos,
+              color: NEWLINE_GLYPH_COLOR,
+              bgColor: newlineSpan.background,
+            },
+          ];
+        }
+
         lineStart += lineTexts[index].length + 1; // + the "\n" join
 
         return out;
@@ -178,7 +233,7 @@ export function transformerCustomColors(): ShikiTransformer {
         if (rule.background && rule.lines.has(line)) {
           this.addClassToHast(node, "highlighted");
           node.properties.style =
-            `${node.properties.style ?? ""};display:block;background-color:${rule.background}`.replace(
+            `${node.properties.style ?? ""};background-color:${rule.background}`.replace(
               /^;/,
               ""
             );
