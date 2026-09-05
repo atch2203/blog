@@ -31,7 +31,7 @@ server {
 }
 ```
 
-As a tl;dr, since `$uri` normalizes the uri/endpoint part of the url, *including newlines*. Combined with an HTTP/1.1 connection, we can mess with the HTTP request that gets sent upstream.
+As a refresher, `$uri` normalizes the uri/endpoint part of the url, *including newlines*. Combined with an HTTP/1.1 connection, we can mess with the HTTP request that gets sent upstream.
 
 Here is the network diagram we will be using for the below examples.
 ```java
@@ -70,7 +70,7 @@ HTTP/2 200 OK
 In fact, we can demonstrate that the backend actually sees the headers we're injecting by injecting an E-Tag.
 
 
-```http title="Proxy POV" "%20HTTP/1.1%0d%0aIf-None-Match:%20W/"84e-w+kiGh/N0swB9TVkVA1PtcE4hJA"%0d%0aTrash:":bg=#550000
+```http title="Proxy POV" "%20HTTP/1.1%0d%0aIf-None-Match:%20W/\"84e-w+kiGh/N0swB9TVkVA1PtcE4hJA\"%0d%0aTrash:":bg=#550000
 GET /%20HTTP/1.1%0d%0aIf-None-Match:%20W/"84e-w+kiGh/N0swB9TVkVA1PtcE4hJA"%0d%0aTrash: HTTP/2
 Host: product.pirate.bay
 
@@ -236,6 +236,7 @@ HTTP/2 200 OK
 Nice, we have one request in the backend again! One important caveat that comes with the usage of content length to absorb garbage is that you have to be precise: 
 - too little and the extra garbage will give a 400 on the entire request
 - too much and the backend will hang, waiting for more data, before giving a 504
+
 You actually have a 4 character window for your content length (in the above case any number from 24-28 would have given 200), why that is can be an exercise for the reader.
 
 > As an exercise, you can try to get a "double request" using the `Transfer-Encoding` header instead of `Content-Length` against the backend of the challenge. After doing the exercise, you can see why we cannot poison subsequent requests using the `Transfer-Encoding` header (it requires a specific ending that our victim does not supply).
@@ -277,11 +278,14 @@ After we send our request above (Proxy POV) in burpsuite, when the victim sends 
 Once again, this comes with a few caveats:
 - if we undershoot the victim's request length, they get a 400
 - if we overshoot, their request hangs
+
 In this case, our victim's request is over 600 characters long due to chromium headers (which you can see above). This is a pain point in the challenge, but there are tricks you can do to determine ahead of time the exact headers sent by the victim.
 
 As we'll see later on, this primitive, while being simpler in idea, allows for some unique exploit chains (including forcing our victim to poison themselves!).
 
 <h1 id="challenge">The challenge itself</h1>
+
+
 *This writeup is intended to be paired with the solve script, it is not a substitute (it would otherwise be way too long).* I won't go too much into detail here, if you want you can read the solve script for exploit implementation. Hopefully this high level overview of the challenge and solution will help you with deciphering my solve script and the challenge source.
 
 The solve script and challenge source can be found at https://github.com/UMassCybersecurity/UMassCTF26-Release/tree/main/web/undercover-agent.
